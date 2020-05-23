@@ -1,0 +1,134 @@
+var timer_state = "reset";
+var timer_minutes_default = 20;
+var timer_seconds = 60 * timer_minutes_default;
+var timer_object = null;
+var words_adjectives = [];
+var words_nouns = [];
+var active_word_adjective = "";
+var active_word_noun = "";
+var random_words_timer_object = null;
+
+function init() {
+  updateTimer("reset");
+  $("#timer-btn-start").click(function(event){
+    if(!event.detail || event.detail == 1){
+      updateTimer("start");
+    }
+  });
+  $("#timer-btn-continue").click(function(event){
+    if(!event.detail || event.detail == 1){
+      updateTimer("continue");
+    }
+  });
+  $("#timer-btn-pause").click(function(event){
+    if(!event.detail || event.detail == 1){
+      updateTimer("pause");
+    }
+  });
+  $("#timer-btn-reset").click(function(event){
+    if(!event.detail || event.detail == 1){
+      updateTimer("reset");
+    }
+  });
+
+  getWords();
+  showWords("???", "???");
+  $("#words-btn-random").click(function(event){
+    //activate on first click only to avoid hiding again on multiple clicks
+    //execute only once on multiple clicks
+    if(!event.detail || event.detail == 1){
+      $("#words-btn-random").addClass("disabled");
+      shuffleWords();
+      let counter = 10;
+      let count = counter;
+      random_words_timer_object = setInterval(function() {
+        count--;
+        if (count <= 0) {
+          clearInterval(random_words_timer_object);
+          $("#words-btn-random").removeClass("disabled");
+        }
+        showWords(words_adjectives[counter-count], words_nouns[counter-count]);
+      }, 100);
+    }
+  });
+}
+
+function updateTimer(t_state) {
+  timer_state = t_state;
+  switch (timer_state) {
+    case "start":
+      setTimer();
+      $("#timer-btn-start").addClass("disabled hide");
+      $("#timer-btn-continue").addClass("disabled hide");
+      $("#timer-btn-pause").removeClass("disabled hide");
+      $("#timer-btn-reset").removeClass("disabled hide");
+      break;
+    case "continue":
+      setTimer();
+      $("#timer-btn-start").addClass("disabled hide");
+      $("#timer-btn-continue").addClass("disabled hide");
+      $("#timer-btn-pause").removeClass("disabled hide");
+      $("#timer-btn-reset").removeClass("disabled hide");
+      break;
+    case "pause":
+      clearTimer();
+      $("#timer-btn-start").addClass("disabled hide");
+      $("#timer-btn-continue").removeClass("disabled hide");
+      $("#timer-btn-pause").addClass("disabled hide");
+      $("#timer-btn-reset").removeClass("disabled hide");
+      break;
+    case "reset":
+    default:
+      timer_seconds = 60 * timer_minutes_default;
+      clearTimer();
+      $("#timer-btn-start").removeClass("disabled hide");
+      $("#timer-btn-continue").addClass("disabled hide");
+      $("#timer-btn-pause").addClass("disabled hide");
+      $("#timer-btn-reset").addClass("disabled hide");
+      break;
+  }
+}
+
+function clearTimer() {
+  clearInterval(timer_object);
+  showTimerMessage();
+}
+function setTimer() {
+  timer_object = setInterval(function() {
+    timer_seconds--;
+    if (timer_seconds < 0) {
+      timer_seconds = 0;
+    }
+    if (timer_seconds <= 0) {
+      updateTimer("pause");
+    }
+    showTimerMessage();
+  }, 1000);
+}
+function showTimerMessage() {
+  let minutes = Math.floor((timer_seconds % (60 * 60)) / 60);
+  let seconds = Math.floor((timer_seconds % 60));
+  $("#timer-txt").html("" + (minutes<10?'0':'') + minutes + ":" + (seconds<10?'0':'') + seconds);
+  if (timer_seconds <= 0) {
+    $("#timer-txt").html("finish!");
+  }
+}
+
+function getWords() {
+  $.getJSON("data/adjectives.json", function(result){
+    words_adjectives = result.data;
+  });
+  $.getJSON("data/nouns.json", function(result){
+    words_nouns = result.data;
+  });
+}
+function shuffleWords() {
+  words_adjectives.sort(function() { return 0.5 - Math.random() });
+  words_nouns.sort(function() { return 0.5 - Math.random() });
+}
+function showWords(adjective, noun) {
+  var active_word_adjective = adjective;
+  var active_word_noun = noun;
+  $("#words-txt-adjectives").html(active_word_adjective);
+  $("#words-txt-nouns").html(active_word_noun);
+}

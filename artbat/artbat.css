@@ -1,0 +1,46 @@
+body {
+  text-align: center;
+  min-width: 550px;
+}
+
+#title-heading {
+  font-size: 52px;
+}
+
+#timer-heading, #topic-heading {
+  font-size: 24px;
+}
+
+#timer-txt {
+  font-size: 60px;
+}
+
+#words-txt-group {
+  font-size: 48px;
+}
+
+.no-table, .no-table>tbody, .no-table>tbody>tr, .no-table>tbody>tr>td {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.blue {
+  color: #1E90FF;
+}
+.green {
+  color: #00FF00;
+}
+.pink {
+  color: #FF1493;
+}
+.purple {
+  color: #8A2BE2;
+}
+.red {
+  color: #DC143C;
+}
+.yellow {
+  color: #FFD700;
+}
