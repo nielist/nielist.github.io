@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  min-width: 550px;
+  min-width: 512px;
 }
 
 #title-heading {
@@ -16,7 +16,7 @@ body {
 }
 
 #words-txt-group {
-  font-size: 48px;
+  font-size: 40px;
 }
 
 .no-table, .no-table>tbody, .no-table>tbody>tr, .no-table>tbody>tr>td {
