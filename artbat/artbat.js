@@ -1,3 +1,4 @@
+var url_prefix = ""; //"https://nielist.github.io/artbat/";
 var timer_state = "reset";
 var timer_minutes_default = 20;
 var timer_seconds = 60 * timer_minutes_default;
@@ -7,6 +8,7 @@ var words_nouns = [];
 var active_word_adjective = "";
 var active_word_noun = "";
 var random_words_timer_object = null;
+var artbat_history = [];
 
 function init() {
   updateTimer("reset");
@@ -51,6 +53,8 @@ function init() {
       }, 100);
     }
   });
+
+  getArtbatHistoryCsv();
 }
 
 function updateTimer(t_state) {
@@ -115,10 +119,10 @@ function showTimerMessage() {
 }
 
 function getWords() {
-  $.getJSON("data/adjectives.json", function(result){
+  $.getJSON(url_prefix + "data/adjectives.json", function(result){
     words_adjectives = result.data;
   });
-  $.getJSON("data/nouns.json", function(result){
+  $.getJSON(url_prefix + "data/nouns.json", function(result){
     words_nouns = result.data;
   });
 }
@@ -131,4 +135,53 @@ function showWords(adjective, noun) {
   var active_word_noun = noun;
   $("#words-txt-adjectives").html(active_word_adjective);
   $("#words-txt-nouns").html(active_word_noun);
+}
+
+function getArtbatHistoryCsv() {
+  $.ajax({
+    type: "GET",
+    url: url_prefix + "data/artbat_history.csv",
+    dataType: "text",
+    success: function(response)
+    {
+      artbat_history = $.csv.toObjects(response);
+      showArtbatHistoryTable(artbat_history);
+    }
+  });
+}
+
+function showArtbatHistoryTable(data) {
+  var html = '<table class="table table-condensed table-hover table-striped" id="table-pastpaper">';
+
+  if(typeof(data[0]) === 'undefined') {
+    return null;
+  } else {
+    data.reverse();
+    $.each(data, function( index, row ) {
+      if(index == 0) {
+        html += '<thead>';
+        html += '<tr>';
+        html += '<th>';
+        html += 'Date';
+        html += '</th>';
+        html += '<th>';
+        html += 'Topic';
+        html += '</th>';
+        html += '</tr>';
+        html += '</thead>';
+        html += '<tbody>';
+      }
+      html += '<tr>';
+      html += '<td>';
+      html += row["date"];
+      html += '</td>';
+      html += '<td>';
+      html += (row["word1"] == '' ? '' : row["word1"] + ' + ') + row["word2"];
+      html += '</td>';
+      html += '</tr>';
+    });
+    html += '</tbody>';
+    html += '</table>';
+    $('#wrapper-table-pastpaper').append(html);
+  }
 }

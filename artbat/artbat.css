@@ -19,6 +19,9 @@ body {
   font-size: 40px;
 }
 
+#table-pastpaper {
+}
+
 .no-table, .no-table>tbody, .no-table>tbody>tr, .no-table>tbody>tr>td {
   border: 0;
   margin: 0;
