@@ -32,14 +32,34 @@
     <!--<script src="https://capitalizemytitle.com/wp-content/tools/random-word/index.php?action=getNouns&limit=1000"></script>-->
   </head>
   <body onload="init()">
-    <h1 id="title-heading">
+    <!--<h1 id="title-heading">
       <span class="blue">A</span>
       <span class="yellow">R</span>
       <span class="pink">T</span>
       <span class="purple">B</span>
       <span class="green">A</span>
       <span class="pink">T</span>
-    </h1>
+    </h1>-->
+    <svg width="512" height="64">
+      <text id="title-heading" font-size="52" x="115" y="50">
+        <tspan id="title-heading1" fill="#1E90FF">A</tspan>
+        <tspan id="title-heading2" fill="#FFD700">R</tspan>
+        <tspan id="title-heading3" fill="#FF1493">T</tspan>
+        <tspan id="title-heading4" fill="#8A2BE2">B</tspan>
+        <tspan id="title-heading5" fill="#00FF00">A</tspan>
+        <tspan id="title-heading6" fill="#FF1493">T</tspan>
+      </text>
+      <defs>
+        <animate xlink:href="#title-heading1" id="a11" attributeName="fill" attributeType="CSS" from="#1E90FF" to="#8A2BE2" begin="0s; a52.end" dur="0.5s" fill="freeze" />
+        <animate xlink:href="#title-heading2" id="a21" attributeName="fill" attributeType="CSS" from="#FFD700" to="#00FF00" begin="a11.end" dur="0.5s" fill="freeze" />
+        <animate xlink:href="#title-heading4" id="a41" attributeName="fill" attributeType="CSS" from="#8A2BE2" to="#1E90FF" begin="a21.end" dur="0.5s" fill="freeze" />
+        <animate xlink:href="#title-heading5" id="a51" attributeName="fill" attributeType="CSS" from="#00FF00" to="#FFD700" begin="a41.end" dur="0.5s" fill="freeze" />
+        <animate xlink:href="#title-heading1" id="a12" attributeName="fill" attributeType="CSS" from="#8A2BE2" to="#1E90FF" begin="a51.end" dur="0.5s" fill="freeze" />
+        <animate xlink:href="#title-heading2" id="a22" attributeName="fill" attributeType="CSS" from="#00FF00" to="#FFD700" begin="a12.end" dur="0.5s" fill="freeze" />
+        <animate xlink:href="#title-heading4" id="a42" attributeName="fill" attributeType="CSS" from="#1E90FF" to="#8A2BE2" begin="a22.end" dur="0.5s" fill="freeze" />
+        <animate xlink:href="#title-heading5" id="a52" attributeName="fill" attributeType="CSS" from="#FFD700" to="#00FF00" begin="a42.end" dur="0.5s" fill="freeze" />
+      </defs>
+    </svg>
     <div class="panel-group">
       <div class="panel panel-default">
         <div class="panel-heading">
