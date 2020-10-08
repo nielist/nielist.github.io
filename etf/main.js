@@ -282,55 +282,57 @@ function constructDataTable() {
   let html = '';
   let sortedResults = Object.values(results).sort(function(a, b){return b.investment.total-a.investment.total});
   for (let i = 0; i < sortedResults.length; i++) {
-    html += '<tr>';
-    html += '<td>';
-    html += sortedResults[i].ticker;
-    if (sortedResults[i].ticker !== sortedResults[i].company) {
-      html += ' (';
-      html += sortedResults[i].company;
-      html += ')';
+    if (sortedResults[i].investment.total > 0.0) {
+      html += '<tr>';
+      html += '<td>';
+      html += sortedResults[i].ticker;
+      if (sortedResults[i].ticker !== sortedResults[i].company) {
+        html += '<br/>(';
+        html += sortedResults[i].company;
+        html += ')';
+      }
+      html += '</td>';
+      html += '<td>';
+      html += '$';
+      html += sortedResults[i].investment.total.toFixed(2);
+      if (sortedResults[i].investment.VOO > 0.0) {
+        html += '<br/>(VOO = $';
+        html += sortedResults[i].investment.VOO.toFixed(2);
+        html += ')';
+      }
+      if (sortedResults[i].investment.QQQ > 0.0) {
+        html += '<br/>(QQQ = $';
+        html += sortedResults[i].investment.QQQ.toFixed(2);
+        html += ')';
+      }
+      if (sortedResults[i].investment.ARKK > 0.0) {
+        html += '<br/>(ARKK = $';
+        html += sortedResults[i].investment.ARKK.toFixed(2);
+        html += ')';
+      }
+      if (sortedResults[i].investment.ARKQ > 0.0) {
+        html += '<br/>(ARKQ = $';
+        html += sortedResults[i].investment.ARKQ.toFixed(2);
+        html += ')';
+      }
+      if (sortedResults[i].investment.ARKW > 0.0) {
+        html += '<br/>(ARKW = $';
+        html += sortedResults[i].investment.ARKW.toFixed(2);
+        html += ')';
+      }
+      if (sortedResults[i].investment.ARKG > 0.0) {
+        html += '<br/>(ARKG = $';
+        html += sortedResults[i].investment.ARKG.toFixed(2);
+        html += ')';
+      }
+      if (sortedResults[i].investment.ARKF > 0.0) {
+        html += '<br/>(ARKF = $';
+        html += sortedResults[i].investment.ARKF.toFixed(2);
+        html += ')';
+      }
+      html += '</td>';
+      html += '</tr>';
     }
-    html += '</td>';
-    html += '<td>';
-    html += '$';
-    html += sortedResults[i].investment.total.toFixed(2);
-    if (sortedResults[i].investment.VOO > 0.0) {
-      html += '<br/>(VOO = $';
-      html += sortedResults[i].investment.VOO.toFixed(2);
-      html += ')';
-    }
-    if (sortedResults[i].investment.QQQ > 0.0) {
-      html += '<br/>(QQQ = $';
-      html += sortedResults[i].investment.QQQ.toFixed(2);
-      html += ')';
-    }
-    if (sortedResults[i].investment.ARKK > 0.0) {
-      html += '<br/>(ARKK = $';
-      html += sortedResults[i].investment.ARKK.toFixed(2);
-      html += ')';
-    }
-    if (sortedResults[i].investment.ARKQ > 0.0) {
-      html += '<br/>(ARKQ = $';
-      html += sortedResults[i].investment.ARKQ.toFixed(2);
-      html += ')';
-    }
-    if (sortedResults[i].investment.ARKW > 0.0) {
-      html += '<br/>(ARKW = $';
-      html += sortedResults[i].investment.ARKW.toFixed(2);
-      html += ')';
-    }
-    if (sortedResults[i].investment.ARKG > 0.0) {
-      html += '<br/>(ARKG = $';
-      html += sortedResults[i].investment.ARKG.toFixed(2);
-      html += ')';
-    }
-    if (sortedResults[i].investment.ARKF > 0.0) {
-      html += '<br/>(ARKF = $';
-      html += sortedResults[i].investment.ARKF.toFixed(2);
-      html += ')';
-    }
-    html += '</td>';
-    html += '</tr>';
   }
   return html;
 }
