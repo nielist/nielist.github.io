@@ -255,9 +255,13 @@ function onClickCalculate() {
   investment['ARKW'] = parseFloat($('#ARKW').val());
   investment['ARKG'] = parseFloat($('#ARKG').val());
   investment['ARKF'] = parseFloat($('#ARKF').val());
-  investment['total'] = investment['VOO'] + investment['QQQ'] + investment['ARKK'] + investment['ARKQ'] + investment['ARKW'] + investment['ARKG'] + investment['ARKF'];
+  investment['label1'] = parseFloat($('#label1').val());
+  investment['label2'] = parseFloat($('#label2').val());
+  investment['total'] = investment['label1'] + investment['label2'] + investment['VOO'] + investment['QQQ'] + investment['ARKK'] + investment['ARKQ'] + investment['ARKW'] + investment['ARKG'] + investment['ARKF'];
 
   results = {};
+  results['label1'] = {'ticker':'Label1', 'company':'Label1', investment:{'total':investment['label1'], 'VOO':0.0, 'QQQ':0.0, 'ARKK':0.0, 'ARKQ':0.0, 'ARKW':0.0, 'ARKG':0.0, 'ARKF':0.0}};
+  results['label2'] = {'ticker':'Label2', 'company':'Label2', investment:{'total':investment['label2'], 'VOO':0.0, 'QQQ':0.0, 'ARKK':0.0, 'ARKQ':0.0, 'ARKW':0.0, 'ARKG':0.0, 'ARKF':0.0}};
   for (let i = 0; i < etf_constituent_list.length; i++) {
     if (typeof results[etf_constituent_list[i].ticker] === 'undefined') {
       results[etf_constituent_list[i].ticker] = {'ticker':'', 'company':'', investment:{'total':0.0, 'VOO':0.0, 'QQQ':0.0, 'ARKK':0.0, 'ARKQ':0.0, 'ARKW':0.0, 'ARKG':0.0, 'ARKF':0.0}};
@@ -284,7 +288,7 @@ function constructDataTable() {
   if (investment.total > 0.0) {
     html += '<thead>';
     html += '<tr>';
-    html += '<th style="width:40%">Ticker / Company</th>';
+    html += '<th>Ticker / Company</th>';
     html += '<th style="width:60%">Investment = $' + investment.total.toFixed(2) + '</th>';
     html += '</tr>';
     html += '</thead>';
