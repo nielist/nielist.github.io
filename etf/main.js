@@ -284,8 +284,8 @@ function constructDataTable() {
   if (investment.total > 0.0) {
     html += '<thead>';
     html += '<tr>';
-    html += '<th style="width:50%">Ticker / Company</th>';
-    html += '<th style="width:50%">Investment ($' + investment.total.toFixed(2) + ')</th>';
+    html += '<th style="width:40%">Ticker / Company</th>';
+    html += '<th style="width:60%">Investment = $' + investment.total.toFixed(2) + '</th>';
     html += '</tr>';
     html += '</thead>';
     html += '<tbody>';
