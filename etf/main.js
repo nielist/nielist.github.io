@@ -1,4 +1,5 @@
 var etf_constituent_list = [];
+var investment = {};
 var results = {};
 
 String.prototype.capitalize = function(){
@@ -247,7 +248,6 @@ function onReadyARKFDataInit() {
 }
 
 function onClickCalculate() {
-  let investment = {};
   investment['VOO'] = parseFloat($('#VOO').val());
   investment['QQQ'] = parseFloat($('#QQQ').val());
   investment['ARKK'] = parseFloat($('#ARKK').val());
@@ -255,6 +255,7 @@ function onClickCalculate() {
   investment['ARKW'] = parseFloat($('#ARKW').val());
   investment['ARKG'] = parseFloat($('#ARKG').val());
   investment['ARKF'] = parseFloat($('#ARKF').val());
+  investment['total'] = investment['VOO'] + investment['QQQ'] + investment['ARKK'] + investment['ARKQ'] + investment['ARKW'] + investment['ARKG'] + investment['ARKF'];
 
   results = {};
   for (let i = 0; i < etf_constituent_list.length; i++) {
@@ -273,66 +274,77 @@ function onClickCalculate() {
 function refreshDataTable() {
   let html = constructDataTable();
   setTimeout(function(){
-    $('.table tbody').html($(html).hide().fadeIn(2000));
-    $('.table tbody').show();
+    $('.table').html($(html).hide().fadeIn(2000));
+    $('.table').show();
   }, 100);
 }
 
 function constructDataTable() {
   let html = '';
-  let sortedResults = Object.values(results).sort(function(a, b){return b.investment.total-a.investment.total});
-  for (let i = 0; i < sortedResults.length; i++) {
-    if (sortedResults[i].investment.total > 0.0) {
-      html += '<tr>';
-      html += '<td>';
-      html += sortedResults[i].ticker;
-      if (sortedResults[i].ticker !== sortedResults[i].company) {
-        html += '<br/>(';
-        html += sortedResults[i].company;
-        html += ')';
+  if (investment.total > 0.0) {
+    html += '<thead>';
+    html += '<tr>';
+    html += '<th style="width:50%">Ticker / Company</th>';
+    html += '<th style="width:50%">Investment ($' + investment.total.toFixed(2) + ')</th>';
+    html += '</tr>';
+    html += '</thead>';
+    html += '<tbody>';
+    let sortedResults = Object.values(results).sort(function(a, b){return b.investment.total-a.investment.total});
+    for (let i = 0; i < sortedResults.length; i++) {
+      if (sortedResults[i].investment.total > 0.0) {
+        html += '<tr>';
+        html += '<td>';
+        html += sortedResults[i].ticker;
+        if (sortedResults[i].ticker !== sortedResults[i].company) {
+          html += '<br/>(';
+          html += sortedResults[i].company;
+          html += ')';
+        }
+        html += '</td>';
+        html += '<td>';
+        html += '$';
+        html += sortedResults[i].investment.total.toFixed(2);
+        html += ' (' + (100.0 * sortedResults[i].investment.total / investment.total).toFixed(2) + '%)';
+        if (sortedResults[i].investment.VOO > 0.0) {
+          html += '<br/>(VOO = $';
+          html += sortedResults[i].investment.VOO.toFixed(2);
+          html += ')';
+        }
+        if (sortedResults[i].investment.QQQ > 0.0) {
+          html += '<br/>(QQQ = $';
+          html += sortedResults[i].investment.QQQ.toFixed(2);
+          html += ')';
+        }
+        if (sortedResults[i].investment.ARKK > 0.0) {
+          html += '<br/>(ARKK = $';
+          html += sortedResults[i].investment.ARKK.toFixed(2);
+          html += ')';
+        }
+        if (sortedResults[i].investment.ARKQ > 0.0) {
+          html += '<br/>(ARKQ = $';
+          html += sortedResults[i].investment.ARKQ.toFixed(2);
+          html += ')';
+        }
+        if (sortedResults[i].investment.ARKW > 0.0) {
+          html += '<br/>(ARKW = $';
+          html += sortedResults[i].investment.ARKW.toFixed(2);
+          html += ')';
+        }
+        if (sortedResults[i].investment.ARKG > 0.0) {
+          html += '<br/>(ARKG = $';
+          html += sortedResults[i].investment.ARKG.toFixed(2);
+          html += ')';
+        }
+        if (sortedResults[i].investment.ARKF > 0.0) {
+          html += '<br/>(ARKF = $';
+          html += sortedResults[i].investment.ARKF.toFixed(2);
+          html += ')';
+        }
+        html += '</td>';
+        html += '</tr>';
       }
-      html += '</td>';
-      html += '<td>';
-      html += '$';
-      html += sortedResults[i].investment.total.toFixed(2);
-      if (sortedResults[i].investment.VOO > 0.0) {
-        html += '<br/>(VOO = $';
-        html += sortedResults[i].investment.VOO.toFixed(2);
-        html += ')';
-      }
-      if (sortedResults[i].investment.QQQ > 0.0) {
-        html += '<br/>(QQQ = $';
-        html += sortedResults[i].investment.QQQ.toFixed(2);
-        html += ')';
-      }
-      if (sortedResults[i].investment.ARKK > 0.0) {
-        html += '<br/>(ARKK = $';
-        html += sortedResults[i].investment.ARKK.toFixed(2);
-        html += ')';
-      }
-      if (sortedResults[i].investment.ARKQ > 0.0) {
-        html += '<br/>(ARKQ = $';
-        html += sortedResults[i].investment.ARKQ.toFixed(2);
-        html += ')';
-      }
-      if (sortedResults[i].investment.ARKW > 0.0) {
-        html += '<br/>(ARKW = $';
-        html += sortedResults[i].investment.ARKW.toFixed(2);
-        html += ')';
-      }
-      if (sortedResults[i].investment.ARKG > 0.0) {
-        html += '<br/>(ARKG = $';
-        html += sortedResults[i].investment.ARKG.toFixed(2);
-        html += ')';
-      }
-      if (sortedResults[i].investment.ARKF > 0.0) {
-        html += '<br/>(ARKF = $';
-        html += sortedResults[i].investment.ARKF.toFixed(2);
-        html += ')';
-      }
-      html += '</td>';
-      html += '</tr>';
     }
+    html += '</tbody>';
   }
   return html;
 }
