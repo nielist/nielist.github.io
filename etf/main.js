@@ -302,9 +302,8 @@ function constructDataTable() {
         }
         html += '</td>';
         html += '<td>';
-        html += '$';
+        html += (100.0 * sortedResults[i].investment.total / investment.total).toFixed(2) + '% = $';
         html += sortedResults[i].investment.total.toFixed(2);
-        html += ' (' + (100.0 * sortedResults[i].investment.total / investment.total).toFixed(2) + '%)';
         if (sortedResults[i].investment.VOO > 0.0) {
           html += '<br/>(VOO = $';
           html += sortedResults[i].investment.VOO.toFixed(2);
