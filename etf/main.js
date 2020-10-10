@@ -257,9 +257,11 @@ function onClickCalculate() {
   investment['ARKF'] = parseFloat($('#ARKF').val());
   investment['Custom1'] = parseFloat($('#Custom1').val());
   investment['Custom2'] = parseFloat($('#Custom2').val());
-  investment['total'] = investment['Custom1'] + investment['Custom2'] + investment['VOO'] + investment['QQQ'] + investment['ARKK'] + investment['ARKQ'] + investment['ARKW'] + investment['ARKG'] + investment['ARKF'];
+  investment['Cash'] = parseFloat($('#Cash').val());
+  investment['total'] = investment['Cash'] + investment['Custom1'] + investment['Custom2'] + investment['VOO'] + investment['QQQ'] + investment['ARKK'] + investment['ARKQ'] + investment['ARKW'] + investment['ARKG'] + investment['ARKF'];
 
   results = {};
+  results['Cash'] = {'ticker':'Cash', 'company':'Cash', investment:{'total':investment['Cash'], 'VOO':0.0, 'QQQ':0.0, 'ARKK':0.0, 'ARKQ':0.0, 'ARKW':0.0, 'ARKG':0.0, 'ARKF':0.0}};
   results['Custom1'] = {'ticker':'Custom1', 'company':'Custom1', investment:{'total':investment['Custom1'], 'VOO':0.0, 'QQQ':0.0, 'ARKK':0.0, 'ARKQ':0.0, 'ARKW':0.0, 'ARKG':0.0, 'ARKF':0.0}};
   results['Custom2'] = {'ticker':'Custom2', 'company':'Custom2', investment:{'total':investment['Custom2'], 'VOO':0.0, 'QQQ':0.0, 'ARKK':0.0, 'ARKQ':0.0, 'ARKW':0.0, 'ARKG':0.0, 'ARKF':0.0}};
   for (let i = 0; i < etf_constituent_list.length; i++) {
