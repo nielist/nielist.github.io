@@ -299,10 +299,12 @@ function onClickCalculate() {
   $('input[type=number].form-control').each(function(){
     let id = $(this).attr('id');
     investment[id] = parseFloat($('#'+id).val());
-    if (typeof params[id] === 'undefined') {
-      params[id] = [];
+    if (investment[id] > 0.0) {
+      if (typeof params[id] === 'undefined') {
+        params[id] = [];
+      }
+      params[id].push(''+investment[id]);
     }
-    params[id].push(''+investment[id]);
   });
   updateUrl(params);
   investment['total'] = 0.0;
