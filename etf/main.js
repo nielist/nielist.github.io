@@ -275,10 +275,13 @@ function onClickAddNewStock() {
 }
 
 function onClickCalculate() {
+  cleanUrlParams();
   $('input[type=number].form-control').each(function(){
     let id = $(this).attr('id');
     investment[id] = parseFloat($('#'+id).val());
+    setUrlParam(id, investment[id]);
   });
+  updateUrl();
   investment['total'] = 0.0;
   $.each(investment, function(key, value) {
     if (key !== 'total') {
