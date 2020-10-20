@@ -13,8 +13,8 @@ function getUrlParams(url) {
 
 function updateUrl(params) {
   let urlParams = new URLSearchParams();
-  for (const key of params.keys()) {
-    for (const value of params[key].values()) {
+  for (const key of Object.keys(params)) {
+    for (const value of Object.values(params[key])) {
       //urlParams.set(key, value);
       urlParams.append(key, value);
     }
