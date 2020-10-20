@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -58,7 +58,7 @@
 
 <div class="jumbotron text-center">
   <h1>ETF Constituent Explorer</h1>
-  <p>v1.0.2</p>
+  <p>v1.0.3</p>
 </div>
 
 <div class="container">
@@ -107,21 +107,15 @@
     </div>
     <div class="input-group mb-3 input-group-lg">
       <div class="input-group-prepend">
-        <span class="input-group-text">Custom1 = $</span>
-      </div>
-      <input type="number" step="0.01" value="0" data-value="0" class="form-control" id="Custom1">
-    </div>
-    <div class="input-group mb-3 input-group-lg">
-      <div class="input-group-prepend">
-        <span class="input-group-text">Custom2 = $</span>
-      </div>
-      <input type="number" step="0.01" value="0" data-value="0" class="form-control" id="Custom2">
-    </div>
-    <div class="input-group mb-3 input-group-lg">
-      <div class="input-group-prepend">
         <span class="input-group-text">Cash = $</span>
       </div>
       <input type="number" step="0.01" value="0" data-value="33333.33" class="form-control" id="Cash">
+    </div>
+    <div class="input-group mb-3 input-group-lg">
+      <input type="text" class="form-control" id="Code" placeholder="Enter Stock Code Here (e.g. AAPL)">
+      <div class="input-group-append">
+        <button class="btn btn-danger" type="button" id="Add"><i class='fas fa-plus'></i></button>
+      </div>
     </div>
     <button type="submit" class="btn btn-info btn-lg btn-block">Calculate</button>
   </form>

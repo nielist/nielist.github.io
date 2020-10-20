@@ -1,4 +1,5 @@
-var etf_constituent_list = [];
+const etf_funds = ['VOO', 'QQQ', 'ARKK', 'ARKQ', 'ARKW', 'ARKG', 'ARKF'];
+var etf_constituents = [];
 var investment = {};
 var results = {};
 
@@ -43,6 +44,10 @@ $(document).ready(function(){
   getARKWCsv(onReadyCsv);
   getARKGCsv(onReadyCsv);
   getARKFCsv(onReadyCsv);
+  $("#Add").click(function(e){
+    e.preventDefault();
+    onClickAddNewStock();
+  });
   $("form").submit(function(e){
     e.preventDefault();
     onClickCalculate();
@@ -59,7 +64,7 @@ function onReadyCsv() {
       onReadyARKWDataInit();
       onReadyARKGDataInit();
       onReadyARKFDataInit();
-      //console.log(etf_constituent_list);
+      //console.log(etf_constituents);
       onClickCalculate();
     }, 0);
   }
@@ -86,7 +91,7 @@ function onReadyVOODataInit() {
       else {
         obj['weight'] = 0.0;
       }
-      etf_constituent_list.push(obj);
+      etf_constituents.push(obj);
     }
   }
 }
@@ -112,7 +117,7 @@ function onReadyQQQDataInit() {
       else {
         obj['weight'] = 0.0;
       }
-      etf_constituent_list.push(obj);
+      etf_constituents.push(obj);
     }
   }
 }
@@ -138,7 +143,7 @@ function onReadyARKKDataInit() {
       else {
         obj['weight'] = 0.0;
       }
-      etf_constituent_list.push(obj);
+      etf_constituents.push(obj);
     }
   }
 }
@@ -164,7 +169,7 @@ function onReadyARKQDataInit() {
       else {
         obj['weight'] = 0.0;
       }
-      etf_constituent_list.push(obj);
+      etf_constituents.push(obj);
     }
   }
 }
@@ -190,7 +195,7 @@ function onReadyARKWDataInit() {
       else {
         obj['weight'] = 0.0;
       }
-      etf_constituent_list.push(obj);
+      etf_constituents.push(obj);
     }
   }
 }
@@ -216,7 +221,7 @@ function onReadyARKGDataInit() {
       else {
         obj['weight'] = 0.0;
       }
-      etf_constituent_list.push(obj);
+      etf_constituents.push(obj);
     }
   }
 }
@@ -242,37 +247,78 @@ function onReadyARKFDataInit() {
       else {
         obj['weight'] = 0.0;
       }
-      etf_constituent_list.push(obj);
+      etf_constituents.push(obj);
     }
   }
 }
 
+function onClickAddNewStock() {
+  let id = $('input[type=text]#Code').val();
+
+  if (typeof id !== 'undefined' && id !== '') {
+    id = id.toUpperCase();
+
+    if ($('#'+id).length <= 0) {
+      let html = '';
+      html += '<div class="input-group mb-3 input-group-lg">';
+      html += '<div class="input-group-prepend">';
+      html += '<span class="input-group-text">' + id + ' = $</span>';
+      html += '</div>';
+      html += '<input type="number" step="0.01" value="0" data-value="0" class="form-control" id="' + id + '">';
+      html += '</div>';
+
+      $('input[type=number].form-control').last().parent().after(html);
+    }
+  }
+
+  $('input[type=text]#Code').val('');
+}
+
 function onClickCalculate() {
-  investment['VOO'] = parseFloat($('#VOO').val());
-  investment['QQQ'] = parseFloat($('#QQQ').val());
-  investment['ARKK'] = parseFloat($('#ARKK').val());
-  investment['ARKQ'] = parseFloat($('#ARKQ').val());
-  investment['ARKW'] = parseFloat($('#ARKW').val());
-  investment['ARKG'] = parseFloat($('#ARKG').val());
-  investment['ARKF'] = parseFloat($('#ARKF').val());
-  investment['Custom1'] = parseFloat($('#Custom1').val());
-  investment['Custom2'] = parseFloat($('#Custom2').val());
-  investment['Cash'] = parseFloat($('#Cash').val());
-  investment['total'] = investment['Cash'] + investment['Custom1'] + investment['Custom2'] + investment['VOO'] + investment['QQQ'] + investment['ARKK'] + investment['ARKQ'] + investment['ARKW'] + investment['ARKG'] + investment['ARKF'];
+  $('input[type=number].form-control').each(function(){
+    let id = $(this).attr('id');
+    investment[id] = parseFloat($('#'+id).val());
+  });
+  investment['total'] = 0.0;
+  $.each(investment, function(key, value) {
+    if (key !== 'total') {
+      investment['total'] += value;
+    }
+  });
 
   results = {};
-  results['Cash'] = {'ticker':'Cash', 'company':'Cash', investment:{'total':investment['Cash'], 'VOO':0.0, 'QQQ':0.0, 'ARKK':0.0, 'ARKQ':0.0, 'ARKW':0.0, 'ARKG':0.0, 'ARKF':0.0}};
-  results['Custom1'] = {'ticker':'Custom1', 'company':'Custom1', investment:{'total':investment['Custom1'], 'VOO':0.0, 'QQQ':0.0, 'ARKK':0.0, 'ARKQ':0.0, 'ARKW':0.0, 'ARKG':0.0, 'ARKF':0.0}};
-  results['Custom2'] = {'ticker':'Custom2', 'company':'Custom2', investment:{'total':investment['Custom2'], 'VOO':0.0, 'QQQ':0.0, 'ARKK':0.0, 'ARKQ':0.0, 'ARKW':0.0, 'ARKG':0.0, 'ARKF':0.0}};
-  for (let i = 0; i < etf_constituent_list.length; i++) {
-    if (typeof results[etf_constituent_list[i].ticker] === 'undefined') {
-      results[etf_constituent_list[i].ticker] = {'ticker':'', 'company':'', investment:{'total':0.0, 'VOO':0.0, 'QQQ':0.0, 'ARKK':0.0, 'ARKQ':0.0, 'ARKW':0.0, 'ARKG':0.0, 'ARKF':0.0}};
+
+  // Handling for Individual Stocks
+  $('input[type=number].form-control').each(function(){
+    let id = $(this).attr('id');
+    if (id !== 'total' && etf_funds.indexOf(id) < 0) {
+      results[id] = {'ticker':id, 'company':id, investment:{'total':investment[id]}};
+      results[id].investment[id] = investment[id];
     }
-    results[etf_constituent_list[i].ticker].ticker = etf_constituent_list[i].ticker;
-    results[etf_constituent_list[i].ticker].company = etf_constituent_list[i].company;
-    results[etf_constituent_list[i].ticker].investment[etf_constituent_list[i].fund] += 1.0 * investment[etf_constituent_list[i].fund] * etf_constituent_list[i].weight / 100.0;
-    results[etf_constituent_list[i].ticker].investment.total += results[etf_constituent_list[i].ticker].investment[etf_constituent_list[i].fund];
+  });
+
+  // Handling for ETF Funds
+  for (let i = 0; i < etf_constituents.length; i++) {
+    let constituent = etf_constituents[i];
+
+    if (typeof results[constituent.ticker] === 'undefined') {
+      results[constituent.ticker] = {'ticker':'', 'company':'', investment:{'total':0.0}};
+    }
+
+    results[constituent.ticker].ticker = constituent.ticker;
+    results[constituent.ticker].company = constituent.company;
+
+    if (typeof results[constituent.ticker].investment[constituent.fund] === 'undefined') {
+      results[constituent.ticker].investment[constituent.fund] = 0.0;
+    }
+    results[constituent.ticker].investment[constituent.fund] += 1.0 * investment[constituent.fund] * constituent.weight / 100.0;
+
+    if (typeof results[constituent.ticker].investment.total === 'undefined') {
+      results[constituent.ticker].investment.total = 0.0;
+    }
+    results[constituent.ticker].investment.total += results[constituent.ticker].investment[constituent.fund];
   }
+
   //console.log(results);
   refreshDataTable();
 }
@@ -287,7 +333,7 @@ function refreshDataTable() {
 
 function constructDataTable() {
   let html = '';
-  if (investment.total > 0.0) {
+  if (typeof investment.total !== 'undefined' && investment.total > 0.0) {
     html += '<thead>';
     html += '<tr>';
     html += '<th>Ticker / Company</th>';
@@ -297,7 +343,7 @@ function constructDataTable() {
     html += '<tbody>';
     let sortedResults = Object.values(results).sort(function(a, b){return b.investment.total-a.investment.total});
     for (let i = 0; i < sortedResults.length; i++) {
-      if (sortedResults[i].investment.total > 0.0) {
+      if (typeof sortedResults[i].investment.total !== 'undefined' && sortedResults[i].investment.total > 0.0) {
         html += '<tr>';
         html += '<td>';
         html += sortedResults[i].ticker;
@@ -310,41 +356,34 @@ function constructDataTable() {
         html += '<td>';
         html += (100.0 * sortedResults[i].investment.total / investment.total).toFixed(2) + '% = $';
         html += sortedResults[i].investment.total.toFixed(2);
-        if (sortedResults[i].investment.VOO > 0.0) {
-          html += '<br/>(VOO = $';
-          html += sortedResults[i].investment.VOO.toFixed(2);
-          html += ')';
+
+        // Handling for Individual Stocks
+        let individual_stocks = [];
+        $.each(sortedResults[i].investment, function(key, value) {
+          if (key !== 'total' && etf_funds.indexOf(key) < 0) {
+            individual_stocks.push(key);
+          }
+        });
+
+        for (let c = 0; c < individual_stocks.length; c++) {
+          let fund = individual_stocks[c];
+          if (typeof sortedResults[i].investment[fund] !== 'undefined' && sortedResults[i].investment[fund] > 0.0) {
+            html += '<br/>(' + fund + ' = $';
+            html += sortedResults[i].investment[fund].toFixed(2);
+            html += ')';
+          }
         }
-        if (sortedResults[i].investment.QQQ > 0.0) {
-          html += '<br/>(QQQ = $';
-          html += sortedResults[i].investment.QQQ.toFixed(2);
-          html += ')';
+
+        // Handling for ETF Funds
+        for (let c = 0; c < etf_funds.length; c++) {
+          let fund = etf_funds[c];
+          if (typeof sortedResults[i].investment[fund] !== 'undefined' && sortedResults[i].investment[fund] > 0.0) {
+            html += '<br/>(' + fund + ' = $';
+            html += sortedResults[i].investment[fund].toFixed(2);
+            html += ')';
+          }
         }
-        if (sortedResults[i].investment.ARKK > 0.0) {
-          html += '<br/>(ARKK = $';
-          html += sortedResults[i].investment.ARKK.toFixed(2);
-          html += ')';
-        }
-        if (sortedResults[i].investment.ARKQ > 0.0) {
-          html += '<br/>(ARKQ = $';
-          html += sortedResults[i].investment.ARKQ.toFixed(2);
-          html += ')';
-        }
-        if (sortedResults[i].investment.ARKW > 0.0) {
-          html += '<br/>(ARKW = $';
-          html += sortedResults[i].investment.ARKW.toFixed(2);
-          html += ')';
-        }
-        if (sortedResults[i].investment.ARKG > 0.0) {
-          html += '<br/>(ARKG = $';
-          html += sortedResults[i].investment.ARKG.toFixed(2);
-          html += ')';
-        }
-        if (sortedResults[i].investment.ARKF > 0.0) {
-          html += '<br/>(ARKF = $';
-          html += sortedResults[i].investment.ARKF.toFixed(2);
-          html += ')';
-        }
+
         html += '</td>';
         html += '</tr>';
       }
