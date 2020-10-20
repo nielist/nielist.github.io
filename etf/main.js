@@ -65,6 +65,23 @@ function onReadyCsv() {
       onReadyARKGDataInit();
       onReadyARKFDataInit();
       //console.log(etf_constituents);
+      let params = getUrlParams();
+      for (const key of params.keys()) {
+        if ($('#'+key).length <= 0) {
+          $('input[type=text]#Code').val(key);
+          onClickAddNewStock();
+        }
+      }
+      for (const key of params.keys()) {
+        if (params.has(key)) {
+          let values = params.getAll(key);
+          for (const value of values) {
+            if (value.isFloat()) {
+              $('#'+key).val(parseFloat(value));
+            }
+          }
+        }
+      }
       onClickCalculate();
     }, 0);
   }
@@ -278,13 +295,16 @@ function onClickAddNewStock() {
 }
 
 function onClickCalculate() {
-  cleanUrlParams();
+  let params = {};
   $('input[type=number].form-control').each(function(){
     let id = $(this).attr('id');
     investment[id] = parseFloat($('#'+id).val());
-    setUrlParam(id, investment[id]);
+    if (typeof params[id] === 'undefined') {
+      params[id] = [];
+    }
+    params[id].push(''+investment[id]);
   });
-  updateUrl();
+  updateUrl(params);
   investment['total'] = 0.0;
   $.each(investment, function(key, value) {
     if (key !== 'total') {
