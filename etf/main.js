@@ -296,8 +296,8 @@ function onClickCalculate() {
   $.each(investment, function(key, value) {
     if (key !== 'total') {
       let percent = 100.0 * investment[key] / investment['total'];
-      $('#'+key+'-percent').css('width',''+percent.toFixed(2)+'%');
-      $('#'+key+'-percent').html(''+key+' = '+percent.toFixed(2)+'%');
+      $('#'+key+'-percent').css('width',''+percent+'%');
+      $('#'+key+'-percent').html(''+percent.toFixed(1)+'%');
       $('#'+key+'-percent').removeClass('bg-success');
       $('#'+key+'-percent').removeClass('bg-info');
       $('#'+key+'-percent').removeClass('bg-warning');
