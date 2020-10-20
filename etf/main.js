@@ -260,6 +260,9 @@ function onClickAddNewStock() {
 
     if ($('#'+id).length <= 0) {
       let html = '';
+      html += '<div class="progress">';
+      html += '<div class="progress-bar progress-bar-striped progress-bar-animated" id="' + id + '-percent" style="width:0%"></div>';
+      html += '</div>';
       html += '<div class="input-group mb-3 input-group-lg">';
       html += '<div class="input-group-prepend">';
       html += '<span class="input-group-text">' + id + ' = $</span>';
@@ -286,6 +289,15 @@ function onClickCalculate() {
   $.each(investment, function(key, value) {
     if (key !== 'total') {
       investment['total'] += value;
+    }
+  });
+
+  // Handling for Percentage Bar
+  $.each(investment, function(key, value) {
+    if (key !== 'total') {
+      let percent = 100.0 * investment[key] / investment['total'];
+      $('#'+key+'-percent').css('width',''+percent+'%');
+      $('#'+key+'-percent').html(''+percent+'%');
     }
   });
 
