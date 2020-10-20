@@ -1,17 +1,3 @@
-var urlParams = new URLSearchParams();
-
-function setUrlParam(key, value) {
-  urlParams.set(key, value);
-}
-
-function cleanUrlParams() {
-  for (const key of urlParams.keys()) {
-    if (urlParams.has(key)) {
-      urlParams.delete('key');
-    }
-  }
-}
-
 function getUrlParams(url) {
   if (typeof url === 'undefined' || url === '') {
     url = window.location;
@@ -25,7 +11,15 @@ function getUrlParams(url) {
   return urlParams;
 }
 
-function updateUrl() {
+function updateUrl(params) {
+  let urlParams = new URLSearchParams();
+  for (const key of params.keys()) {
+    for (const value of params[key].values()) {
+      //urlParams.set(key, value);
+      urlParams.append(key, value);
+    }
+  }
+
   let queryString = urlParams.toString();
   window.history.replaceState({}, '', `${window.location.pathname}?${queryString}`);
 }
