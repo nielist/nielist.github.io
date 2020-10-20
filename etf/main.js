@@ -296,8 +296,24 @@ function onClickCalculate() {
   $.each(investment, function(key, value) {
     if (key !== 'total') {
       let percent = 100.0 * investment[key] / investment['total'];
-      $('#'+key+'-percent').css('width',''+percent+'%');
-      $('#'+key+'-percent').html(''+percent+'%');
+      $('#'+key+'-percent').css('width',''+percent.toFixed(2)+'%');
+      $('#'+key+'-percent').html(''+key+' = '+percent.toFixed(2)+'%');
+      $('#'+key+'-percent').removeClass('bg-success');
+      $('#'+key+'-percent').removeClass('bg-info');
+      $('#'+key+'-percent').removeClass('bg-warning');
+      $('#'+key+'-percent').removeClass('bg-danger');
+      if (percent >= 20.0) {
+        $('#'+key+'-percent').addClass('bg-success');
+      }
+      else if (percent >= 30.0) {
+        $('#'+key+'-percent').addClass('bg-info');
+      }
+      else if (percent >= 40.0) {
+        $('#'+key+'-percent').addClass('bg-warning');
+      }
+      else if (percent >= 50.0) {
+        $('#'+key+'-percent').addClass('bg-danger');
+      }
     }
   });
 
