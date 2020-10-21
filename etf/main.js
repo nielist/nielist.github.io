@@ -378,6 +378,7 @@ function onChangeStockInfo() {
 }
 
 function onChangeUSDHKD() {
+  onChangeStockInfo();
   return false;
 }
 
