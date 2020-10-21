@@ -333,15 +333,15 @@ function onClickAddNewStock() {
     if ($('#'+id).length <= 0) {
       let html = '';
       html += '<div class="progress">';
-      html += '<div class="progress-bar progress-bar-striped progress-bar-animated" id="' + id + '-percent" style="width:0%"></div>';
+      html += '<div class="progress-bar progress-bar-striped progress-bar-animated stock-percent" id="' + id + '-percent" style="width:0%"></div>';
       html += '</div>';
       html += '<div class="input-group mb-3 input-group-lg">';
       html += '<div class="input-group-prepend">';
       html += '<span class="input-group-text">' + id + ' = </span>';
       html += '</div>';
-      html += '<input type="number" step="0.01" min="0" value="0" data-value="0" class="form-control" id="' + id + '" placeholder="Enter Shares (e.g. 123)">';
+      html += '<input type="number" step="0.01" min="0" value="0" data-value="0" class="form-control stock-shares" id="' + id + '" placeholder="Enter Shares (e.g. 123)">';
       html += '<div class="input-group-append">';
-      html += '<span class="input-group-text"> = $<span id="' + id + '-invest">0.00</span></span>';
+      html += '<span class="input-group-text"> = $<span class="stock-invest" id="' + id + '-invest">0.00</span></span>';
       html += '</div>';
       html += '</div>';
 
@@ -354,7 +354,7 @@ function onClickAddNewStock() {
 
 function onClickCalculate() {
   let params = {};
-  $('input[type=number].form-control').each(function(){
+  $('input[type=number].stock-shares').each(function(){
     let id = $(this).attr('id');
     investment[id] = parseFloat($('#'+id).val());
     if (investment[id] > 0.0) {
@@ -402,7 +402,7 @@ function onClickCalculate() {
   results = {};
 
   // Handling for Individual Stocks
-  $('input[type=number].form-control').each(function(){
+  $('input[type=number].stock-shares').each(function(){
     let id = $(this).attr('id');
     if (id !== 'total' && etf_funds.indexOf(id) < 0) {
       results[id] = {'ticker':id, 'company':id, investment:{'total':investment[id]}};
