@@ -323,66 +323,20 @@ function onChangeStockInfo() {
     if ($('#'+symbol).length > 0 && $('#'+symbol+'-invest').length > 0) {
       let shares = parseFloat($('#'+symbol).val());
       let usdhkd = parseFloat($('#USDHKD').val());
-      $('#'+symbol+'-invest').html((shares * price * usdhkd).toFixed(2));
-    }
-  }
-  return false;
-}
-
-function onChangeUSDHKD() {
-  stock_info['USD']['price'] = parseFloat($('#USDHKD').val());
-  return false;
-}
-
-function onClickAddNewStock() {
-  let id = $('input[type=text]#Code').val();
-
-  if (typeof id !== 'undefined' && id !== '') {
-    id = id.toUpperCase();
-
-    if (currency_codes.indexOf(id) < 0) {
-      let assetClass = 'stocks';
-      if (etf_funds.indexOf(id) >= 0) {
-        assetClass = 'etf';
+      let invest = shares * price * usdhkd;
+      if (symbol === 'HKD') {
+        invest = shares * price;
       }
-      getStockInfoJson(id, assetClass, onReadyStockInfoDataInit);
-    }
-
-    if ($('#'+id).length <= 0) {
-      let html = '';
-      html += '<div class="progress">';
-      html += '<div class="progress-bar progress-bar-striped progress-bar-animated stock-percent" id="' + id + '-percent" style="width:0%"></div>';
-      html += '</div>';
-      html += '<div class="input-group mb-3 input-group-lg">';
-      html += '<div class="input-group-prepend">';
-      html += '<span class="input-group-text">' + id + ' = </span>';
-      html += '</div>';
-      html += '<input type="number" step="0.01" min="0" value="0" data-value="0" class="form-control stock-shares" id="' + id + '" placeholder="Enter Shares (e.g. 123)" onchange="onChangeStockInfo()">';
-      html += '<div class="input-group-append">';
-      html += '<span class="input-group-text"> = $<span class="stock-invest" id="' + id + '-invest">0.00</span></span>';
-      html += '</div>';
-      html += '</div>';
-
-      $('input[type=text]#Code').parent().before(html);
+      $('#'+symbol+'-invest').val(invest);
+      $('#'+symbol+'-invest').html(invest.toFixed(2));
     }
   }
 
-  $('input[type=text]#Code').val('');
-}
-
-function onClickCalculate() {
-  let params = {};
   $('input[type=number].stock-shares').each(function(){
     let id = $(this).attr('id');
-    investment[id] = parseFloat($('#'+id).val());
-    if (investment[id] > 0.0) {
-      if (typeof params[id] === 'undefined') {
-        params[id] = [];
-      }
-      params[id].push(''+investment[id]);
-    }
+    investment[id] = parseFloat($('#'+id+'-invest').val());
   });
-  updateUrl(params);
+
   investment['total'] = 0.0;
   $.each(investment, function(key, value) {
     if (key !== 'total') {
@@ -394,6 +348,7 @@ function onClickCalculate() {
   $.each(investment, function(key, value) {
     if (key !== 'total') {
       let percent = 100.0 * investment[key] / investment['total'];
+      $('#'+key+'-percent').val(percent);
       $('#'+key+'-percent').css('width',''+percent+'%');
       $('#'+key+'-percent').html(''+percent.toFixed(1)+'%');
       $('#'+key+'-percent').removeClass('bg-success');
@@ -416,6 +371,63 @@ function onClickCalculate() {
       }
     }
   });
+
+  return false;
+}
+
+function onChangeUSDHKD() {
+  return false;
+}
+
+function onClickAddNewStock() {
+  let id = $('input[type=text]#Code').val();
+
+  if (typeof id !== 'undefined' && id !== '') {
+    id = id.toUpperCase();
+
+    if (currency_codes.indexOf(id) < 0) {
+      let assetClass = 'stocks';
+      if (etf_funds.indexOf(id) >= 0) {
+        assetClass = 'etf';
+      }
+      getStockInfoJson(id, assetClass, onReadyStockInfoDataInit);
+    }
+
+    if ($('#'+id).length <= 0) {
+      let html = '';
+      html += '<div class="progress">';
+      html += '<div class="progress-bar progress-bar-striped progress-bar-animated stock-percent" id="' + id + '-percent" value="0" style="width:0%"></div>';
+      html += '</div>';
+      html += '<div class="input-group mb-3 input-group-lg">';
+      html += '<div class="input-group-prepend">';
+      html += '<span class="input-group-text">' + id + ' = </span>';
+      html += '</div>';
+      html += '<input type="number" step="0.01" min="0" value="0" data-value="0" class="form-control stock-shares" id="' + id + '" placeholder="Enter Shares (e.g. 123)" onchange="onChangeStockInfo()">';
+      html += '<div class="input-group-append">';
+      html += '<span class="input-group-text"> = $<span class="stock-invest" id="' + id + '-invest" value="0">0.00</span></span>';
+      html += '</div>';
+      html += '</div>';
+
+      $('input[type=text]#Code').parent().before(html);
+    }
+  }
+
+  $('input[type=text]#Code').val('');
+}
+
+function onClickCalculate() {
+  let params = {};
+  $('input[type=number].stock-shares').each(function(){
+    let id = $(this).attr('id');
+    let shares = parseFloat($('#'+id).val());
+    if (shares > 0.0) {
+      if (typeof params[id] === 'undefined') {
+        params[id] = [];
+      }
+      params[id].push(''+shares);
+    }
+  });
+  updateUrl(params);
 
   results = {};
 
