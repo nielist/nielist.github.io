@@ -323,7 +323,8 @@ function onChangeStockInfo() {
     let price = stock['price'];
     if ($('#'+symbol).length > 0 && $('#'+symbol+'-invest').length > 0) {
       let shares = parseFloat($('#'+symbol).val());
-      $('#'+symbol+'-invest').html(shares * price);
+      let usdhkd = parseFloat($('#USDHKD').val());
+      $('#'+symbol+'-invest').html((shares * price * usdhkd).toFixed(2));
     }
   }
 }
