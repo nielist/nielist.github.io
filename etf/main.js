@@ -337,11 +337,11 @@ function onClickAddNewStock() {
       html += '</div>';
       html += '<div class="input-group mb-3 input-group-lg">';
       html += '<div class="input-group-prepend">';
-      html += '<span class="input-group-text">' + id + ' = $<span id="' + id + '-invest">0.00</span> = </span>';
+      html += '<span class="input-group-text">' + id + ' = </span>';
       html += '</div>';
-      html += '<input type="number" step="0.01" min="0.00" value="0.00" data-value="0.00" class="form-control" id="' + id + '" placeholder="Enter Shares (e.g. 123)">';
-      html += '<div class="input-group-append d-none">';
-      html += '<span class="input-group-text"></span>';
+      html += '<input type="number" step="0.01" min="0" value="0" data-value="0" class="form-control" id="' + id + '" placeholder="Enter Shares (e.g. 123)">';
+      html += '<div class="input-group-append">';
+      html += '<span class="input-group-text"> = $<span id="' + id + '-invest">0.00</span></span>';
       html += '</div>';
       html += '</div>';
 
