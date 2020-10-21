@@ -41,7 +41,8 @@ function getStockInfoJson(symbol, assetClass, callback) {
       typeof assetClass === 'undefined' || assetClass === '') {
     return;
   }
-  $.getJSON(`https://api.nasdaq.com/api/quote/${symbol}/info?assetclass=${assetClass}`, function (data) {
+  $.getJSON('https://api.allorigins.win/get?url=' +
+            encodeURIComponent(`https://api.nasdaq.com/api/quote/${symbol}/info?assetclass=${assetClass}`), function (data) {
       let response = '';
       console.log(data);
   });
