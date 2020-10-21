@@ -328,7 +328,7 @@ function onClickAddNewStock() {
       html += '<input type="number" step="0.01" value="0" data-value="0" class="form-control" id="' + id + '">';
       html += '</div>';
 
-      $('input[type=number].form-control').last().parent().after(html);
+      $('#form-first-element').after(html);
     }
   }
 
