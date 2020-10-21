@@ -11,6 +11,35 @@ String.prototype.capitalize = function(){
     .join(' ');
 }
 
+/*
+//https://stackoverflow.com/questions/610406/javascript-equivalent-to-printf-string-format
+// Method 1:
+let soMany = 10;
+console.log(`This is ${soMany} times easier!`);
+// Method 2:
+//"{0} is dead, but {1} is alive! {0} {2}".format("ASP", "ASP.NET")
+String.prototype.format = function() {
+  var args = arguments;
+  return this.replace(/{(\d+)}/g, function(match, number) { 
+    return typeof args[number] != 'undefined'
+      ? args[number]
+      : match
+    ;
+  });
+};
+// Method 3:
+//String.format('{0} is dead, but {1} is alive! {0} {2}', 'ASP', 'ASP.NET');
+String.format = function(format) {
+  var args = Array.prototype.slice.call(arguments, 1);
+  return format.replace(/{(\d+)}/g, function(match, number) { 
+    return typeof args[number] != 'undefined'
+      ? args[number] 
+      : match
+    ;
+  });
+};
+*/
+
 String.prototype.isNumber = function(){
   return /^\d+$/.test(this);
 }
