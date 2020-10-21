@@ -6,7 +6,7 @@ var ajax_retry_times_max = domain.length - 1;
 var unixtimestamp = Math.floor(Date.now() / 1000);
 var unixtimestampper15mins = Math.floor(unixtimestamp / 1000);
 
-var ajax_pending = [];
+var ajax_pending = {};
 ajax_pending['VOO' ] = (1 << 0);
 ajax_pending['QQQ' ] = (1 << 1);
 ajax_pending['ARKK'] = (1 << 2);
@@ -15,7 +15,7 @@ ajax_pending['ARKW'] = (1 << 4);
 ajax_pending['ARKG'] = (1 << 5);
 ajax_pending['ARKF'] = (1 << 6);
 
-var csv_obj = [];
+var csv_obj = {};
 csv_obj['VOO' ] = [];
 csv_obj['QQQ' ] = [];
 csv_obj['ARKK'] = [];
@@ -24,7 +24,7 @@ csv_obj['ARKW'] = [];
 csv_obj['ARKG'] = [];
 csv_obj['ARKF'] = [];
 
-var stock_info = [];
+var stock_info = {};
 
 function isAjaxDone(file_list) {
   let result = 0;
@@ -49,7 +49,7 @@ function getStockInfoJson(symbol, assetClass, callback) {
       let response = JSON.parse(data.contents);
       if (typeof response.status !== 'undefined' && response.status.rCode == 200) {
         let symbol = response.data.symbol.toUpperCase();
-        stock_info[symbol] = [];
+        stock_info[symbol] = {};
         stock_info[symbol]['symbol'] = symbol;
         stock_info[symbol]['company'] = response.data.companyName;
         stock_info[symbol]['price'] = parseFloat(response.data.primaryData.lastSalePrice.replace(/\$/g, ''));
