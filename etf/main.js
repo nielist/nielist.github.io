@@ -125,7 +125,9 @@ function onReadyCsv() {
           }
         }
       }
-      onClickCalculate();
+      setTimeout(function(){
+        onClickCalculate();
+      }, 2000);
     }, 0);
   }
 }
