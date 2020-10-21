@@ -36,6 +36,17 @@ function onCompleteAjax(file_name) {
   ajax_pending[file_name] = 0;
 }
 
+function getStockInfoJson(symbol, assetClass, callback) {
+  if (typeof symbol === 'undefined' || symbol === '' ||
+      typeof assetClass === 'undefined' || assetClass === '') {
+    return;
+  }
+  $.getJSON(`https://api.nasdaq.com/api/quote/${symbol}/info?assetclass=${assetClass}`, function (data) {
+      let response = '';
+      console.log(data);
+  });
+}
+
 function getVOOHtml(callback) {
   $.getJSON('https://api.allorigins.win/get?url=' +
             encodeURIComponent('https://www.slickcharts.com/sp500'), function (data) {
