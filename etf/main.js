@@ -316,6 +316,12 @@ function onClickAddNewStock() {
   if (typeof id !== 'undefined' && id !== '') {
     id = id.toUpperCase();
 
+    let assetClass = 'stocks';
+    if (etf_funds.indexOf(id) >= 0) {
+      assetClass = 'etf';
+    }
+    getStockInfoJson(id, assetClass);
+
     if ($('#'+id).length <= 0) {
       let html = '';
       html += '<div class="progress">';
