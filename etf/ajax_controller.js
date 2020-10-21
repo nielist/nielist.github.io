@@ -44,6 +44,9 @@ function getStockInfoJson(symbol, assetClass, callback) {
   $.getJSON('https://api.allorigins.win/get?url=' +
             encodeURIComponent(`https://api.nasdaq.com/api/quote/${symbol}/info?assetclass=${assetClass}`), function (data) {
       let response = data.contents;
+      console.log(response);
+      console.log(response.status);
+      console.log(response.status.rCode);
       if (typeof response.status !== 'undefined' && response.status.rCode == 200) {
         let obj = {};
         obj['symbol'] = response.data.symbol;
