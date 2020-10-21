@@ -312,9 +312,8 @@ function onReadyARKFDataInit() {
   }
 }
 
-function onReadyStockInfoDataInit(symbol) {
-  console.log(symbol);
-  console.log(stock_info[symbol]);
+function onReadyStockInfoDataInit() {
+  console.log(stock_info);
 }
 
 function onClickAddNewStock() {
@@ -328,7 +327,7 @@ function onClickAddNewStock() {
       if (etf_funds.indexOf(id) >= 0) {
         assetClass = 'etf';
       }
-      getStockInfoJson(id, assetClass, onReadyStockInfoDataInit(id));
+      getStockInfoJson(id, assetClass, onReadyStockInfoDataInit);
     }
 
     if ($('#'+id).length <= 0) {
