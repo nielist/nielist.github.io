@@ -43,8 +43,21 @@ function getStockInfoJson(symbol, assetClass, callback) {
   }
   $.getJSON('https://api.allorigins.win/get?url=' +
             encodeURIComponent(`https://api.nasdaq.com/api/quote/${symbol}/info?assetclass=${assetClass}`), function (data) {
-      let response = '';
-      console.log(data);
+      let response = data.contents;
+      if (typeof response.status !== 'undefined' && response.status.rCode == 200) {
+        let obj = {};
+        obj['symbol'] = response.data.symbol;
+        obj['company'] = response.data.companyName;
+        obj['price'] = response.data.primaryData.lastSalePrice;
+        obj['netChange'] = response.data.primaryData.netChange;
+        obj['percentageChange'] = response.data.primaryData.percentageChange;
+        obj['volume'] = response.data.keyStats.Volume.value;
+        obj['previousClose'] = response.data.keyStats.PreviousClose.value;
+        obj['openPrice'] = response.data.keyStats.OpenPrice.value;
+        obj['marketCap'] = response.data.keyStats.MarketCap.value;
+        console.log(obj);
+        callback();
+      }
   });
 }
 
