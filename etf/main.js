@@ -313,7 +313,19 @@ function onReadyARKFDataInit() {
 }
 
 function onReadyStockInfoDataInit() {
-  console.log(stock_info);
+  onChangeStockInfo();
+  return false;
+}
+
+function onChangeStockInfo() {
+  for (const stock of Object.values(stock_info)) {
+    let symbol = stock['symbol'];
+    let price = stock['price'];
+    if ($('#'+symbol).length > 0 && $('#'+symbol+'-invest').length > 0) {
+      let shares = parseFloat($('#'+symbol).val());
+      $('#'+symbol+'-invest').html(shares * price);
+    }
+  }
 }
 
 function onClickAddNewStock() {
@@ -339,7 +351,7 @@ function onClickAddNewStock() {
       html += '<div class="input-group-prepend">';
       html += '<span class="input-group-text">' + id + ' = </span>';
       html += '</div>';
-      html += '<input type="number" step="0.01" min="0" value="0" data-value="0" class="form-control stock-shares" id="' + id + '" placeholder="Enter Shares (e.g. 123)">';
+      html += '<input type="number" step="0.01" min="0" value="0" data-value="0" class="form-control stock-shares" id="' + id + '" placeholder="Enter Shares (e.g. 123)" onchange="onChangeStockInfo()">';
       html += '<div class="input-group-append">';
       html += '<span class="input-group-text"> = $<span class="stock-invest" id="' + id + '-invest">0.00</span></span>';
       html += '</div>';
