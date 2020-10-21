@@ -25,6 +25,12 @@ csv_obj['ARKG'] = [];
 csv_obj['ARKF'] = [];
 
 var stock_info = {};
+stock_info['HKD'] = {};
+stock_info['HKD']['symbol'] = 'HKD';
+stock_info['HKD']['price'] = 1.0;
+stock_info['USD'] = {};
+stock_info['USD']['symbol'] = 'USD';
+stock_info['USD']['price'] = parseFloat($('#USDHKD').val());
 
 function isAjaxDone(file_list) {
   let result = 0;
