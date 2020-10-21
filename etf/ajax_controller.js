@@ -24,6 +24,8 @@ csv_obj['ARKW'] = [];
 csv_obj['ARKG'] = [];
 csv_obj['ARKF'] = [];
 
+var stock_info = [];
+
 function isAjaxDone(file_list) {
   let result = 0;
   for (let i = 0; i < file_list.length; i++) {
@@ -41,18 +43,19 @@ function getStockInfoJson(symbol, assetClass, callback) {
       typeof assetClass === 'undefined' || assetClass === '') {
     return;
   }
+  symbol = symbol.toUpperCase();
   $.getJSON('https://api.allorigins.win/get?url=' +
             encodeURIComponent(`https://api.nasdaq.com/api/quote/${symbol}/info?assetclass=${assetClass}`), function (data) {
       let response = JSON.parse(data.contents);
       if (typeof response.status !== 'undefined' && response.status.rCode == 200) {
-        let obj = {};
-        obj['symbol'] = response.data.symbol.toUpperCase();
-        obj['company'] = response.data.companyName;
-        obj['price'] = parseFloat(response.data.primaryData.lastSalePrice.replace(/\$/g, ''));
-        obj['netChange'] = parseFloat(response.data.primaryData.netChange);
-        obj['percentageChange'] = parseFloat(response.data.primaryData.percentageChange.replace(/%/g, ''));
-        obj['volume'] = parseInt(response.data.keyStats.Volume.value.replace(/,/g, ''));
-        console.log(obj);
+        let symbol = response.data.symbol.toUpperCase();
+        stock_info[symbol] = [];
+        stock_info[symbol]['symbol'] = symbol;
+        stock_info[symbol]['company'] = response.data.companyName;
+        stock_info[symbol]['price'] = parseFloat(response.data.primaryData.lastSalePrice.replace(/\$/g, ''));
+        stock_info[symbol]['netChange'] = parseFloat(response.data.primaryData.netChange);
+        stock_info[symbol]['percentageChange'] = parseFloat(response.data.primaryData.percentageChange.replace(/%/g, ''));
+        stock_info[symbol]['volume'] = parseInt(response.data.keyStats.Volume.value.replace(/,/g, ''));
         callback();
       }
   });
