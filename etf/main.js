@@ -329,6 +329,10 @@ function onChangeStockInfo() {
   }
 }
 
+function onChangeUSDHKD() {
+  stock_info['USD']['price'] = parseFloat($('#USDHKD').val());
+}
+
 function onClickAddNewStock() {
   let id = $('input[type=text]#Code').val();
 
