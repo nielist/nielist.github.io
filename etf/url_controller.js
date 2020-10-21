@@ -21,5 +21,8 @@ function updateUrl(params) {
   }
 
   let queryString = urlParams.toString();
-  window.history.replaceState({}, '', `${window.location.pathname}?${queryString}`);
+  if (queryString.length > 0) {
+    queryString = '?' + queryString;
+  }
+  window.history.replaceState({}, '', `${window.location.pathname}${queryString}`);
 }
