@@ -1,4 +1,8 @@
 
+Stock Price
+https://api.nasdaq.com/api/quote/ARKK/info?assetclass=etf
+https://api.nasdaq.com/api/quote/AAPL/info?assetclass=stocks
+
 S&P500 / VOO
 https://www.barchart.com/etfs-funds/quotes/VOO/constituents
 https://www.slickcharts.com/sp500
