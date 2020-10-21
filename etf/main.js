@@ -94,6 +94,18 @@ function onReadyCsv() {
       onReadyARKGDataInit();
       onReadyARKFDataInit();
       //console.log(etf_constituents);
+      for (const id of Object.values(etf_funds)) {
+        if ($('#'+id).length <= 0) {
+          $('input[type=text]#Code').val(id);
+          onClickAddNewStock();
+        }
+      }
+      for (const id of Object.values(['Currency'])) {
+        if ($('#'+id).length <= 0) {
+          $('input[type=text]#Code').val(id);
+          onClickAddNewStock();
+        }
+      }
       let params = getUrlParams();
       for (const key of params.keys()) {
         if ($('#'+key).length <= 0) {
