@@ -127,7 +127,7 @@ function onReadyCsv() {
       }
       setTimeout(function(){
         onClickCalculate();
-      }, 5000);
+      }, 2000);
     }, 0);
   }
 }
@@ -373,13 +373,10 @@ function onChangeStockInfo() {
       }
     }
   });
-
-  return false;
 }
 
 function onChangeUSDHKD() {
   onChangeStockInfo();
-  return false;
 }
 
 function onClickAddNewStock() {
