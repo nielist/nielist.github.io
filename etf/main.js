@@ -327,14 +327,14 @@ function onChangeStockInfo() {
       if (symbol === 'HKD') {
         invest = shares * price;
       }
-      $('#'+symbol+'-invest').val(invest);
+      $('#'+symbol+'-invest').attr('data-value', invest);
       $('#'+symbol+'-invest').html(invest.toFixed(2));
     }
   }
 
   $('input[type=number].stock-shares').each(function(){
     let id = $(this).attr('id');
-    investment[id] = parseFloat($('#'+id+'-invest').val());
+    investment[id] = parseFloat($('#'+id+'-invest').attr('data-value'));
   });
 
   investment['total'] = 0.0;
@@ -348,7 +348,7 @@ function onChangeStockInfo() {
   $.each(investment, function(key, value) {
     if (key !== 'total') {
       let percent = 100.0 * investment[key] / investment['total'];
-      $('#'+key+'-percent').val(percent);
+      $('#'+key+'-percent').attr('data-value', percent);
       $('#'+key+'-percent').css('width',''+percent+'%');
       $('#'+key+'-percent').html(''+percent.toFixed(1)+'%');
       $('#'+key+'-percent').removeClass('bg-success');
@@ -396,7 +396,7 @@ function onClickAddNewStock() {
     if ($('#'+id).length <= 0) {
       let html = '';
       html += '<div class="progress">';
-      html += '<div class="progress-bar progress-bar-striped progress-bar-animated stock-percent" id="' + id + '-percent" value="0" style="width:0%"></div>';
+      html += '<div class="progress-bar progress-bar-striped progress-bar-animated stock-percent" id="' + id + '-percent" data-value="0" style="width:0%"></div>';
       html += '</div>';
       html += '<div class="input-group mb-3 input-group-lg">';
       html += '<div class="input-group-prepend">';
@@ -404,7 +404,7 @@ function onClickAddNewStock() {
       html += '</div>';
       html += '<input type="number" step="0.01" min="0" value="0" data-value="0" class="form-control stock-shares" id="' + id + '" placeholder="Enter Shares (e.g. 123)" onchange="onChangeStockInfo()">';
       html += '<div class="input-group-append">';
-      html += '<span class="input-group-text"> = $<span class="stock-invest" id="' + id + '-invest" value="0">0.00</span></span>';
+      html += '<span class="input-group-text"> = $<span class="stock-invest" id="' + id + '-invest" data-value="0">0.00</span></span>';
       html += '</div>';
       html += '</div>';
 
