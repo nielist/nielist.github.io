@@ -1,3 +1,4 @@
+const currency_codes = ['CURRENCY'];
 const etf_funds = ['VOO', 'QQQ', 'ARKK', 'ARKQ', 'ARKW', 'ARKG', 'ARKF'];
 var etf_constituents = [];
 var investment = {};
@@ -94,13 +95,14 @@ function onReadyCsv() {
       onReadyARKGDataInit();
       onReadyARKFDataInit();
       //console.log(etf_constituents);
+
       for (const id of Object.values(etf_funds)) {
         if ($('#'+id).length <= 0) {
           $('input[type=text]#Code').val(id);
           onClickAddNewStock();
         }
       }
-      for (const id of Object.values(['Currency'])) {
+      for (const id of Object.values(currency_codes)) {
         if ($('#'+id).length <= 0) {
           $('input[type=text]#Code').val(id);
           onClickAddNewStock();
@@ -316,11 +318,13 @@ function onClickAddNewStock() {
   if (typeof id !== 'undefined' && id !== '') {
     id = id.toUpperCase();
 
-    let assetClass = 'stocks';
-    if (etf_funds.indexOf(id) >= 0) {
-      assetClass = 'etf';
+    if (currency_codes.indexOf(id) < 0) {
+      let assetClass = 'stocks';
+      if (etf_funds.indexOf(id) >= 0) {
+        assetClass = 'etf';
+      }
+      getStockInfoJson(id, assetClass);
     }
-    getStockInfoJson(id, assetClass);
 
     if ($('#'+id).length <= 0) {
       let html = '';
