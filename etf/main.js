@@ -1,4 +1,4 @@
-const currency_codes = ['HKD'];
+const currency_codes = ['USD', 'HKD'];
 const etf_funds = ['VOO', 'QQQ', 'ARKK', 'ARKQ', 'ARKW', 'ARKG', 'ARKF'];
 var etf_constituents = [];
 var investment = {};
