@@ -314,7 +314,6 @@ function onReadyARKFDataInit() {
 
 function onReadyStockInfoDataInit() {
   onChangeStockInfo();
-  return false;
 }
 
 function onChangeStockInfo() {
@@ -327,10 +326,12 @@ function onChangeStockInfo() {
       $('#'+symbol+'-invest').html((shares * price * usdhkd).toFixed(2));
     }
   }
+  return false;
 }
 
 function onChangeUSDHKD() {
   stock_info['USD']['price'] = parseFloat($('#USDHKD').val());
+  return false;
 }
 
 function onClickAddNewStock() {
