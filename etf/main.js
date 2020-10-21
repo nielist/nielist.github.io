@@ -337,9 +337,12 @@ function onClickAddNewStock() {
       html += '</div>';
       html += '<div class="input-group mb-3 input-group-lg">';
       html += '<div class="input-group-prepend">';
-      html += '<span class="input-group-text">' + id + ' = $</span>';
+      html += '<span class="input-group-text">' + id + ' = </span>';
       html += '</div>';
-      html += '<input type="number" step="0.01" value="0" data-value="0" class="form-control" id="' + id + '">';
+      html += '<input type="number" step="0.01" value="0" data-value="0" class="form-control" id="' + id + '" placeholder="Enter Shares (e.g. 123)>';
+      html += '<div class="input-group-append">';
+      html += '<span class="input-group-text"> = $<span id="' + id + '-invest"></span></span>';
+      html += '</div>';
       html += '</div>';
 
       $('input[type=text]#Code').parent().before(html);
