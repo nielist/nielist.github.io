@@ -404,6 +404,7 @@ function onClickAddNewStock() {
       html += '<a href="' + `https://finance.yahoo.com/quote/${id}/options?p=${id}&straddle=true` + '" target="_blank">';
       html += id;
       html += '</a>';
+      html += '&nbsp;';
       html += ' = </span>';
       html += '</div>';
       html += '<input type="number" step="0.01" min="0" value="0" data-value="0" class="form-control stock-shares" id="' + id + '" placeholder="Enter Shares (e.g. 123)" onchange="onChangeStockInfo()">';
@@ -531,7 +532,11 @@ function constructDataTable() {
         for (let c = 0; c < etf_funds.length; c++) {
           let fund = etf_funds[c];
           if (typeof sortedResults[i].investment[fund] !== 'undefined' && sortedResults[i].investment[fund] > 0.0) {
-            html += '<br/>(' + fund + ' = $';
+            html += '<br/>(';
+            html += '<a href="' + `https://finance.yahoo.com/quote/${fund}/options?p=${fund}&straddle=true` + '" target="_blank">';
+            html += fund;
+            html += '</a>';
+            html += ' = $';
             html += sortedResults[i].investment[fund].toFixed(2);
             html += ')';
           }
