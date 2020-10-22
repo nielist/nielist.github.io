@@ -28,9 +28,11 @@ var stock_info = {};
 stock_info['HKD'] = {};
 stock_info['HKD']['symbol'] = 'HKD';
 stock_info['HKD']['price'] = 1.0;
+/*
 stock_info['USD'] = {};
 stock_info['USD']['symbol'] = 'USD';
 stock_info['USD']['price'] = 1.0;
+*/
 
 function isAjaxDone(file_list) {
   let result = 0;
