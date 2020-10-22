@@ -410,7 +410,7 @@ function onClickAddNewStock() {
       html += '</a>';
       html += '&nbsp;= </span>';
       html += '</div>';
-      html += '<input type="number" step="0.01" min="0" value="0" data-value="0" class="form-control stock-shares" id="' + id + '" placeholder="Enter Shares (e.g. 123)" onchange="onChangeStockInfo()">';
+      html += '<input type="number" step="1.00" min="0" value="0" data-value="0" class="form-control stock-shares" id="' + id + '" placeholder="Enter Shares (e.g. 123)" onchange="onChangeStockInfo()">';
       html += '<div class="input-group-append">';
       html += '<span class="input-group-text"> = HKD $<span class="stock-invest" id="' + id + '-invest" data-value="0">0.00</span></span>';
       html += '</div>';
