@@ -357,15 +357,13 @@ function onChangeStockInfo() {
       $('#'+key+'-percent').removeClass('bg-info');
       $('#'+key+'-percent').removeClass('bg-warning');
       $('#'+key+'-percent').removeClass('bg-danger');
-      if (percent < 10.0) {
-      }
-      else if (percent < 20.0) {
-        $('#'+key+'-percent').addClass('bg-success');
-      }
-      else if (percent < 30.0) {
+      if (percent < (1.0 / 10)) {
         $('#'+key+'-percent').addClass('bg-info');
       }
-      else if (percent < 40.0) {
+      else if (percent < (1.0 / 5)) {
+        $('#'+key+'-percent').addClass('bg-success');
+      }
+      else if (percent < (1.0 / 3)) {
         $('#'+key+'-percent').addClass('bg-warning');
       }
       else {
