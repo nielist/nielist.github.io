@@ -408,8 +408,7 @@ function onClickAddNewStock() {
       html += '<a href="' + `https://finance.yahoo.com/quote/${stock_quote}/options?p=${stock_quote}&straddle=true` + '" target="_blank">';
       html += id;
       html += '</a>';
-      html += '&nbsp;';
-      html += ' = </span>';
+      html += '&nbsp;= </span>';
       html += '</div>';
       html += '<input type="number" step="0.01" min="0" value="0" data-value="0" class="form-control stock-shares" id="' + id + '" placeholder="Enter Shares (e.g. 123)" onchange="onChangeStockInfo()">';
       html += '<div class="input-group-append">';
