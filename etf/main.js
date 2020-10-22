@@ -400,7 +400,11 @@ function onClickAddNewStock() {
       html += '</div>';
       html += '<div class="input-group mb-3 input-group-lg">';
       html += '<div class="input-group-prepend">';
-      html += '<span class="input-group-text">' + id + ' = </span>';
+      html += '<span class="input-group-text">';
+      html += '<a href="' + `https://finance.yahoo.com/quote/${id}/options?p=${id}&straddle=true` + '" target="_blank">';
+      html += id;
+      html += '</a>';
+      html += ' = </span>';
       html += '</div>';
       html += '<input type="number" step="0.01" min="0" value="0" data-value="0" class="form-control stock-shares" id="' + id + '" placeholder="Enter Shares (e.g. 123)" onchange="onChangeStockInfo()">';
       html += '<div class="input-group-append">';
@@ -489,7 +493,9 @@ function constructDataTable() {
       if (typeof sortedResults[i].investment.total !== 'undefined' && sortedResults[i].investment.total > 0.0) {
         html += '<tr>';
         html += '<td>';
+        html += '<a href="' + `https://finance.yahoo.com/quote/${sortedResults[i].ticker}/options?p=${sortedResults[i].ticker}&straddle=true` + '" target="_blank">';
         html += sortedResults[i].ticker;
+        html += '</a>';
         if (sortedResults[i].ticker !== sortedResults[i].company) {
           html += '<br/>(';
           html += sortedResults[i].company;
@@ -511,7 +517,11 @@ function constructDataTable() {
         for (let c = 0; c < individual_stocks.length; c++) {
           let fund = individual_stocks[c];
           if (typeof sortedResults[i].investment[fund] !== 'undefined' && sortedResults[i].investment[fund] > 0.0) {
-            html += '<br/>(' + fund + ' = $';
+            html += '<br/>(';
+            html += '<a href="' + `https://finance.yahoo.com/quote/${fund}/options?p=${fund}&straddle=true` + '" target="_blank">';
+            html += fund;
+            html += '</a>';
+            html += ' = $';
             html += sortedResults[i].investment[fund].toFixed(2);
             html += ')';
           }
