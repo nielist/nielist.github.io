@@ -29,6 +29,7 @@ stock_info['HKD'] = {};
 stock_info['HKD']['symbol'] = 'HKD';
 stock_info['HKD']['price'] = 1.0;
 /*
+// 'USD' should be ETF
 stock_info['USD'] = {};
 stock_info['USD']['symbol'] = 'USD';
 stock_info['USD']['price'] = 1.0;
