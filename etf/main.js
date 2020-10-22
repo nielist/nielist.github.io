@@ -1,4 +1,4 @@
-const currency_codes = ['USD', 'HKD'];
+const currency_codes = ['HKD']; // 'USD' should be ETF
 const etf_funds = ['VOO', 'QQQ', 'ARKK', 'ARKQ', 'ARKW', 'ARKG', 'ARKF'];
 var etf_constituents = [];
 var investment = {};
@@ -401,7 +401,11 @@ function onClickAddNewStock() {
       html += '<div class="input-group mb-3 input-group-lg">';
       html += '<div class="input-group-prepend">';
       html += '<span class="input-group-text">';
-      html += '<a href="' + `https://finance.yahoo.com/quote/${id}/options?p=${id}&straddle=true` + '" target="_blank">';
+      let stock_quote = id;
+      if (currency_codes.indexOf(stock_quote) >= 0) {
+        stock_quote = stock_quote + '%3DX';
+      }
+      html += '<a href="' + `https://finance.yahoo.com/quote/${stock_quote}/options?p=${stock_quote}&straddle=true` + '" target="_blank">';
       html += id;
       html += '</a>';
       html += '&nbsp;';
@@ -494,7 +498,11 @@ function constructDataTable() {
       if (typeof sortedResults[i].investment.total !== 'undefined' && sortedResults[i].investment.total > 0.0) {
         html += '<tr>';
         html += '<td>';
-        html += '<a href="' + `https://finance.yahoo.com/quote/${sortedResults[i].ticker}/options?p=${sortedResults[i].ticker}&straddle=true` + '" target="_blank">';
+        let stock_quote = sortedResults[i].ticker;
+        if (currency_codes.indexOf(stock_quote) >= 0) {
+          stock_quote = stock_quote + '%3DX';
+        }
+        html += '<a href="' + `https://finance.yahoo.com/quote/${stock_quote}/options?p=${stock_quote}&straddle=true` + '" target="_blank">';
         html += sortedResults[i].ticker;
         html += '</a>';
         if (sortedResults[i].ticker !== sortedResults[i].company) {
@@ -519,7 +527,11 @@ function constructDataTable() {
           let fund = individual_stocks[c];
           if (typeof sortedResults[i].investment[fund] !== 'undefined' && sortedResults[i].investment[fund] > 0.0) {
             html += '<br/>(';
-            html += '<a href="' + `https://finance.yahoo.com/quote/${fund}/options?p=${fund}&straddle=true` + '" target="_blank">';
+            stock_quote = fund;
+            if (currency_codes.indexOf(stock_quote) >= 0) {
+              stock_quote = stock_quote + '%3DX';
+            }
+            html += '<a href="' + `https://finance.yahoo.com/quote/${stock_quote}/options?p=${stock_quote}&straddle=true` + '" target="_blank">';
             html += fund;
             html += '</a>';
             html += ' = $';
@@ -533,7 +545,11 @@ function constructDataTable() {
           let fund = etf_funds[c];
           if (typeof sortedResults[i].investment[fund] !== 'undefined' && sortedResults[i].investment[fund] > 0.0) {
             html += '<br/>(';
-            html += '<a href="' + `https://finance.yahoo.com/quote/${fund}/options?p=${fund}&straddle=true` + '" target="_blank">';
+            stock_quote = fund;
+            if (currency_codes.indexOf(stock_quote) >= 0) {
+              stock_quote = stock_quote + '%3DX';
+            }
+            html += '<a href="' + `https://finance.yahoo.com/quote/${stock_quote}/options?p=${stock_quote}&straddle=true` + '" target="_blank">';
             html += fund;
             html += '</a>';
             html += ' = $';
