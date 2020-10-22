@@ -96,13 +96,13 @@ function onReadyCsv() {
       onReadyARKFDataInit();
       //console.log(etf_constituents);
 
-      for (const id of Object.values(etf_funds)) {
+      for (const id of Object.values(currency_codes)) {
         if ($('#'+id).length <= 0) {
           $('input[type=text]#Code').val(id);
           onClickAddNewStock();
         }
       }
-      for (const id of Object.values(currency_codes)) {
+      for (const id of Object.values(etf_funds)) {
         if ($('#'+id).length <= 0) {
           $('input[type=text]#Code').val(id);
           onClickAddNewStock();
