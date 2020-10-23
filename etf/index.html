@@ -60,6 +60,50 @@
 <div class="jumbotron text-center">
   <h1>ETF Constituent Explorer</h1>
   <p>v2.3</p>
+  <p>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#refUrlsModal">Reference URLs</button>
+    <div class="modal fade" id="refUrlsModal">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Reference URLs</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div id="refUrlsAccordion">
+              <div class="card">
+                <div class="card-header">
+                  <a class="card-link" data-toggle="collapse" href="#refUrlsCollapse1">Useful Services</a>
+                </div>
+                <div id="refUrlsCollapse1" class="collapse show" data-parent="#refUrlsAccordion">
+                  <div class="card-body">
+                    <a href="https://finviz.com/" target="_blank">finviz.com</a><br/>
+                    <a href="https://www.marketwatch.com/" target="_blank">marketwatch.com</a><br/>
+                    <a href="https://finance.yahoo.com/" target="_blank">finance.yahoo.com</a><br/>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <a class="collapsed card-link" data-toggle="collapse" href="#refUrlsCollapse2">Trade Calendars</a>
+                </div>
+                <div id="refUrlsCollapse2" class="collapse" data-parent="#refUrlsAccordion">
+                  <div class="card-body">
+                    <a href="https://www.theocc.com/Clearance-and-Settlement/Expiration-Calendars" target="_blank">theocc.com</a><br/>
+                    <a href="https://www.marketwatch.com/optionscenter/calendar" target="_blank">marketwatch.com</a><br/>
+                    <a href="https://www.nasdaq.net/PublicPages/assets/MyMID/Trade_Calendar_2020.pdf" target="_blank">nasdaq.net</a><br/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </p>
 </div>
 
 <div class="container">
