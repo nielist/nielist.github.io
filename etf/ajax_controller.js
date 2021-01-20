@@ -14,6 +14,8 @@ ajax_pending['ARKQ'] = (1 << 3);
 ajax_pending['ARKW'] = (1 << 4);
 ajax_pending['ARKG'] = (1 << 5);
 ajax_pending['ARKF'] = (1 << 6);
+ajax_pending['PRNT'] = (1 << 7);
+ajax_pending['IZRL'] = (1 << 8);
 
 var csv_obj = {};
 csv_obj['VOO' ] = [];
@@ -23,6 +25,8 @@ csv_obj['ARKQ'] = [];
 csv_obj['ARKW'] = [];
 csv_obj['ARKG'] = [];
 csv_obj['ARKF'] = [];
+csv_obj['PRNT'] = [];
+csv_obj['IZRL'] = [];
 
 var stock_info = {};
 stock_info['HKD'] = {};
@@ -290,6 +294,80 @@ function getARKFCsv(callback) {
       if (ajax_retry_times < ajax_retry_times_max) {
         ++ajax_retry_times;
         getARKFCsv(callback);
+      }
+    }
+  });
+}
+
+function getPRNTCsv(callback) {
+  $.ajax({
+    type: "GET",
+    url: "https://api.allorigins.win/get?url=" +
+         encodeURIComponent(
+           domain[ajax_retry_times] + "THE_3D_PRINTING_ETF_PRNT_HOLDINGS.csv?t=" + unixtimestampper15mins
+         ),
+    dataType: "json",
+    //dataType: "text",
+    //dataType: "jsonp",
+    //jsonpCallback: callback,
+    //crossDomain: true,
+    cache: false,
+    success: function(response)
+    {
+      response = response.contents;
+      csv_obj['PRNT'] = $.csv.toObjects(response);
+      if (csv_obj['PRNT'].length > 0) {
+        onCompleteAjax('PRNT');
+        callback();
+      }
+      // if no result
+      else if (ajax_retry_times < ajax_retry_times_max) {
+        ++ajax_retry_times;
+        getPRNTCsv(callback);
+      }
+    },
+    error: function()
+    {
+      if (ajax_retry_times < ajax_retry_times_max) {
+        ++ajax_retry_times;
+        getPRNTCsv(callback);
+      }
+    }
+  });
+}
+
+function getIZRLCsv(callback) {
+  $.ajax({
+    type: "GET",
+    url: "https://api.allorigins.win/get?url=" +
+         encodeURIComponent(
+           domain[ajax_retry_times] + "ARK_ISRAEL_INNOVATIVE_TECHNOLOGY_ETF_IZRL_HOLDINGS.csv?t=" + unixtimestampper15mins
+         ),
+    dataType: "json",
+    //dataType: "text",
+    //dataType: "jsonp",
+    //jsonpCallback: callback,
+    //crossDomain: true,
+    cache: false,
+    success: function(response)
+    {
+      response = response.contents;
+      csv_obj['IZRL'] = $.csv.toObjects(response);
+      if (csv_obj['IZRL'].length > 0) {
+        onCompleteAjax('IZRL');
+        callback();
+      }
+      // if no result
+      else if (ajax_retry_times < ajax_retry_times_max) {
+        ++ajax_retry_times;
+        getIZRLCsv(callback);
+      }
+    },
+    error: function()
+    {
+      if (ajax_retry_times < ajax_retry_times_max) {
+        ++ajax_retry_times;
+        getIZRLCsv(callback);
       }
     }
   });
