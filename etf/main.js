@@ -1,5 +1,5 @@
 const currency_codes = ['HKD']; // 'USD' should be ETF
-const etf_funds = ['VOO', 'QQQ', 'ARKK', 'ARKQ', 'ARKW', 'ARKG', 'ARKF'];
+const etf_funds = ['VOO', 'QQQ', 'ARKK', 'ARKQ', 'ARKW', 'ARKG', 'ARKF', 'PRNT', 'IZRL'];
 var etf_constituents = [];
 var investment = {};
 var results = {};
@@ -74,6 +74,8 @@ $(document).ready(function(){
   getARKWCsv(onReadyCsv);
   getARKGCsv(onReadyCsv);
   getARKFCsv(onReadyCsv);
+  getPRNTCsv(onReadyCsv);
+  getIZRLCsv(onReadyCsv);
   $("#Add").click(function(e){
     e.preventDefault();
     onClickAddNewStock();
@@ -85,7 +87,7 @@ $(document).ready(function(){
 });
 
 function onReadyCsv() {
-  if (isAjaxDone(['VOO', 'QQQ', 'ARKK', 'ARKQ', 'ARKW', 'ARKG', 'ARKF'])) {
+  if (isAjaxDone(['VOO', 'QQQ', 'ARKK', 'ARKQ', 'ARKW', 'ARKG', 'ARKF', 'PRNT', 'IZRL'])) {
     setTimeout(function(){
       onReadyVOODataInit();
       onReadyQQQDataInit();
@@ -94,6 +96,8 @@ function onReadyCsv() {
       onReadyARKWDataInit();
       onReadyARKGDataInit();
       onReadyARKFDataInit();
+      onReadyPRNTDataInit();
+      onReadyIZRLDataInit();
       //console.log(etf_constituents);
 
       for (const id of Object.values(currency_codes)) {
@@ -296,6 +300,58 @@ function onReadyARKFDataInit() {
     obj['ticker'] = csv_obj['ARKF'][i]['ticker'];
     obj['company'] = csv_obj['ARKF'][i]['company'];
     obj['weight'] = csv_obj['ARKF'][i]['weight(%)'];
+    if (obj['ticker'] === '') {
+      obj['ticker'] = obj['company'];
+    }
+    if (typeof obj['weight'] === 'undefined') {
+      //console.log(obj);
+    }
+    if (obj['weight'] !== '' && typeof obj['weight'] !== 'undefined') {
+      if (obj['weight'].isFloat()) {
+        obj['weight'] = parseFloat(obj['weight']);
+      }
+      else {
+        obj['weight'] = 0.0;
+      }
+      etf_constituents.push(obj);
+    }
+  }
+}
+
+function onReadyPRNTDataInit() {
+  //console.log(csv_obj['PRNT']);
+  for (let i = 0; i < csv_obj['PRNT'].length; i++) {
+    let obj = {};
+    obj['fund'] = csv_obj['PRNT'][i]['fund'];
+    obj['ticker'] = csv_obj['PRNT'][i]['ticker'];
+    obj['company'] = csv_obj['PRNT'][i]['company'];
+    obj['weight'] = csv_obj['PRNT'][i]['weight(%)'];
+    if (obj['ticker'] === '') {
+      obj['ticker'] = obj['company'];
+    }
+    if (typeof obj['weight'] === 'undefined') {
+      //console.log(obj);
+    }
+    if (obj['weight'] !== '' && typeof obj['weight'] !== 'undefined') {
+      if (obj['weight'].isFloat()) {
+        obj['weight'] = parseFloat(obj['weight']);
+      }
+      else {
+        obj['weight'] = 0.0;
+      }
+      etf_constituents.push(obj);
+    }
+  }
+}
+
+function onReadyIZRLDataInit() {
+  //console.log(csv_obj['IZRL']);
+  for (let i = 0; i < csv_obj['IZRL'].length; i++) {
+    let obj = {};
+    obj['fund'] = csv_obj['IZRL'][i]['fund'];
+    obj['ticker'] = csv_obj['IZRL'][i]['ticker'];
+    obj['company'] = csv_obj['IZRL'][i]['company'];
+    obj['weight'] = csv_obj['IZRL'][i]['weight(%)'];
     if (obj['ticker'] === '') {
       obj['ticker'] = obj['company'];
     }
