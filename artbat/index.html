@@ -61,8 +61,8 @@
       </defs>
     </svg>
     <div>
-      <input type="color" id="color1" name="color1" value="#000000" onchange="$('#colorlbl1').html($(this).val())">
-      <label for="color1" id="colorlbl1"></label>
+      <input type="color" id="color-input-1" value="#000000" onchange="$('#color-lbl-1').html($('#color-input-1').val());">
+      <label id="color-lbl-1" for="color-input-1" onload="$('#color-lbl-1').html($('#color-input-1').val());"></label>
     </div>
     <div class="panel-group">
       <div class="panel panel-default">
