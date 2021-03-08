@@ -140,7 +140,7 @@ function showWords(adjective, noun) {
 function getArtbatHistoryCsv() {
   $.ajax({
     type: "GET",
-    url: url_prefix + "data/artbat_history.csv",
+    url: url_prefix + "data/pastpaper.csv",
     dataType: "text",
     success: function(response)
     {
