@@ -7,7 +7,7 @@ var words_adjectives = [];
 var words_nouns = [];
 var active_word_adjective = "";
 var active_word_noun = "";
-var random_words_timer_object = null;
+var spin_words_timer_object = null;
 var artbat_pastpaper = [];
 
 function init() {
@@ -35,19 +35,19 @@ function init() {
 
   getWords();
   showWords("???", "???");
-  $("#words-btn-random").click(function(event){
+  $("#words-btn-spin").click(function(event){
     //activate on first click only to avoid hiding again on multiple clicks
     //execute only once on multiple clicks
     if(!event.detail || event.detail == 1){
-      $("#words-btn-random").addClass("disabled");
+      $("#words-btn-spin").addClass("disabled");
       shuffleWords();
       let counter = 10;
       let count = counter;
-      random_words_timer_object = setInterval(function() {
+      spin_words_timer_object = setInterval(function() {
         count--;
         if (count <= 0) {
-          clearInterval(random_words_timer_object);
-          $("#words-btn-random").removeClass("disabled");
+          clearInterval(spin_words_timer_object);
+          $("#words-btn-spin").removeClass("disabled");
         }
         showWords(words_adjectives[counter-count], words_nouns[counter-count]);
       }, 100);
