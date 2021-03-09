@@ -137,17 +137,28 @@
       <label id="color-lbl-1" for="color-input-1" onload="$('#color-lbl-1').html($('#color-input-1').val());"></label>
     </div>
     <div id="footer">
-      <svg width="100%" height="30">
-        <rect width="100%" height="100%" fill="url(#footer-gradient)" />
+      <svg width="100%" height="100%">
+        <rect id="footer-rect2" width="100%" height="100%" fill="url(#footer-gradient)" />
         <defs>
           <linearGradient id="footer-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" style="stop-color:red;stop-opacity:1" />
-            <stop offset="16.67%" style="stop-color:orange;stop-opacity:1" />
-            <stop offset="33.33%" style="stop-color:yellow;stop-opacity:1" />
-            <stop offset="50%" style="stop-color:green;stop-opacity:1" />
-            <stop offset="66.67%" style="stop-color:blue;stop-opacity:1" />
-            <stop offset="83.33%" style="stop-color:indigo;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:violet;stop-opacity:1" />
+            <stop offset="0%" stop-color="#FF0085">
+              <animate attributeName="stop-color" values="#FF0085;#FF0000;#FFEB00;#009E00;#00ABFF;#000085;#FF0085;" dur="4s" repeatCount="indefinite"></animate>
+            </stop>
+            <stop offset="20%" stop-color="#FF0000">
+              <animate attributeName="stop-color" values="#FF0000;#FFEB00;#009E00;#00ABFF;#000085;#FF0085;#FF0000;" dur="4s" repeatCount="indefinite"></animate>
+            </stop>
+            <stop offset="40%" stop-color="#FFEB00">
+              <animate attributeName="stop-color" values="#FFEB00;#009E00;#00ABFF;#000085;#FF0085;#FF0000;#FFEB00;" dur="4s" repeatCount="indefinite"></animate>
+            </stop>
+            <stop offset="60%" stop-color="#009E00">
+              <animate attributeName="stop-color" values="#009E00;#00ABFF;#000085;#FF0085;#FF0000;#FFEB00;#009E00;" dur="4s" repeatCount="indefinite"></animate>
+            </stop>
+            <stop offset="80%" stop-color="#00ABFF">
+              <animate attributeName="stop-color" values="#00ABFF;#000085;#FF0085;#FF0000;#FFEB00;#009E00;#00ABFF;" dur="4s" repeatCount="indefinite"></animate>
+            </stop>
+            <stop offset="100%" stop-color="#000085">
+              <animate attributeName="stop-color" values="#000085;#FF0085;#FF0000;#FFEB00;#009E00;#00ABFF;#000085;" dur="4s" repeatCount="indefinite"></animate>
+            </stop>
           </linearGradient>
         </defs>
       </svg>

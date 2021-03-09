@@ -8,7 +8,7 @@ var words_nouns = [];
 var active_word_adjective = "";
 var active_word_noun = "";
 var random_words_timer_object = null;
-var artbat_history = [];
+var artbat_pastpaper = [];
 
 function init() {
   updateTimer("reset");
@@ -54,7 +54,7 @@ function init() {
     }
   });
 
-  getArtbatHistoryCsv();
+  getArtbatPastpaperCsv();
 }
 
 function updateTimer(t_state) {
@@ -137,20 +137,20 @@ function showWords(adjective, noun) {
   $("#words-txt-nouns").html(active_word_noun);
 }
 
-function getArtbatHistoryCsv() {
+function getArtbatPastpaperCsv() {
   $.ajax({
     type: "GET",
     url: url_prefix + "data/pastpaper.csv",
     dataType: "text",
     success: function(response)
     {
-      artbat_history = $.csv.toObjects(response);
-      showArtbatHistoryTable(artbat_history);
+      artbat_pastpaper = $.csv.toObjects(response);
+      showArtbatPastpaperTable(artbat_pastpaper);
     }
   });
 }
 
-function showArtbatHistoryTable(data) {
+function showArtbatPastpaperTable(data) {
   var html = '<table class="table table-condensed table-hover table-striped" id="table-pastpaper">';
 
   if(typeof(data[0]) === 'undefined') {
