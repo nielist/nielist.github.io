@@ -48,6 +48,11 @@ body div.panel-group {
   font-size: 30px;
 }
 
+#words-btn-spin {
+  width: 100%;
+  max-width: 200px;
+}
+
 #table-pastpaper {
 }
 
