@@ -5,6 +5,11 @@ body {
   color: #FFFFFF;
 }
 
+body div.panel-group {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 #title-heading {
   font-size: 52px;
 }
