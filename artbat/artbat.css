@@ -9,6 +9,24 @@ body div.panel-group {
   margin-right: 20px;
 }
 
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 98;
+  background-color: #000000;
+  opacity: 0.8;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 98;
+}
+
 #title-heading {
   font-size: 52px;
 }
