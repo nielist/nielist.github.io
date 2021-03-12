@@ -3,8 +3,10 @@ var timer_state = "reset";
 var timer_minutes_default = 20;
 var timer_seconds = 60 * timer_minutes_default;
 var timer_object = null;
-var words_adjectives = [];
-var words_nouns = [];
+var dict_words_adjectives = [];
+var dict_words_nouns = [];
+var pending_spin_words_adjectives = [];
+var pending_spin_words_noun = [];
 var active_word_adjective = "";
 var active_word_noun = "";
 var spin_words_timer_object = null;
@@ -49,12 +51,33 @@ function init() {
           clearInterval(spin_words_timer_object);
           $("#words-btn-spin").removeClass("disabled");
         }
-        showWords(words_adjectives[counter-count], words_nouns[counter-count]);
+        showWords(dict_words_adjectives[counter-count], dict_words_nouns[counter-count]);
       }, 100);
     }
   });
 
   getArtbatPastpaperCsv();
+}
+
+function onClickAddNewColor() {
+  let id = $('input[type=text]#Code').val();
+
+  if (typeof id !== 'undefined' && id !== '') {
+    if ($('#'+id).length <= 0) {
+      let html = '';
+      html += '';
+
+      $('input[type=text]#Code').parent().before(html);
+    }
+  }
+
+  $('input[type=text]#Code').val('');
+}
+
+function onClickAddNewAdjective() {
+}
+
+function onClickAddNewNoun() {
 }
 
 function updateTimer(t_state) {
@@ -120,15 +143,15 @@ function showTimerMessage() {
 
 function getWords() {
   $.getJSON(url_prefix + "data/adjectives.json", function(result){
-    words_adjectives = result.data;
+    dict_words_adjectives = result.data;
   });
   $.getJSON(url_prefix + "data/nouns.json", function(result){
-    words_nouns = result.data;
+    dict_words_nouns = result.data;
   });
 }
 function shuffleWords() {
-  words_adjectives.sort(function() { return 0.5 - Math.random() });
-  words_nouns.sort(function() { return 0.5 - Math.random() });
+  dict_words_adjectives.sort(function() { return 0.5 - Math.random() });
+  dict_words_nouns.sort(function() { return 0.5 - Math.random() });
 }
 function showWords(adjective, noun) {
   var active_word_adjective = adjective;
