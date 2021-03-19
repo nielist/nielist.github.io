@@ -1,3 +1,10 @@
+const COLOR_PINK = "#FF0085";
+const COLOR_RED = "#FF0000";
+const COLOR_YELLOW = "#FFEB00";
+const COLOR_GREEN = "#009E00";
+const COLOR_LIGHTBLUE = "#00ABFF";
+const COLOR_BLUE = "#000085";
+
 var url_prefix = ""; //"https://nielist.github.io/artbat/";
 var timer_state = "reset";
 var timer_minutes_default = 20;
@@ -5,6 +12,7 @@ var timer_seconds = 60 * timer_minutes_default;
 var timer_object = null;
 var dict_words_adjectives = [];
 var dict_words_nouns = [];
+var pending_spin_colors = [COLOR_PINK, COLOR_RED, COLOR_YELLOW, COLOR_GREEN, COLOR_LIGHTBLUE, COLOR_BLUE];
 var pending_spin_words_adjectives = [];
 var pending_spin_words_noun = [];
 var active_word_adjective = "";
