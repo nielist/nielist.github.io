@@ -1,5 +1,5 @@
 const currency_codes = ['HKD']; // 'USD' should be ETF
-const etf_funds = ['VOO', 'QQQ', 'ARKK', 'ARKQ', 'ARKW', 'ARKG', 'ARKF', 'PRNT', 'IZRL'];
+const etf_funds = ['VOO', 'QQQ', 'ARKK', 'ARKQ', 'ARKW', 'ARKG', 'ARKF', 'ARKX', 'PRNT', 'IZRL'];
 var etf_constituents = [];
 var investment = {};
 var results = {};
@@ -74,6 +74,7 @@ $(document).ready(function(){
   getARKWCsv(onReadyCsv);
   getARKGCsv(onReadyCsv);
   getARKFCsv(onReadyCsv);
+  getARKXCsv(onReadyCsv);
   getPRNTCsv(onReadyCsv);
   getIZRLCsv(onReadyCsv);
   $("#Add").click(function(e){
@@ -87,7 +88,7 @@ $(document).ready(function(){
 });
 
 function onReadyCsv() {
-  if (isAjaxDone(['VOO', 'QQQ', 'ARKK', 'ARKQ', 'ARKW', 'ARKG', 'ARKF', 'PRNT', 'IZRL'])) {
+  if (isAjaxDone(['VOO', 'QQQ', 'ARKK', 'ARKQ', 'ARKW', 'ARKG', 'ARKF', 'ARKX', 'PRNT', 'IZRL'])) {
     setTimeout(function(){
       onReadyVOODataInit();
       onReadyQQQDataInit();
@@ -96,6 +97,7 @@ function onReadyCsv() {
       onReadyARKWDataInit();
       onReadyARKGDataInit();
       onReadyARKFDataInit();
+      onReadyARKXDataInit();
       onReadyPRNTDataInit();
       onReadyIZRLDataInit();
       //console.log(etf_constituents);
@@ -300,6 +302,32 @@ function onReadyARKFDataInit() {
     obj['ticker'] = csv_obj['ARKF'][i]['ticker'];
     obj['company'] = csv_obj['ARKF'][i]['company'];
     obj['weight'] = csv_obj['ARKF'][i]['weight(%)'];
+    if (obj['ticker'] === '') {
+      obj['ticker'] = obj['company'];
+    }
+    if (typeof obj['weight'] === 'undefined') {
+      //console.log(obj);
+    }
+    if (obj['weight'] !== '' && typeof obj['weight'] !== 'undefined') {
+      if (obj['weight'].isFloat()) {
+        obj['weight'] = parseFloat(obj['weight']);
+      }
+      else {
+        obj['weight'] = 0.0;
+      }
+      etf_constituents.push(obj);
+    }
+  }
+}
+
+function onReadyARKXDataInit() {
+  //console.log(csv_obj['ARKX']);
+  for (let i = 0; i < csv_obj['ARKX'].length; i++) {
+    let obj = {};
+    obj['fund'] = csv_obj['ARKX'][i]['fund'];
+    obj['ticker'] = csv_obj['ARKX'][i]['ticker'];
+    obj['company'] = csv_obj['ARKX'][i]['company'];
+    obj['weight'] = csv_obj['ARKX'][i]['weight(%)'];
     if (obj['ticker'] === '') {
       obj['ticker'] = obj['company'];
     }
