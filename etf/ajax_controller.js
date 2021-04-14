@@ -14,8 +14,9 @@ ajax_pending['ARKQ'] = (1 << 3);
 ajax_pending['ARKW'] = (1 << 4);
 ajax_pending['ARKG'] = (1 << 5);
 ajax_pending['ARKF'] = (1 << 6);
-ajax_pending['PRNT'] = (1 << 7);
-ajax_pending['IZRL'] = (1 << 8);
+ajax_pending['ARKX'] = (1 << 7);
+ajax_pending['PRNT'] = (1 << 8);
+ajax_pending['IZRL'] = (1 << 9);
 
 var csv_obj = {};
 csv_obj['VOO' ] = [];
@@ -25,6 +26,7 @@ csv_obj['ARKQ'] = [];
 csv_obj['ARKW'] = [];
 csv_obj['ARKG'] = [];
 csv_obj['ARKF'] = [];
+csv_obj['ARKX'] = [];
 csv_obj['PRNT'] = [];
 csv_obj['IZRL'] = [];
 
@@ -294,6 +296,43 @@ function getARKFCsv(callback) {
       if (ajax_retry_times < ajax_retry_times_max) {
         ++ajax_retry_times;
         getARKFCsv(callback);
+      }
+    }
+  });
+}
+
+function getARKXCsv(callback) {
+  $.ajax({
+    type: "GET",
+    url: "https://api.allorigins.win/get?url=" +
+         encodeURIComponent(
+           domain[ajax_retry_times] + "ARK_SPACE_EXPLORATION_&_INNOVATION_ETF_ARKX_HOLDINGS.csv?t=" + unixtimestampper15mins
+         ),
+    dataType: "json",
+    //dataType: "text",
+    //dataType: "jsonp",
+    //jsonpCallback: callback,
+    //crossDomain: true,
+    cache: false,
+    success: function(response)
+    {
+      response = response.contents;
+      csv_obj['ARKX'] = $.csv.toObjects(response);
+      if (csv_obj['ARKX'].length > 0) {
+        onCompleteAjax('ARKX');
+        callback();
+      }
+      // if no result
+      else if (ajax_retry_times < ajax_retry_times_max) {
+        ++ajax_retry_times;
+        getARKXCsv(callback);
+      }
+    },
+    error: function()
+    {
+      if (ajax_retry_times < ajax_retry_times_max) {
+        ++ajax_retry_times;
+        getARKXCsv(callback);
       }
     }
   });
