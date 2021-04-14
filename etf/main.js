@@ -472,6 +472,9 @@ function onClickAddNewStock() {
       if (etf_funds.indexOf(id) >= 0) {
         assetClass = 'etf';
       }
+      if (id === 'ARKX') { // Special Handling for ARKX
+        assetClass = 'stocks';
+      }
       getStockInfoJson(id, assetClass, onReadyStockInfoDataInit);
     }
 
