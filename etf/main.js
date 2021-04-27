@@ -1,5 +1,5 @@
 const currency_codes = ['HKD']; // 'USD' should be ETF
-const etf_funds = ['VOO', 'QQQ', 'ARKK', 'ARKQ', 'ARKW', 'ARKG', 'ARKF', 'ARKX', 'PRNT', 'IZRL'];
+const etf_funds = ['VOO', 'QQQ', 'MOON', 'ARKK', 'ARKQ', 'ARKW', 'ARKG', 'ARKF', 'ARKX', 'PRNT', 'IZRL'];
 var etf_constituents = [];
 var investment = {};
 var results = {};
@@ -69,6 +69,7 @@ Number.prototype.toOrdinal = function(){
 $(document).ready(function(){
   getVOOHtml(onReadyCsv);
   getQQQHtml(onReadyCsv);
+  getMOONCsv(onReadyCsv);
   getARKKCsv(onReadyCsv);
   getARKQCsv(onReadyCsv);
   getARKWCsv(onReadyCsv);
@@ -88,10 +89,11 @@ $(document).ready(function(){
 });
 
 function onReadyCsv() {
-  if (isAjaxDone(['VOO', 'QQQ', 'ARKK', 'ARKQ', 'ARKW', 'ARKG', 'ARKF', 'ARKX', 'PRNT', 'IZRL'])) {
+  if (isAjaxDone(['VOO', 'QQQ', 'MOON', 'ARKK', 'ARKQ', 'ARKW', 'ARKG', 'ARKF', 'ARKX', 'PRNT', 'IZRL'])) {
     setTimeout(function(){
       onReadyVOODataInit();
       onReadyQQQDataInit();
+      onReadyMOONDataInit();
       onReadyARKKDataInit();
       onReadyARKQDataInit();
       onReadyARKWDataInit();
@@ -172,6 +174,32 @@ function onReadyQQQDataInit() {
     obj['ticker'] = csv_obj['QQQ'][i]['Symbol'];
     obj['company'] = csv_obj['QQQ'][i]['Company'];
     obj['weight'] = csv_obj['QQQ'][i]['Weight'];
+    if (obj['ticker'] === '') {
+      obj['ticker'] = obj['company'];
+    }
+    if (typeof obj['weight'] === 'undefined') {
+      //console.log(obj);
+    }
+    if (obj['weight'] !== '' && typeof obj['weight'] !== 'undefined') {
+      if (obj['weight'].isFloat()) {
+        obj['weight'] = parseFloat(obj['weight']);
+      }
+      else {
+        obj['weight'] = 0.0;
+      }
+      etf_constituents.push(obj);
+    }
+  }
+}
+
+function onReadyMOONDataInit() {
+  //console.log(csv_obj['MOON']);
+  for (let i = 0; i < csv_obj['MOON'].length; i++) {
+    let obj = {};
+    obj['fund'] = csv_obj['MOON'][i]['fund'];
+    obj['ticker'] = csv_obj['MOON'][i]['ticker'];
+    obj['company'] = csv_obj['MOON'][i]['company'];
+    obj['weight'] = csv_obj['MOON'][i]['weight(%)'];
     if (obj['ticker'] === '') {
       obj['ticker'] = obj['company'];
     }
