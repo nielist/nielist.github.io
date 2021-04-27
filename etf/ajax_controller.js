@@ -9,18 +9,20 @@ var unixtimestampper15mins = Math.floor(unixtimestamp / 1000);
 var ajax_pending = {};
 ajax_pending['VOO' ] = (1 << 0);
 ajax_pending['QQQ' ] = (1 << 1);
-ajax_pending['ARKK'] = (1 << 2);
-ajax_pending['ARKQ'] = (1 << 3);
-ajax_pending['ARKW'] = (1 << 4);
-ajax_pending['ARKG'] = (1 << 5);
-ajax_pending['ARKF'] = (1 << 6);
-ajax_pending['ARKX'] = (1 << 7);
-ajax_pending['PRNT'] = (1 << 8);
-ajax_pending['IZRL'] = (1 << 9);
+ajax_pending['MOON'] = (1 << 2);
+ajax_pending['ARKK'] = (1 << 3);
+ajax_pending['ARKQ'] = (1 << 4);
+ajax_pending['ARKW'] = (1 << 5);
+ajax_pending['ARKG'] = (1 << 6);
+ajax_pending['ARKF'] = (1 << 7);
+ajax_pending['ARKX'] = (1 << 8);
+ajax_pending['PRNT'] = (1 << 9);
+ajax_pending['IZRL'] = (1 << 10);
 
 var csv_obj = {};
 csv_obj['VOO' ] = [];
 csv_obj['QQQ' ] = [];
+csv_obj['MOON'] = [];
 csv_obj['ARKK'] = [];
 csv_obj['ARKQ'] = [];
 csv_obj['ARKW'] = [];
@@ -113,6 +115,27 @@ function getQQQHtml(callback) {
         onCompleteAjax('QQQ');
         callback();
       }
+  });
+}
+
+function getMOONCsv(callback) {
+  $.ajax({
+    type: "GET",
+    url: "https://api.allorigins.win/get?url=" +
+         encodeURIComponent(
+           "https://files.direxionfunds.com/DirexionWebsiteFiles/holdings_moon.csv?t=" + unixtimestampper15mins
+         ),
+    dataType: "json",
+    cache: false,
+    success: function(response)
+    {
+      response = response.contents;
+      csv_obj['MOON'] = $.csv.toObjects(response);
+      if (csv_obj['MOON'].length > 0) {
+        onCompleteAjax('MOON');
+        callback();
+      }
+    }
   });
 }
 
