@@ -130,6 +130,7 @@ function getMOONCsv(callback) {
     success: function(response)
     {
       response = response.contents;
+      response = response.substring(response.indexOf("TradeDate,"));
       csv_obj['MOON'] = $.csv.toObjects(response);
       if (csv_obj['MOON'].length > 0) {
         onCompleteAjax('MOON');
