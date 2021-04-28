@@ -196,10 +196,10 @@ function onReadyMOONDataInit() {
   //console.log(csv_obj['MOON']);
   for (let i = 0; i < csv_obj['MOON'].length; i++) {
     let obj = {};
-    obj['fund'] = csv_obj['MOON'][i]['fund'];
-    obj['ticker'] = csv_obj['MOON'][i]['ticker'];
-    obj['company'] = csv_obj['MOON'][i]['company'];
-    obj['weight'] = csv_obj['MOON'][i]['weight(%)'];
+    obj['fund'] = csv_obj['MOON'][i]['AccountTicker'];
+    obj['ticker'] = csv_obj['MOON'][i]['StockTicker'];
+    obj['company'] = csv_obj['MOON'][i]['SecurityDescription'];
+    obj['weight'] = csv_obj['MOON'][i]['HoldingsPercent'];
     if (obj['ticker'] === '') {
       obj['ticker'] = obj['company'];
     }
