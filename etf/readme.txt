@@ -14,7 +14,7 @@ https://api.nasdaq.com/api/quote/list-type/nasdaq100
 
 MOON
 https://www.direxion.com/product/moonshot-innovators-etf
-https://files.direxionfunds.com/DirexionWebsiteFiles/holdings_moon.csv
+http://files.direxionfunds.com/DirexionWebsiteFiles/holdings_moon.csv
 
 ARKK
 https://ark-funds.com/wp-content/fundsiteliterature/csv/ARK_INNOVATION_ETF_ARKK_HOLDINGS.csv
