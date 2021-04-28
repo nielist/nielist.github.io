@@ -123,7 +123,7 @@ function getMOONCsv(callback) {
     type: "GET",
     url: "https://api.allorigins.win/get?url=" +
          encodeURIComponent(
-           "https://files.direxionfunds.com/DirexionWebsiteFiles/holdings_moon.csv?t=" + unixtimestampper15mins
+           "http://files.direxionfunds.com/DirexionWebsiteFiles/holdings_moon.csv?t=" + unixtimestampper15mins
          ),
     dataType: "json",
     cache: false,
