@@ -4,16 +4,16 @@ https://api.nasdaq.com/api/quote/ARKK/info?assetclass=etf
 https://api.nasdaq.com/api/quote/AAPL/info?assetclass=stocks
 
 S&P500 / VOO
-https://www.barchart.com/etfs-funds/quotes/VOO/constituents
-https://www.slickcharts.com/sp500
+https://www.barchart.com/etfs-funds/quotes/VOO/constituents/
+https://www.slickcharts.com/sp500/
 
 NASDAQ / QQQ
-https://www.barchart.com/etfs-funds/quotes/QQQ/constituents
-https://www.slickcharts.com/nasdaq100
-https://api.nasdaq.com/api/quote/list-type/nasdaq100
+https://www.barchart.com/etfs-funds/quotes/QQQ/constituents/
+https://www.slickcharts.com/nasdaq100/
+https://api.nasdaq.com/api/quote/list-type/nasdaq100/
 
 MOON
-https://www.direxion.com/product/moonshot-innovators-etf
+https://www.direxion.com/product/moonshot-innovators-etf/
 http://files.direxionfunds.com/DirexionWebsiteFiles/holdings_moon.csv
 
 ARKK
