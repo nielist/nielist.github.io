@@ -5,7 +5,7 @@ const COLOR_GREEN = "#009E00";
 const COLOR_LIGHTBLUE = "#00ABFF";
 const COLOR_BLUE = "#000085";
 
-var url_prefix = "https://nielist.github.io/"; //"https://nielist.github.io/artbat/data/";
+var url_prefix = "data_v2/"; //"https://nielist.github.io/artbat/data_v2/";
 
 var timer_state = "reset";
 var timer_minutes_default = 20;
