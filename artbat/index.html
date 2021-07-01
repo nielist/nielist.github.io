@@ -6,8 +6,8 @@
     <meta http-equiv="Expires" content="0">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="nielist.github.io">
-    <meta name="description" content="nielist.github.io">
+    <meta name="author" content="Niels">
+    <meta name="description" content="ARTBAT">
     <meta name="revisit-after" content="7 days">
     <meta name="robots" content="follow,index">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,8 +25,8 @@
     <!-- AngularJS 1.6.9 -->
     <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>-->
     <!-- Custom -->
-    <link rel="stylesheet" href="artbat.css?v=1.0">
-    <script src="artbat.js?v=1.0"></script>
+    <link rel="stylesheet" href="artbat.css?t=">
+    <script src="artbat.js?t="></script>
     <!--<script src="https://randomlists.com/data/adjectives.json"></script>-->
     <!--<script src="https://randomlists.com/data/nouns.json"></script>-->
     <!--<script src="https://capitalizemytitle.com/wp-content/tools/random-word/index.php?action=getNouns&limit=1000"></script>-->
@@ -75,10 +75,10 @@
                 </td>
                 <td width="50%" align="left">
                   <div id="timer-btn-group">
-                    <button type="button" class="btn btn-primary" id="timer-btn-start">Start</button>
-                    <button type="button" class="btn btn-success disabled hide" id="timer-btn-continue">Continue</button>
-                    <button type="button" class="btn btn-warning disabled hide" id="timer-btn-pause">Pause</button>
-                    <button type="button" class="btn btn-danger disabled hide" id="timer-btn-reset">Reset</button>
+                    <button type="button" class="btn btn-primary" id="btn_timer_start">Start</button>
+                    <button type="button" class="btn btn-success disabled hide" id="btn_timer_continue">Continue</button>
+                    <button type="button" class="btn btn-warning disabled hide" id="btn_timer_pause">Pause</button>
+                    <button type="button" class="btn btn-danger disabled hide" id="btn_timer_reset">Reset</button>
                   </div>
                 </td>
               </tr>
@@ -86,7 +86,7 @@
           </table>
         </div>
         <div class="panel-body">
-          <div id="timer-txt"></div>
+          <div id="div_timer_display"></div>
         </div>
       </div>
       <div class="panel panel-default">
@@ -108,7 +108,7 @@
                           <h4 class="modal-title">Pastpaper</h4>
                         </div>
                         <div class="modal-body">
-                          <div id="wrapper-table-pastpaper"></div>
+                          <div id="div_pastpaper_display"></div>
                         </div>
                       </div>
                     </div>
@@ -127,12 +127,12 @@
               </tr>
             </tbody>
           </table>
-          <table class="table no-table" id="words-txt-group">
+          <table class="table no-table" id="div_words">
             <tbody>
               <tr>
-                <td width="50%" align="right"><span id="words-txt-adjectives"></span></td>
+                <td width="50%" align="right"><span id="lbl_adjt"></span></td>
                 <td width="60px" align="center"><span>&nbsp;+&nbsp;</span></td>
-                <td width="50%" align="left"><span id="words-txt-nouns"></span></td>
+                <td width="50%" align="left"><span id="lbl_noun"></span></td>
               </tr>
             </tbody>
           </table>
@@ -140,7 +140,7 @@
             <tbody>
               <tr>
                 <td colspan="3" width="100%" align="center">
-                  <button type="button" class="btn btn-default" id="words-btn-spin">Spin</button>
+                  <button type="button" class="btn btn-default" id="btn_spin">Spin</button>
                 </td>
               </tr>
               <!--
@@ -167,9 +167,9 @@
     </div>
     <div id="footer">
       <svg width="100%" height="100%">
-        <rect id="footer-rect2" width="100%" height="100%" fill="url(#footer-gradient)" />
+        <rect id="footer_rect" width="100%" height="100%" fill="url(#footer_gradient)" />
         <defs>
-          <linearGradient id="footer-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <linearGradient id="footer_gradient" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stop-color="#FF0085">
               <animate attributeName="stop-color" values="#FF0085;#FF0000;#FFEB00;#009E00;#00ABFF;#000085;#FF0085;" dur="7s" repeatCount="indefinite"></animate>
             </stop>

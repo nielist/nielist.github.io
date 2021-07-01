@@ -40,20 +40,20 @@ body div.panel-group {
   font-size: 24px;
 }
 
-#timer-txt {
+#div_timer_display {
   font-size: 40px;
 }
 
-#words-txt-group {
+#div_words {
   font-size: 30px;
 }
 
-#words-btn-spin {
+#btn_spin {
   width: 100%;
   max-width: 200px;
 }
 
-#table-pastpaper {
+#tbl_pastpaper {
 }
 
 .no-table, .no-table>tbody, .no-table>tbody>tr, .no-table>tbody>tr>td {
