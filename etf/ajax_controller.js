@@ -1,5 +1,5 @@
 var domain = [];
-domain[0] = "https://ark-funds.com/wp-content/fundsiteliterature/csv/";
+domain[0] = "https://ark-funds.com/wp-content/uploads/funds-etf-csv/";
 var ajax_retry_times = 0;
 var ajax_retry_times_max = domain.length - 1;
 
@@ -182,7 +182,7 @@ function getARKQCsv(callback) {
     type: "GET",
     url: "https://api.allorigins.win/get?url=" +
          encodeURIComponent(
-           domain[ajax_retry_times] + "ARK_AUTONOMOUS_TECHNOLOGY_&_ROBOTICS_ETF_ARKQ_HOLDINGS.csv?t=" + unixtimestampper15mins
+           domain[ajax_retry_times] + "ARK_INNOVATION_ETF_ARKQ_HOLDINGS.csv?t=" + unixtimestampper15mins
          ),
     dataType: "json",
     //dataType: "text",
@@ -219,7 +219,7 @@ function getARKWCsv(callback) {
     type: "GET",
     url: "https://api.allorigins.win/get?url=" +
          encodeURIComponent(
-           domain[ajax_retry_times] + "ARK_NEXT_GENERATION_INTERNET_ETF_ARKW_HOLDINGS.csv?t=" + unixtimestampper15mins
+           domain[ajax_retry_times] + "ARK_INNOVATION_ETF_ARKW_HOLDINGS.csv?t=" + unixtimestampper15mins
          ),
     dataType: "json",
     //dataType: "text",
@@ -256,7 +256,7 @@ function getARKGCsv(callback) {
     type: "GET",
     url: "https://api.allorigins.win/get?url=" +
          encodeURIComponent(
-           domain[ajax_retry_times] + "ARK_GENOMIC_REVOLUTION_MULTISECTOR_ETF_ARKG_HOLDINGS.csv?t=" + unixtimestampper15mins
+           domain[ajax_retry_times] + "ARK_INNOVATION_ETF_ARKG_HOLDINGS.csv?t=" + unixtimestampper15mins
          ),
     dataType: "json",
     //dataType: "text",
@@ -293,7 +293,7 @@ function getARKFCsv(callback) {
     type: "GET",
     url: "https://api.allorigins.win/get?url=" +
          encodeURIComponent(
-           domain[ajax_retry_times] + "ARK_FINTECH_INNOVATION_ETF_ARKF_HOLDINGS.csv?t=" + unixtimestampper15mins
+           domain[ajax_retry_times] + "ARK_INNOVATION_ETF_ARKF_HOLDINGS.csv?t=" + unixtimestampper15mins
          ),
     dataType: "json",
     //dataType: "text",
@@ -330,7 +330,7 @@ function getARKXCsv(callback) {
     type: "GET",
     url: "https://api.allorigins.win/get?url=" +
          encodeURIComponent(
-           domain[ajax_retry_times] + "ARK_SPACE_EXPLORATION_&_INNOVATION_ETF_ARKX_HOLDINGS.csv?t=" + unixtimestampper15mins
+           domain[ajax_retry_times] + "ARK_INNOVATION_ETF_ARKX_HOLDINGS.csv?t=" + unixtimestampper15mins
          ),
     dataType: "json",
     //dataType: "text",
@@ -367,7 +367,7 @@ function getPRNTCsv(callback) {
     type: "GET",
     url: "https://api.allorigins.win/get?url=" +
          encodeURIComponent(
-           domain[ajax_retry_times] + "THE_3D_PRINTING_ETF_PRNT_HOLDINGS.csv?t=" + unixtimestampper15mins
+           domain[ajax_retry_times] + "ARK_INNOVATION_ETF_PRNT_HOLDINGS.csv?t=" + unixtimestampper15mins
          ),
     dataType: "json",
     //dataType: "text",
@@ -404,7 +404,7 @@ function getIZRLCsv(callback) {
     type: "GET",
     url: "https://api.allorigins.win/get?url=" +
          encodeURIComponent(
-           domain[ajax_retry_times] + "ARK_ISRAEL_INNOVATIVE_TECHNOLOGY_ETF_IZRL_HOLDINGS.csv?t=" + unixtimestampper15mins
+           domain[ajax_retry_times] + "ARK_INNOVATION_ETF_IZRL_HOLDINGS.csv?t=" + unixtimestampper15mins
          ),
     dataType: "json",
     //dataType: "text",
