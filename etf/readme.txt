@@ -18,6 +18,10 @@ MOON
 https://www.direxion.com/product/moonshot-innovators-etf/
 http://files.direxionfunds.com/DirexionWebsiteFiles/holdings_moon.csv
 
+IGV
+https://www.ishares.com/us/products/239771/ishares-north-american-techsoftware-etf
+https://www.ishares.com/us/products/239771/ishares-north-american-techsoftware-etf/1467271812596.ajax?fileType=csv&fileName=IGV_holdings&dataType=fund
+
 ARKK
 https://ark-funds.com/wp-content/uploads/funds-etf-csv/ARK_INNOVATION_ETF_ARKK_HOLDINGS.csv
 
