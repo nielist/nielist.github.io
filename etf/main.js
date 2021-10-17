@@ -503,7 +503,11 @@ function onClickAddNewStock() {
       if (id === 'ARKX') { // Special Handling for ARKX
         assetClass = 'stocks';
       }
+      /*
+      // Obsoleted
       getStockInfoJson(id, assetClass, onReadyStockInfoDataInit);
+      */
+      getStockInfoJson(id, onReadyStockInfoDataInit);
     }
 
     if ($('#'+id).length <= 0) {
