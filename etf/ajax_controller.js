@@ -89,8 +89,8 @@ function getStockInfoJson(symbol, callback) {
   $.getJSON('https://api.allorigins.win/get?url=' +
             encodeURIComponent(`https://query1.finance.yahoo.com/v8/finance/chart/${symbol}`), function (data) {
       let response = JSON.parse(data.contents);
+      console.log(response);
       if (typeof response.status !== 'undefined' && response.status.rCode == 200) {
-        console.log(response);
         let symbol = response.chart.result[0].symbol.toUpperCase();
         stock_info[symbol] = {};
         stock_info[symbol]['symbol'] = symbol;
