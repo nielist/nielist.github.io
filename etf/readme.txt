@@ -2,6 +2,8 @@
 Stock Price
 https://api.nasdaq.com/api/quote/ARKK/info?assetclass=etf
 https://api.nasdaq.com/api/quote/AAPL/info?assetclass=stocks
+https://query1.finance.yahoo.com/v8/finance/chart/ARKK
+https://query1.finance.yahoo.com/v8/finance/chart/ARKK?region=US&lang=en-US&includePrePost=false&interval=2m&useYfid=true&range=1d&corsDomain=finance.yahoo.com&.tsrc=finance
 
 S&P500 / VOO
 https://www.barchart.com/etfs-funds/quotes/VOO/constituents/
