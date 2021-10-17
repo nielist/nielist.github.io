@@ -89,13 +89,12 @@ function getStockInfoJson(symbol, callback) {
   $.getJSON('https://api.allorigins.win/get?url=' +
             encodeURIComponent(`https://query1.finance.yahoo.com/v8/finance/chart/${symbol}`), function (data) {
       let response = JSON.parse(data.contents);
-      console.log(response);
-      if (typeof response.status !== 'undefined' && response.status.rCode == 200) {
-        let symbol = response.chart.result[0].symbol.toUpperCase();
+      if (typeof response.chart !== 'undefined' && response.chart.error == null) {
+        let symbol = response.chart.result[0].meta.symbol.toUpperCase();
         stock_info[symbol] = {};
         stock_info[symbol]['symbol'] = symbol;
-        stock_info[symbol]['company'] = response.chart.result[0].symbol;
-        stock_info[symbol]['price'] = parseFloat(response.chart.result[0].regularMarketPrice);
+        stock_info[symbol]['company'] = symbol;
+        stock_info[symbol]['price'] = parseFloat(response.chart.result[0].meta.regularMarketPrice);
         stock_info[symbol]['netChange'] = parseFloat('0.0');
         stock_info[symbol]['percentageChange'] = parseFloat('0.0');
         stock_info[symbol]['volume'] = parseInt('0.0');
