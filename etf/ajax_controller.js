@@ -55,6 +55,8 @@ function onCompleteAjax(file_name) {
   ajax_pending[file_name] = 0;
 }
 
+/*
+// Obsoleted
 function getStockInfoJson(symbol, assetClass, callback) {
   if (typeof symbol === 'undefined' || symbol === '' ||
       typeof assetClass === 'undefined' || assetClass === '') {
@@ -73,6 +75,29 @@ function getStockInfoJson(symbol, assetClass, callback) {
         stock_info[symbol]['netChange'] = parseFloat(response.data.primaryData.netChange);
         stock_info[symbol]['percentageChange'] = parseFloat(response.data.primaryData.percentageChange.replace(/%/g, ''));
         stock_info[symbol]['volume'] = parseInt(response.data.keyStats.Volume.value.replace(/,/g, ''));
+        callback();
+      }
+  });
+}
+*/
+
+function getStockInfoJson(symbol, callback) {
+  if (typeof symbol === 'undefined' || symbol === '') {
+    return;
+  }
+  symbol = symbol.toUpperCase();
+  $.getJSON('https://api.allorigins.win/get?url=' +
+            encodeURIComponent(`https://query1.finance.yahoo.com/v8/finance/chart/${symbol}`), function (data) {
+      let response = JSON.parse(data.contents);
+      if (typeof response.status !== 'undefined' && response.status.rCode == 200) {
+        let symbol = response.chart.result[0].symbol.toUpperCase();
+        stock_info[symbol] = {};
+        stock_info[symbol]['symbol'] = symbol;
+        stock_info[symbol]['company'] = response.chart.result[0].symbol;
+        stock_info[symbol]['price'] = parseFloat(response.chart.result[0].regularMarketPrice);
+        stock_info[symbol]['netChange'] = parseFloat('0.0');
+        stock_info[symbol]['percentageChange'] = parseFloat('0.0');
+        stock_info[symbol]['volume'] = parseInt('0.0');
         callback();
       }
   });
