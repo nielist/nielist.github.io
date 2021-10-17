@@ -225,7 +225,7 @@ function onReadyARKKDataInit() {
     obj['fund'] = csv_obj['ARKK'][i]['fund'];
     obj['ticker'] = csv_obj['ARKK'][i]['ticker'];
     obj['company'] = csv_obj['ARKK'][i]['company'];
-    obj['weight'] = csv_obj['ARKK'][i]['weight(%)'];
+    obj['weight'] = csv_obj['ARKK'][i]['weight (%)'];
     if (obj['ticker'] === '') {
       obj['ticker'] = obj['company'];
     }
@@ -251,7 +251,7 @@ function onReadyARKQDataInit() {
     obj['fund'] = csv_obj['ARKQ'][i]['fund'];
     obj['ticker'] = csv_obj['ARKQ'][i]['ticker'];
     obj['company'] = csv_obj['ARKQ'][i]['company'];
-    obj['weight'] = csv_obj['ARKQ'][i]['weight(%)'];
+    obj['weight'] = csv_obj['ARKQ'][i]['weight (%)'];
     if (obj['ticker'] === '') {
       obj['ticker'] = obj['company'];
     }
@@ -277,7 +277,7 @@ function onReadyARKWDataInit() {
     obj['fund'] = csv_obj['ARKW'][i]['fund'];
     obj['ticker'] = csv_obj['ARKW'][i]['ticker'];
     obj['company'] = csv_obj['ARKW'][i]['company'];
-    obj['weight'] = csv_obj['ARKW'][i]['weight(%)'];
+    obj['weight'] = csv_obj['ARKW'][i]['weight (%)'];
     if (obj['ticker'] === '') {
       obj['ticker'] = obj['company'];
     }
@@ -303,7 +303,7 @@ function onReadyARKGDataInit() {
     obj['fund'] = csv_obj['ARKG'][i]['fund'];
     obj['ticker'] = csv_obj['ARKG'][i]['ticker'];
     obj['company'] = csv_obj['ARKG'][i]['company'];
-    obj['weight'] = csv_obj['ARKG'][i]['weight(%)'];
+    obj['weight'] = csv_obj['ARKG'][i]['weight (%)'];
     if (obj['ticker'] === '') {
       obj['ticker'] = obj['company'];
     }
@@ -329,7 +329,7 @@ function onReadyARKFDataInit() {
     obj['fund'] = csv_obj['ARKF'][i]['fund'];
     obj['ticker'] = csv_obj['ARKF'][i]['ticker'];
     obj['company'] = csv_obj['ARKF'][i]['company'];
-    obj['weight'] = csv_obj['ARKF'][i]['weight(%)'];
+    obj['weight'] = csv_obj['ARKF'][i]['weight (%)'];
     if (obj['ticker'] === '') {
       obj['ticker'] = obj['company'];
     }
@@ -355,7 +355,7 @@ function onReadyARKXDataInit() {
     obj['fund'] = csv_obj['ARKX'][i]['fund'];
     obj['ticker'] = csv_obj['ARKX'][i]['ticker'];
     obj['company'] = csv_obj['ARKX'][i]['company'];
-    obj['weight'] = csv_obj['ARKX'][i]['weight(%)'];
+    obj['weight'] = csv_obj['ARKX'][i]['weight (%)'];
     if (obj['ticker'] === '') {
       obj['ticker'] = obj['company'];
     }
@@ -381,7 +381,7 @@ function onReadyPRNTDataInit() {
     obj['fund'] = csv_obj['PRNT'][i]['fund'];
     obj['ticker'] = csv_obj['PRNT'][i]['ticker'];
     obj['company'] = csv_obj['PRNT'][i]['company'];
-    obj['weight'] = csv_obj['PRNT'][i]['weight(%)'];
+    obj['weight'] = csv_obj['PRNT'][i]['weight (%)'];
     if (obj['ticker'] === '') {
       obj['ticker'] = obj['company'];
     }
@@ -407,7 +407,7 @@ function onReadyIZRLDataInit() {
     obj['fund'] = csv_obj['IZRL'][i]['fund'];
     obj['ticker'] = csv_obj['IZRL'][i]['ticker'];
     obj['company'] = csv_obj['IZRL'][i]['company'];
-    obj['weight'] = csv_obj['IZRL'][i]['weight(%)'];
+    obj['weight'] = csv_obj['IZRL'][i]['weight (%)'];
     if (obj['ticker'] === '') {
       obj['ticker'] = obj['company'];
     }
