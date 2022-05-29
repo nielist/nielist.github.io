@@ -29,6 +29,6 @@ function getDictionaryCsv() {
 
 function onChangeSourceText() {
   let source_text = $("#source-text").val();
-  let re = new RegExp("a|b", "i");
+  let re = new RegExp("a|b", "gim");
   $("#target-text").val(source_text);
 }
