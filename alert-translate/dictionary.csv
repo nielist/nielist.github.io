@@ -1,3 +1,4 @@
 "en","tc"
-"Security Alert \((.*)\): Vulnerability in (.*)","保安警報 \((.*)\): (.*) 漏洞"
-"High Threat Security Alert \((.*)\): Multiple Vulnerabilities in \((.*)\)","高危保安警報 \((.*)\): \((.*)\)多個漏洞"
+"Security Alert (.*): Vulnerability in (.*)","保安警報 $1: $2 漏洞"
+"High Threat Security Alert (.*): Multiple Vulnerabilities in (.*)","高危保安警報 $1: $2多個漏洞"
+"VMware has published a security advisory to address multiple vulnerabilities in VMware products. The list of security updates can be found at:","VMware 發布了一個安全公告，以應對 VMware 產品中的多個漏洞。有關安全性更新的列表，請參考以下網址："

@@ -20,7 +20,7 @@ function getDictionaryCsv() {
       let csv_obj = $.csv.toObjects(response);
       if (csv_obj.length > 0) {
         dictionary_list = csv_obj;
-		dictionary_list.sort((a, b) => (a.en.length > b.en.length) ? 1 : -1);
+		dictionary_list.sort((a, b) => (a.en.length < b.en.length) ? 1 : -1);
 		console.log(dictionary_list);
       }
     }
@@ -29,6 +29,12 @@ function getDictionaryCsv() {
 
 function onChangeSourceText() {
   let source_text = $("#source-text").val();
-  let re = new RegExp("a|b", "gim");
-  $("#target-text").val(source_text);
+  let target_text = source_text;
+  for (let i = 0; i < dictionary_list.length; i++) {
+    let en = dictionary_list[i].en;
+    let tc = dictionary_list[i].tc;
+    let re = new RegExp(en, "gim");
+    target_text = target_text.replace(re, tc);
+  }
+  $("#target-text").val(target_text);
 }
