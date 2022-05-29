@@ -23,3 +23,6 @@
 "Depending on the vulnerability exploited, a successful attack could lead to (.*).","成功利用漏洞可以導致$1，視乎攻擊者利用哪個漏洞而定。"
 "Patches for affected products are available from the Windows Update / Microsoft Update Catalog.","受影響產品的修補程式可在 Windows Update 或 Microsoft Update Catalog 獲取。"
 "Users of affected systems should follow the recommendations provided by the product vendor and take immediate actions to mitigate the risk.","受影響系統的用戶應遵從產品供應商的建議，立即採取行動以降低風險。"
+"Microsoft Edge (Chromium-based)", "Microsoft Edge (以 Chromium 為基礎)"
+"(.*) released a security update to address multiple vulnerabilities in (.*).","$1 發布了安全性更新，以應對發現於 $2 的多個漏洞。"
+"A remote attacker could entice a user to open a web page with specially crafted content on a vulnerable browser to exploit the vulnerability.","遠端攻擊者可誘使用戶透過含有漏洞的瀏覽器開啟包含特製內容的網頁，從而攻擊漏洞。"
