@@ -1,0 +1,3 @@
+"en","tc"
+"Security Alert \((.*)\): Vulnerability in (.*)","保安警報 \((.*)\): (.*) 漏洞"
+"High Threat Security Alert \((.*)\): Multiple Vulnerabilities in \((.*)\)","高危保安警報 \((.*)\): \((.*)\)多個漏洞"
