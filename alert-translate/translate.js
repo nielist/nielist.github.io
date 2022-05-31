@@ -20,8 +20,8 @@ function getDictionaryCsv() {
       let csv_obj = $.csv.toObjects(response);
       if (csv_obj.length > 0) {
         dictionary_list = csv_obj;
-		dictionary_list.sort((a, b) => (a.en.length < b.en.length) ? 1 : -1);
-		//console.log(dictionary_list);
+        dictionary_list.sort((a, b) => (a.en.length < b.en.length) ? 1 : -1);
+        //console.log(dictionary_list);
       }
     }
   });
