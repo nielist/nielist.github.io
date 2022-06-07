@@ -1,4 +1,5 @@
-var glossary_json_url = "https://www.infosec.gov.hk/json/glossary.json";
+//var glossary_json_url = "https://www.infosec.gov.hk/json/glossary.json";
+var glossary_json_url = "https://nielist.github.io/glossary/glossary.json";
 
 var glossary_list = [];
 
