@@ -1,0 +1,1837 @@
+[
+	{
+		"id":"0",
+		"letter":"a",
+		"slug":"access-control-system",
+		"name_en":"Access Control System",
+		"content_en":"The system ensures that resources are only granted to those users who are entitled to them.",
+		"name_tc":"接達控制系統",
+		"content_tc":"保證電腦資源只供獲授權人士使用。",
+		"name_sc":"接达控制系统",
+		"content_sc":"保证电脑资源只供获授权人士使用。"
+	},
+
+	{
+		"id":"1",
+		"letter":"a",
+		"slug":"address-spoofing",
+		"name_en":"Address Spoofing",
+		"content_en":"It's simply an action to forging an address. One example is IP spoofing.",
+		"name_tc":"位址仿冒",
+		"content_tc":"位址欺騙即假冒他人位址，例如互聯網規約位址仿冒。",
+		"name_sc":"位址仿冒",
+		"content_sc":"位址欺骗即假冒他人位址，例如互联网规约位址仿冒。"
+	},
+
+	{
+		"id":"2",
+		"letter":"a",
+		"slug":"administrative-security",
+		"name_en":"Administrative Security",
+		"content_en":"It refers to the use of management procedures and mechanisms to prevent unauthorised access to a system.",
+		"name_tc":"行政性保安",
+		"content_tc":"運用管理程序和機制以防止未獲授權接達系統。",
+		"name_sc":"行政性保安",
+		"content_sc":"运用管理程序和机制以防止未获授权接达系统。"
+	},
+
+	{
+		"id":"3",
+		"letter":"a",
+		"slug":"adware",
+		"name_en":"Adware",
+		"content_en":"Adware is software that displays advertising banners while the program is running. A lot of adware is also spyware.",
+		"name_tc":"廣告軟件",
+		"content_tc":"當廣告軟件運行時會顯示廣告標語。很多廣告軟件同時也是間諜軟件。",
+		"name_sc":"广告软件",
+		"content_sc":"当广告软件运行时会显示广告标语。很多广告软件同时也是间谍软件。"
+	},
+
+	{
+		"id":"4",
+		"letter":"a",
+		"slug":"advanced-encryption-standard-algorithm",
+		"name_en":"Advanced Encryption Standard (AES) Algorithm",
+		"content_en":"AES algorithm is an encryption algorithm based on Rijndael algorithm, with key sizes of 128, 192, or 256 bits to operate on a 128-bit block. The algorithm described by AES is a symmetric-key algorithm, meaning the same key is used for both encryption and decryption. AES supersedes Data Encryption Standard (DES) and is currently used worldwide.",
+		"name_tc":"高級加密標準運算法",
+		"content_tc":"高級加密算法（AES）是以Rijndael算法為基礎的對稱分區加密（加密算法），採用128、192或256位元的密碼匙在128位元的區塊運作。高級加密算法是一種對稱密鑰算法，使用相同的密碼匙進行加密和解密。它取代了數據加密標準（DES），目前於全球廣泛地使用。",
+		"name_sc":"高级加密标准运算法",
+		"content_sc":"高级加密算法（AES）是以Rijndael算法为基础的对称分区加密（加密算法），采用128、192或256位元的密码匙在128位元的区块运作。高级加密算法是一种对称密钥算法，使用相同的密码匙进行加密和解密。它取代了数据加密标准（DES），目前于全球广泛地使用。"
+	},
+
+	{
+		"id":"5",
+		"letter":"a",
+		"slug":"anti-virus-software",
+		"name_en":"Anti-virus Software",
+		"content_en":"Anti-virus Software is computer software that is designed to stop computer viruses, eliminate computer viruses, and/or recover data affected by computer viruses.",
+		"name_tc":"抗電腦病毒軟件",
+		"content_tc":"該等軟件乃設計來阻止和消滅電腦病毒，及／或把受到電腦病毒感染的數據復原。",
+		"name_sc":"抗电脑病毒软件",
+		"content_sc":"该等软件乃设计来阻止和消灭电脑病毒，及／或把受到电脑病毒感染的数据复原。"
+	},
+
+	{
+		"id":"6",
+		"letter":"a",
+		"slug":"application-gateway",
+		"name_en":"Application Gateway",
+		"content_en":"A system used to restrict access to services or functions across a firewall boundary.",
+		"name_tc":"應用通訊閘",
+		"content_tc":"該等系統用以限制穿越防火牆範圍來接達服務或功能。",
+		"name_sc":"应用通讯闸",
+		"content_sc":"该等系统用以限制穿越防火墙范围来接达服务或功能。"
+	},
+
+	{
+		"id":"7",
+		"letter":"a",
+		"slug":"assurance-level",
+		"name_en":"Assurance Level",
+		"content_en":"A relative measure of confidence in the quality of a credential. The assurance level ranges from level 1 (little or no confidence) to level 4 (very high degree of confidence).",
+		"name_tc":"保證等級",
+		"content_tc":"對憑證質素的信心所採用的相關措施。「保證等級」的幅度由第1等級(信心不大或無信心)至第4等級(信心程度非常高)。",
+		"name_sc":"保证等级",
+		"content_sc":"对凭证质素的信心所采用的相关措施。「保证等级」的幅度由第1等级(信心不大或无信心)至第4等级(信心程度非常高)。"
+	},
+
+	{
+		"id":"8",
+		"letter":"a",
+		"slug":"asymmetric-cryptography",
+		"name_en":"Asymmetric Cryptography",
+		"content_en":"Two different keys are used with one for encryption and the other for decryption. The decryption key cannot be derived from the encryption key.",
+		"name_tc":"非對稱加密法",
+		"content_tc":"使用兩條不同的密碼匙分別用以加密和解密的方法，當中外人不能根據用以加密的密碼匙計算出解密的密碼匙。",
+		"name_sc":"非对称加密法",
+		"content_sc":"使用两条不同的密码匙分别用以加密和解密的方法，当中外人不能根据用以加密的密码匙计算出解密的密码匙。"
+	},
+
+	{
+		"id":"9",
+		"letter":"a",
+		"slug":"audit-trail",
+		"name_en":"Audit Trail",
+		"content_en":"Audit trail is defined as a chronological record of system activities to enable the reconstruction and examination of the sequence of events and/or changes in an event.",
+		"name_tc":"審計追蹤",
+		"content_tc":"審計追蹤被定義為按系統活動的時間先後記錄，可以用作重組和檢查一組事件的發生次序，及／或一件事件的連串變化。",
+		"name_sc":"审计追踪",
+		"content_sc":"审计追踪被定义为按系统活动的时间先后记录，可以用作重组和检查一组事件的发生次序，及／或一件事件的连串变化。"
+	},
+
+	{
+		"id":"10",
+		"letter":"a",
+		"slug":"authentication",
+		"name_en":"Authentication",
+		"content_en":"A process or method to identify and to prove the identity of a user/party who attempts to send message or access data. Message authentication refers to a process used to prove the integrity of specific information.",
+		"name_tc":"認證",
+		"content_tc":"用以辨識及證明嘗試發出信息或接達數據的用戶╱一方身份的程序或方法。信息認證指用以證明特定資訊的完整性的程序。",
+		"name_sc":"认证",
+		"content_sc":"用以辨识及证明尝试发出信息或接达数据的用户╱一方身份的程序或方法。信息认证指用以证明特定资讯的完整性的程序。"
+	},
+
+	{
+		"id":"11",
+		"letter":"a",
+		"slug":"authentication-token",
+		"name_en":"Authentication Token",
+		"content_en":"A portable device operates by using challenge/response, time sequence, or other techniques in order to authenticate a user.",
+		"name_tc":"認證權標",
+		"content_tc":"採用質疑╱應答、時間順序或其它技巧以認證用戶的可攜式設備。",
+		"name_sc":"认证权标",
+		"content_sc":"采用质疑╱应答、时间顺序或其它技巧以认证用户的可携式设备。"
+	},
+
+	{
+		"id":"12",
+		"letter":"a",
+		"slug":"authorisation",
+		"name_en":"Authorisation",
+		"content_en":"A process to grant rights to a person for accessing data or using specific information resources.",
+		"name_tc":"授權",
+		"content_tc":"把接達數據或使用特定資訊資源的權利批給某人的程序。",
+		"name_sc":"授权",
+		"content_sc":"把接达数据或使用特定资讯资源的权利批给某人的程序。"
+	},
+
+	{
+		"id":"13",
+		"letter":"a",
+		"slug":"availability",
+		"name_en":"Availability",
+		"content_en":"A condition in which information or processes are reasonably accessible and used by an authorised party including timely and critical operations.",
+		"name_tc":"可用性",
+		"content_tc":"獲授權一方可合理地接達及使用資訊或程序的狀態，包括及時和重要的運作。",
+		"name_sc":"可用性",
+		"content_sc":"获授权一方可合理地接达及使用资讯或程序的状态，包括及时和重要的运作。"
+	},
+
+	{
+		"id":"14",
+		"letter":"b",
+		"slug":"backdoor",
+		"name_en":"Backdoor",
+		"content_en":"A backdoor is a tool installed after a compromise to give an attacker easier access to the compromised system around any security mechanisms that are in place.",
+		"name_tc":"後門",
+		"content_tc":"後門是系統遭破解後被安裝的工具，使攻擊者更容易在圍繞著的任何保安機制在中，接達被破解的系統。",
+		"name_sc":"後门",
+		"content_sc":"後门是系统遭破解後被安装的工具，使攻击者更容易在围绕著的任何保安机制在中，接达被破解的系统。"
+	},
+
+	{
+		"id":"15",
+		"letter":"b",
+		"slug":"biometric-identification",
+		"name_en":"Biometric Identification",
+		"content_en":"Use of measurable physiological characteristics to authenticate a user such as fingerprints or facial characteristics.",
+		"name_tc":"生物特徵識別技術",
+		"content_tc":"使用可量度的生理特徵，例如：指紋或面部特徵，以認證用戶的身分。",
+		"name_sc":"生物特徵识别技术",
+		"content_sc":"使用可量度的生理特征，例如：指纹或面部特征，以认证用户的身分。"
+	},
+
+	{
+		"id":"16",
+		"letter":"b",
+		"slug":"botnet",
+		"name_en":"Botnet",
+		"content_en":"A botnet is a large number of compromised computers that are used to create and send spam or viruses or flood a network with messages as a distributed denial of service attack.",
+		"name_tc":"殭屍網絡",
+		"content_tc":"殭屍網絡是由大量遙距控制的殭屍電腦所組成的網絡，被利用作發出垃圾郵件或病毒，以發動分布式拒絕服務攻擊。",
+		"name_sc":"僵尸网络",
+		"content_sc":"僵尸网络是由大量遥距控制的僵尸电脑所组成的网络，被利用作发出垃圾邮件或病毒，以发动分布式拒绝服务攻击。"
+	},
+
+	{
+		"id":"17",
+		"letter":"b",
+		"slug":"brute-force-attack",
+		"name_en":"Brute Force Attack",
+		"content_en":"Brute force attack is a technique used to break an encryption or authentication system by trying all possibilities.",
+		"name_tc":"暴力攻擊",
+		"content_tc":"暴力攻擊是嘗試所有可能性以破解加密或認證系統的技術。",
+		"name_sc":"暴力攻击",
+		"content_sc":"暴力攻击是尝试所有可能性以破解加密或认證系统的技术。"
+	},
+
+	{
+		"id":"18",
+		"letter":"b",
+		"slug":"buffer-overflow-attack",
+		"name_en":"Buffer-overflow Attack",
+		"content_en":"An attack exploits a process to read in data beyond the boundary of a fixed-length buffer, with an aim to overwrite computer memory by a carefully crafted data and execute privilege instructions in an unintended way.",
+		"name_tc":"緩衝區滿溢攻擊",
+		"content_tc":"利用程式在指定長度的緩衝界限以外讀取資料所構成的攻擊，目的是以特別編寫的資料蓋寫電腦記憶體，並且不正當地以特別權限執行指令。",
+		"name_sc":"缓衝区满溢攻击",
+		"content_sc":"利用程式在指定长度的缓衝界限以外读取资料所构成的攻击，目的是以特别编写的资料盖写电脑记忆体，并且不正当地以特别权限执行指令。"
+	},
+
+	{
+		"id":"19",
+		"letter":"c",
+		"slug":"captcha",
+		"name_en":"Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA)",
+		"content_en":"CAPTCHA is a type of challenge-response test used in computing as an attempt to ensure that the response is generated by a human being. It is to protect websites against bots by generating and grading tests that humans can pass but current computer programs cannot.",
+		"name_tc":"驗證碼",
+		"content_tc":"一種用於電腦計算領域中的挑戰與回應式的測試，以確保該回應是由人所產生的。它產生人類可以通過而電腦程序不能通過的測試，以保護網站來自惡意電腦的襲擊。",
+		"name_sc":"验證码",
+		"content_sc":"一种用于电脑计算领域中的挑战与回应式的测试，以确保该回应是由人所产生的。它产生人类可以通过而电脑程序不能通过的测试，以保护网站来自恶意电脑的袭击。"
+	},
+
+	{
+		"id":"20",
+		"letter":"c",
+		"slug":"centralised-identity-management",
+		"name_en":"Centralised Identity Management",
+		"content_en":"Centralised identity management is a model of identity management in which the same identifier and credential are used by each service provider.",
+		"name_tc":"集中化身份管理",
+		"content_tc":"集中化身份管理是身份管理模式的一種，在此模式中，每一個服務提供者可使用相同身份認證工具和憑證。",
+		"name_sc":"集中化身份管理",
+		"content_sc":"集中化身份管理是身份管理模式的一种，在此模式中，每一个服务提供者可使用相同身份认证工具和凭证。"
+	},
+
+	{
+		"id":"21",
+		"letter":"c",
+		"slug":"certification-authority",
+		"name_en":"Certification Authority (CA)",
+		"content_en":"A trusted authority or party that issue and revoke digital certificates to a person or an organisation for proofing of identity in an electronic transaction.",
+		"name_tc":"核證機關",
+		"content_tc":"核證機關是向個人或機構發放和撒銷數碼證書，以便他們在進行電子交易時核實身分。",
+		"name_sc":"核证机关",
+		"content_sc":"核证机关是向个人或机构发放和撒销数码证书，以便他们在进行电子交易时核实身分。"
+	},
+
+	{
+		"id":"22",
+		"letter":"c",
+		"slug":"certificate-management",
+		"name_en":"Certificate Management",
+		"content_en":"A management mechanism includes tasks of storage, dissemination, publication, revocation and suspension of certificates.",
+		"name_tc":"證書管理",
+		"content_tc":"包括貯存、分發、公布、撤銷及暫時吊銷證書的管理機制。",
+		"name_sc":"证书管理",
+		"content_sc":"包括贮存、分发、公布、撤销及暂时吊销证书的管理机制。"
+	},
+
+	{
+		"id":"152",
+		"letter":"c",
+		"slug":"certificate-pinning",
+		"name_en":"Certificate Pinning",
+		"content_en":"Certificate pinning restricts which digital certificates are considered valid to control the risk of CA compromise, or Man-in-the-middle attacks. Clients connecting to that certificate pinning enabled server will treat all other certificates as invalid and refuse to make an HTTPS connection.",
+		"name_tc":"憑證綁定機制",
+		"content_tc":"「憑證綁定機制」限制哪些數碼證書是有效的，以減低核證機關受控制或受到中間人攻擊的風險。客戶端連一旦接到啟用憑證綁定機制的服務器，便會把其他證書視為無效並拒絕建立 HTTPS 連線。",
+		"name_sc":"凭证绑定机制",
+		"content_sc":"「凭证绑定机制」限制哪些数码证书是有效的，以减低核证机关受控制或受到中间人攻击的风险。客户端连一旦接到启用凭证绑定机制的服务器，便会把其他证书视为无效并拒绝建立 HTTPS 连线。"
+	},
+
+	{
+		"id":"23",
+		"letter":"c",
+		"slug":"certificate-server",
+		"name_en":"Certificate Server",
+		"content_en":"A server which performs the certification process of public keys.",
+		"name_tc":"證書伺服器",
+		"content_tc":"執行公開密碼匙核證程序的伺服器。",
+		"name_sc":"证书伺服器",
+		"content_sc":"执行公开密码匙核证程序的伺服器。"
+	},
+
+	{
+		"id":"24",
+		"letter":"c",
+		"slug":"challenge-response",
+		"name_en":"Challenge / Response",
+		"content_en":"An authentication technique used by a system/server to authenticate a user. A server usually sends an unpredictable challenge (a set of numbers or letters) to the user, and the client/user will then compute a response using some special form of authentication token.",
+		"name_tc":"質疑╱應答",
+		"content_tc":"系統╱伺服器採用的用以認證用戶身份的認證技巧。伺服器通常會發出不可預測的質疑（一組數字或字母）給用戶，而客戶╱用戶會使用某種特別形式的認證權標計算應答。",
+		"name_sc":"质疑╱应答",
+		"content_sc":"系统╱伺服器采用的用以认证用户身份的认证技巧。伺服器通常会发出不可预测的质疑（一组数字或字母）给用户，而客户╱用户会使用某种特别形式的认证权标计算应答。"
+	},
+
+	{
+		"id":"25",
+		"letter":"c",
+		"slug":"checksum",
+		"name_en":"Checksum",
+		"content_en":"A value that is computed by a function that is dependent on the contents of a data object and is stored or transmitted together with the object, for the purpose of detecting changes in the data.",
+		"name_tc":"校驗和",
+		"content_tc":"校驗和是因應數據物件中的內容以函數計算的一個值，與數據物件一起儲存或傳輸，以檢查數據是否曾遭更改。",
+		"name_sc":"校验和",
+		"content_sc":"校验和是因应数据物件中的内容以函数计算的一个值，与数据物件一起储存或传输，以检查数据是否曾遭更改。"
+	},
+
+	{
+		"id":"26",
+		"letter":"c",
+		"slug":"ciphertext",
+		"name_en":"Ciphertext",
+		"content_en":"A scrambled / cryptic content derived from plaintext using an encryption algorithm.",
+		"name_tc":"加密文本",
+		"content_tc":"使用加密算法把原文轉為混亂和不能明解的信息或數據。",
+		"name_sc":"加密文本",
+		"content_sc":"使用加密算法把原文转为混乱和不能明解的信息或数据。"
+	},
+
+	{
+		"id":"27",
+		"letter":"c",
+		"slug":"code-injection-attack",
+		"name_en":"Code Injection Attack",
+		"content_en":"An attack technique to introduce code into a computer program or system to form an unexpected action. The attack is usually accomplished by taking advantage of an un-enforced or loosely implemented input validation process.",
+		"name_tc":"代碼插入攻擊",
+		"content_tc":"在電腦程式或系統中插入代碼所構成的攻擊，通常利用薄弱或容易受攻擊的輸入確認程式來達成入侵目的。",
+		"name_sc":"代码插入攻击",
+		"content_sc":"在电脑程式或系统中插入代码所构成的攻击，通常利用薄弱或容易受攻击的输入确认程式来达成入侵目的。"
+	},
+
+	{
+		"id":"28",
+		"letter":"c",
+		"slug":"compromise",
+		"name_en":"Compromise",
+		"content_en":"A violation of a security policy in which an unauthorised access to a system, disclosure or loss of sensitive information may be resulted.",
+		"name_tc":"破解",
+		"content_tc":"一種違反保安政策的情況，可能導致敏感資訊遭未獲授權的披露或遺失。",
+		"name_sc":"破解",
+		"content_sc":"一种违反保安政策的情况，可能导致敏感资讯遭未获授权的披露或遗失。"
+	},
+
+	{
+		"id":"29",
+		"letter":"c",
+		"slug":"confidentiality",
+		"name_en":"Confidentiality",
+		"content_en":"Confidentiality is the need to ensure that information is disclosed only to those who are authorised to view it.",
+		"name_tc":"機密性",
+		"content_tc":"確保數據受到保護及只向獲授權一方披露的情況。",
+		"name_sc":"机密性",
+		"content_sc":"确保数据受到保护及只向获授权一方披露的情况。"
+	},
+
+	{
+		"id":"30",
+		"letter":"c",
+		"slug":"cobit",
+		"name_en":"Control Objectives for Information and related Technology (COBIT)",
+		"content_en":"The Control Objectives for Information and related Technology (COBIT) is an IT governance framework and supporting toolset that allows managers to bridge the gap between control requirements, technical issues and business risks.",
+		"name_tc":"資訊系統稽核與控制標準",
+		"content_tc":"資訊系統稽核與控制標準（COBIT）是一個資訊科技治理框架和配套工具，使管理人員能夠彌合控制的要求、技術問題和業務風險之間的差距。",
+		"name_sc":"资讯系统稽核与控制标准",
+		"content_sc":"资讯系统稽核与控制标准（COBIT）是一个资讯科技治理框架和配套工具，使管理人员能够弥合控制的要求、技术问题和业务风险之间的差距。"
+	},
+
+	{
+		"id":"31",
+		"letter":"c",
+		"slug":"cracker",
+		"name_en":"Cracker",
+		"content_en":"An individual with malicious intent who attempts to gain unauthorised access to other’s system.",
+		"name_tc":"電腦破壞者",
+		"content_tc":"個別人士嘗試在未獲授權情況下進入他人電腦並作出破壞。",
+		"name_sc":"电脑破坏者",
+		"content_sc":"个别人士尝试在未获授权情况下进入他人电脑并作出破坏。"
+	},
+
+	{
+		"id":"32",
+		"letter":"c",
+		"slug":"credential",
+		"name_en":"Credential",
+		"content_en":"A set of claims used to prove the identity of a client. They contain an identifier for the client and a proof of the client's identity, such as a password. They may also include information, such as a signature, to indicate that the issuer certifies the claims in the credential.",
+		"name_tc":"憑證",
+		"content_tc":"一組用以證明用戶身分的聲稱,當中載有用戶身分的標識符及用戶身分的證明,例如密碼。此外,亦可能包括資料(例如簽名),以顯示發行人證明憑證的聲稱。",
+		"name_sc":"凭证",
+		"content_sc":"一组用以证明用户身分的声称,当中载有用户身分的标识符及用户身分的证明,例如密码。此外,亦可能包括资料(例如签名),以显示发行人证明凭证的声称。"
+	},
+
+	{
+		"id":"33",
+		"letter":"c",
+		"slug":"cross-site-scripting",
+		"name_en":"Cross Site Scripting",
+		"content_en":"Cross site scripting is a flaw in web application that allows the execution of scripts in the victim's browser to hijack user sessions, deface websites, and possibly introduce computer worms, etc.",
+		"name_tc":"跨網址程式編程",
+		"content_tc":"跨網址程式編程攻擊（XSS）是網上應用系統保安漏洞的一種，它允許在受害者的瀏覽器執行手稿程式（Script），導致劫持用戶對話、竄改網站並可能植入蠕蟲等等。",
+		"name_sc":"跨网址程式编程",
+		"content_sc":"跨网址程式编程攻击（XSS）是网上应用系统保安漏洞的一种，它允许在受害者的浏览器执行手稿程式（Script），导致劫持用户对话、窜改网站并可能植入蠕虫等等。"
+	},
+
+	{
+		"id":"34",
+		"letter":"c",
+		"slug":"cryptography",
+		"name_en":"Cryptography",
+		"content_en":"Cryptography is the art of keeping messages secret by using different methods. It normally deals with all aspects of secure messaging, authentication, digital signatures, and electronic money.",
+		"name_tc":"密碼學",
+		"content_tc":"密碼學是指把信息保密的技術。它處理有關穩妥信息傳送、認證、數碼簽署及電子貨幣等所有範疇的工作。",
+		"name_sc":"密码学",
+		"content_sc":"密码学是指把信息保密的技术。它处理有关稳妥信息传送、认证、数码签署及电子货币等所有范畴的工作。"
+	},
+
+	{
+		"id":"35",
+		"letter":"d",
+		"slug":"decryption",
+		"name_en":"Decryption",
+		"content_en":"The reverse process of encryption in which encoded messages or ciphertext is decoded from its protected, scrambled form into original plaintext so that they can be easily readable.",
+		"name_tc":"解密",
+		"content_tc":"把文本加密的相反程序，即把經加密的信息或加密文本從受保護和混亂的形式轉回原文形式，以便閱讀。",
+		"name_sc":"解密",
+		"content_sc":"把文本加密的相反程序，即把经加密的信息或加密文本从受保护和混乱的形式转回原文形式，以便阅读。"
+	},
+
+	{
+		"id":"36",
+		"letter":"d",
+		"slug":"defence-in-depth",
+		"name_en":"Defence-in-Depth",
+		"content_en":"Defence-in-Depth is the approach of using multiple layers of security to guard against failure of a single security component.",
+		"name_tc":"縱深防禦",
+		"content_tc":"縱深防禦是利用多層次的資訊保安措施，以在單一保安組件發生故障時作出保護。",
+		"name_sc":"纵深防御",
+		"content_sc":"纵深防御是利用多层次的资讯保安措施，以在单一保安组件发生故障时作出保护。"
+	},
+
+	{
+		"id":"37",
+		"letter":"d",
+		"slug":"degauss",
+		"name_en":"Degauss",
+		"content_en":"Reduce magnetic flux density to zero by applying a reversing magnetic field, in order to permanently remove data from a magnetic storage medium, such as a tape or disk. It is also called demagnetising.",
+		"name_tc":"消磁",
+		"content_tc":"通過施加反向磁場把磁通密度減少到零，來將一個磁存儲介質（如磁帶或磁盤）的數據永久刪除。",
+		"name_sc":"消磁",
+		"content_sc":"通过施加反向磁场把磁通密度减少到零，来将一个磁存储介质（如磁带或磁盘）的数据永久删除。"
+	},
+
+	{
+		"id":"38",
+		"letter":"d",
+		"slug":"denial-of-service",
+		"name_en":"Denial of Service (DoS)",
+		"content_en":"An attacker attempts to prevent legitimate users from accessing information or services. Examples of such attacks are SYN flood, Ping O death, packet flooding and Ping flooding.",
+		"name_tc":"拒絕服務",
+		"content_tc":"攻擊者嘗試阻止用家使用網上資訊或服務。這類攻擊的例子計有大量的SYN,「致命小包」,小包氾濫及Ping氾濫等。",
+		"name_sc":"拒绝服务",
+		"content_sc":"攻击者尝试阻止用家使用网上资讯或服务。这类攻击的例子计有大量的SYN,「致命小包」,小包泛滥及Ping泛滥等。"
+	},
+
+	{
+		"id":"39",
+		"letter":"d",
+		"slug":"detective-control",
+		"name_en":"Detective Control",
+		"content_en":"Detective controls are used to identify undesirable events that have occurred.",
+		"name_tc":"偵測性措施",
+		"content_tc":"偵測性措施是用來識別已發生的不利事件。",
+		"name_sc":"侦测性措施",
+		"content_sc":"侦测性措施是用来识别已发生的不利事件。"
+	},
+
+	{
+		"id":"40",
+		"letter":"d",
+		"slug":"dictionary-attack",
+		"name_en":"Dictionary Attack",
+		"content_en":"Dictionary attack is a technique used to break an encryption or authentication system by trying words that can be found in a dictionary.",
+		"name_tc":"字典攻擊",
+		"content_tc":"字典攻擊是使用字典中可找到的字，用以破解加密或認證系統的一種技術。",
+		"name_sc":"字典攻击",
+		"content_sc":"字典攻击是使用字典中可找到的字，用以破解加密或认证系统的一种技术。"
+	},
+
+	{
+		"id":"41",
+		"letter":"d",
+		"slug":"digital-certificate",
+		"name_en":"Digital Certificate",
+		"content_en":"A digital certificate is a form of electronic record that serves as an identification of who you are in conducting online transactions. The certificate usually contains information such as user's public key, name and email address.",
+		"name_tc":"數碼證書",
+		"content_tc":"數碼證書是在進行網上交易時能識別你的身分的電子紀錄。證書通常包含的資訊包括用戶的公開密碼匙、姓名及電子郵件地址。",
+		"name_sc":"数码证书",
+		"content_sc":"数码证书是在进行网上交易时能识别你的身分的电子纪录。证书通常包含的资讯包括用户的公开密码匙、姓名及电子邮件地址。"
+	},
+
+	{
+		"id":"42",
+		"letter":"d",
+		"slug":"digital-signature",
+		"name_en":"Digital Signature",
+		"content_en":"Under the public key infrastructure (PKI) technology, a digital signature is derived by applying a mathematical function to compute the electronic message and the signer's private key. Recipients can verify the integrity, authenticity, and non-repudiation of the electronic message by checking the digital signature with the use of the sender's public key. Under the Electronic Transactions Ordinance (Cap. 553) (ETO), electronic or digital signatures have the same legal status as paper-based signatures.",
+		"name_tc":"數碼簽署",
+		"content_tc":"在公開密碼匙基礎建設的技術下，數碼簽署是以一數學公式透過電子信息內容和簽署一方的私人密碼匙來計算出。接收電子信息的一方可利用簽署一方的公開密碼匙來確認信息內容的完整性、真確性及不可否定性。根據《電子交易條例》（第553章），電子或數碼簽署與紙張文件上的簽署具有相同的法律地位。",
+		"name_sc":"数码签署",
+		"content_sc":"在公开密码匙基础建设的技术下，数码签署是以一数学公式透过电子信息内容和签署一方的私人密码匙来计算出。接收电子信息的一方可利用签署一方的公开密码匙来确认信息内容的完整性、真确性及不可否定性。根据《电子交易条例》（第553章），电子或数码签署与纸张文件上的签署具有相同的法律地位。"
+	},
+
+	{
+		"id":"43",
+		"letter":"d",
+		"slug":"discretionary-access-control",
+		"name_en":"Discretionary Access Control (DAC)",
+		"content_en":"Discretionary Access Control (DAC) is an authorisation mechanism in which users own the objects under their control, and the granting and revoking of access control privileges are left to the discretion of individual users.",
+		"name_tc":"自主接達控制",
+		"content_tc":"自主接達控制是一授權機制，用戶可以控制的自己本身的物件，以及可以就個別用戶分別設下授予及撒銷使用這些物件的權利。",
+		"name_sc":"自主接达控制",
+		"content_sc":"自主接达控制是一授权机制，用户可以控制的自己本身的物件，以及可以就个别用户分别设下授予及撒销使用这些物件的权利。"
+	},
+
+	{
+		"id":"44",
+		"letter":"d",
+		"slug":"ddos",
+		"name_en":"Distributed Denial of Service (DDoS) Attack",
+		"content_en":"An attack using multiple computers to launch denial-of-service (DoS) attacks at the same time against a targeted system.",
+		"name_tc":"分布式拒絕服務攻擊",
+		"content_tc":"利用多台電腦向同一目標系統同時發動拒絕服務攻擊。",
+		"name_sc":"分布式拒绝服务攻击",
+		"content_sc":"利用多台电脑向同一目标系统同时发动拒绝服务攻击。"
+	},
+
+	{
+		"id":"45",
+		"letter":"d",
+		"slug":"domain-name-system",
+		"name_en":"Domain Name System (DNS)",
+		"content_en":"DNS resolves human-memorable domain names and hostnames into the corresponding Internet Protocol (IP) addresses.",
+		"name_tc":"域名系統",
+		"content_tc":"域名系統將網域名稱轉換為對應的互聯網規約地址。",
+		"name_sc":"域名系统",
+		"content_sc":"域名系统将网域名称转换为对应的互联网规约地址。"
+	},
+
+	{
+		"id":"46",
+		"letter":"d",
+		"slug":"domain-name-system-spoofing",
+		"name_en":"Domain Name System (DNS) Spoofing",
+		"content_en":"The DNS spoofing compromises the domain name server which resolve the domain name to an incorrect IP address and diverting traffic to another computer (often the attacker's).",
+		"name_tc":"域名系統仿冒",
+		"content_tc":"破解域名系統伺服器，將網域名稱轉換為錯誤的互聯網規約地址，或者是其他電腦，甚至是攻擊者電腦的互聯網規約地址。",
+		"name_sc":"域名系统仿冒",
+		"content_sc":"破解域名系统伺服器，将网域名称转换为错误的互联网规约地址，或者是其他电脑，甚至是攻击者电脑的互联网规约地址。"
+	},
+
+	{
+		"id":"47",
+		"letter":"d",
+		"slug":"dnssec",
+		"name_en":"Domain Name System Security Extensions (DNSSEC)",
+		"content_en":"DNSSEC was designed to protect the Internet from certain attacks, such as DNS cache poisoning. It is a set of extensions to DNS, which provide: a) origin authentication of DNS data, b) data integrity, and c) authenticated denial of existence.",
+		"name_tc":"域名系統安全擴展",
+		"content_tc":"域名系統安全擴展的目的是要保護互聯網的攻擊，如網域名稱系統緩存中毒。這網域名稱系統的擴展提供了：a）認證網域名稱系統數據的源頭，b）數據的完整性，及c）認證否定存在。",
+		"name_sc":"域名系统安全扩展",
+		"content_sc":"域名系统安全扩展的目的是要保护互联网的攻击，如网域名称系统缓存中毒。这网域名称系统的扩展提供了：a）认证网域名称系统数据的源头，b）数据的完整性，及c）认证否定存在。"
+	},
+
+	{
+		"id":"48",
+		"letter":"d",
+		"slug":"drive-by-attack",
+		"name_en":"Drive-by attack",
+		"content_en":"Drive-by attack is used by attackers who construct URL(s) embedded with malicious scripts in a website, where the users are tricked to click on the URL allowing the embedded script running on their web browsers and resulting in more malignant attacks (such as downloading a Trojan Horse or sending cookie information to the attacker).",
+		"name_tc":"偷渡式攻擊",
+		"content_tc":"偷渡式攻擊是由攻擊者在網頁中編制一個或數個已嵌入惡性手稿程式的網址，藉此引誘目標用戶點擊此網址，讓隱藏在內的手稿程式在用戶的瀏覽器開始運作，造成更惡性的攻擊如下載特洛依木馬程式或把cookie資訊傳送給攻擊者。",
+		"name_sc":"偷渡式攻击",
+		"content_sc":"偷渡式攻击是由攻击者在网页中编制一个或数个已嵌入恶性手稿程式的网址，藉此引诱目标用户点击此网址，让隐藏在内的手稿程式在用户的浏览器开始运作，造成更恶性的攻击如下载特洛依木马程式或把cookie讯传送给攻击者。"
+	},
+
+	{
+		"id":"49",
+		"letter":"e",
+		"slug":"eavesdropping",
+		"name_en":"Eavesdropping",
+		"content_en":"Eavesdropping is simply listening to a private conversation which may reveal information which can provide access to a facility or network.",
+		"name_tc":"竊聽",
+		"content_tc":"從聆聽私人對話中，獲得可接達設備或網絡的資訊。",
+		"name_sc":"窃听",
+		"content_sc":"从聆听私人对话中，获得可接达设备或网络的资讯。"
+	},
+
+	{
+		"id":"50",
+		"letter":"e",
+		"slug":"encryption",
+		"name_en":"Encryption",
+		"content_en":"A process to encode the contents of message so as to hide it from outsiders. That is, it is a process of scrambling and transforming data from an easily readable and understandable format (plaintext) into an unintelligible format that seems to be useless and not readily understandable (ciphertext).",
+		"name_tc":"加密",
+		"content_tc":"把信息內容編碼以防止外人讀取程序，即把易於讀取和了解的數據格式（原文）加以更改及轉變，使其轉為不可讀取的格式（加密文本），令人看起來是一組無用及難以了解的文本。",
+		"name_sc":"加密",
+		"content_sc":"把信息内容编码以防止外人读取程序，即把易于读取和了解的数据格式（原文）加以更改及转变，使其转为不可读取的格式（加密文本），令人看起来是一组无用及难以了解的文本。"
+	},
+
+	{
+		"id":"51",
+		"letter":"e",
+		"slug":"exploit-code",
+		"name_en":"Exploit Code",
+		"content_en":"A program that allows attackers to automatically break into a system.",
+		"name_tc":"漏洞開發編碼",
+		"content_tc":"一個允許攻擊者自動闖入系統的程序。",
+		"name_sc":"漏洞开发编码",
+		"content_sc":"一个允许攻击者自动闯入系统的程序。"
+	},
+
+	{
+		"id":"52",
+		"letter":"f",
+		"slug":"false-positive",
+		"name_en":"False Positive",
+		"content_en":"An alert that incorrectly indicates that malicious activity is occurring.",
+		"name_tc":"誤報",
+		"content_tc":"錯誤地指示惡意活動發生的警報。",
+		"name_sc":"误报",
+		"content_sc":"错误地指示恶意活动发生的警报。"
+	},
+
+	{
+		"id":"53",
+		"letter":"f",
+		"slug":"federation",
+		"name_en":"Federation",
+		"content_en":"Members of a federation system depend on each other to authenticate their respective users and vouch for their access to services offered by other members of the federation.",
+		"name_tc":"聯邦",
+		"content_tc":"由聯邦內的成員互相認證彼此各自的使用者,以保證他們可接達到其他成員所提供的服務。",
+		"name_sc":"联邦",
+		"content_sc":"由联邦内的成员互相认证彼此各自的使用者,以保证他们可接达到其他成员所提供的服务。"
+	},
+
+	{
+		"id":"54",
+		"letter":"f",
+		"slug":"firewall",
+		"name_en":"Firewall",
+		"content_en":"A firewall is a system or combination of systems that helps to prevent outsiders from obtaining unauthorised access to internal information resources. The firewall enforces the access control policy, i.e. permit or deny, between two networks. It provides a single point where access control and audit can be imposed.",
+		"name_tc":"防火牆",
+		"content_tc":"防火牆是一個或一組系統，協助防止外人在未獲授權情況下接達內部的資訊資源。防火牆執行接達控制政策，即負責准許或拒絕兩個網絡之間接達的工作。防火牆只提供單一點以進行接達管制和審計。",
+		"name_sc":"防火墙",
+		"content_sc":"防火墙是一个或一组系统，协助防止外人在未获授权情况下接达内部的资讯资源。防火墙执行接达控制政策，即负责准许或拒绝两个网络之间接达的工作。防火墙只提供单一点以进行接达管制和审计。"
+	},
+
+	{
+		"id":"55",
+		"letter":"h",
+		"slug":"hacker",
+		"name_en":"Hacker",
+		"content_en":"In computer security, a hacker is someone with a strong interest in understanding and manipulating computer systems, and specialises in work with the security mechanisms for these systems. Nowadays, it is most commonly used by the mass media to refer to a person who maliciously uses computer knowledge to gain unauthorised access and cause damage to computers and data.",
+		"name_tc":"黑客",
+		"content_tc":"從電腦保安層面看，黑客是對電腦系統有很大興趣去了解和探討，並擁有對系統保安機制的專門知識。時至今日，大眾傳媒形容以電腦知識去得到未獲授權的接達並破壞電腦和數據的人，都稱之為黑客。",
+		"name_sc":"黑客",
+		"content_sc":"从电脑保安层面看，黑客是对电脑系统有很大兴趣去了解和探讨，并拥有对系统保安机制的专门知识。时至今日，大众传媒形容以电脑知识去得到未获授权的接达并破坏电脑和数据的人，都称之为黑客。"
+	},
+
+	{
+		"id":"56",
+		"letter":"h",
+		"slug":"hard-token",
+		"name_en":"Hard Token",
+		"content_en":"This is a hardware device that contains a protected cryptographic key that cannot be exported.",
+		"name_tc":"硬體權標",
+		"content_tc":"指載有受保護密碼匙的硬件設備,該設備不能匯出密碼匙。",
+		"name_sc":"硬件权标",
+		"content_sc":"指载有受保护密码匙的硬件设备,该设备不能汇出密码匙。"
+	},
+
+	{
+		"id":"57",
+		"letter":"h",
+		"slug":"hardening",
+		"name_en":"Hardening",
+		"content_en":"Hardening is a process to secure a system, including an operating system or servers such as web servers, by removing the unnecessary system components, disabling unnecessary services, tightening the system configurations, etc.",
+		"name_tc":"強化",
+		"content_tc":"強化是加強系統保安的過程，這些系統包括操作系統或伺服器如網頁伺服器。強化系統的過程包括停止不用的系統組件和服務、加強系統設定等。",
+		"name_sc":"强化",
+		"content_sc":"强化是加强系统保安的过程，这些系统包括操作系统或伺服器如网页伺服器。强化系统的过程包括停止不用的系统组件和服务、加强系统设定等。"
+	},
+
+	{
+		"id":"58",
+		"letter":"h",
+		"slug":"hash-function",
+		"name_en":"Hash Function",
+		"content_en":"A function that maps a bit string of arbitrary length to a fixed length bit string. Approved hash functions satisfy the following properties:<br> 1) One-Way. It is computationally infeasible to find any input that maps to any prespecified output.<br> 2) Collision Resistant. It is computationally infeasible to find any two distinct inputs that map to the same output.",
+		"name_tc":"雜湊函數",
+		"content_tc":"配對或轉化一組位元為另一組等同長度位元（通常是較小的）的算法，並需符合以下特性：<br>1)單向性：從該算法產生的雜湊結果中是不能將原文推算或還原出來。<br>2)計算上的抗碰撞性：在計算上兩項不同資料產生相同的雜湊結果是不可行的。",
+		"name_sc":"杂凑函数",
+		"content_sc":"配对或转化一组位元为另一组等同长度位元（通常是较小的）的算法，并需符合以下特性：<br>1)单向性：从该算法产生的杂凑结果中是不能将原文推算或还原出来。<br>2)计算上的抗碰撞性：在计算上两项不同资料产生相同的杂凑结果是不可行的。"
+	},
+
+	{
+		"id":"59",
+		"letter":"h",
+		"slug":"heuristic",
+		"name_en":"Heuristic",
+		"content_en":"This is a technique for assessing the probability that a file contains a computer virus or other forms of malware.",
+		"name_tc":"試探",
+		"content_tc":"用於評估檔案含有電腦病毒或其他惡意軟件的可能性的一項技術。",
+		"name_sc":"试探",
+		"content_sc":"用于评估档案含有电脑病毒或其他恶意软件的可能性的一项技术。"
+	},
+
+	{
+		"id":"60",
+		"letter":"h",
+		"slug":"hoax",
+		"name_en":"Hoax",
+		"content_en":"This usually consists of an email message warning recipients about a new and terribly destructive virus. It ends by suggesting that the reader should warn his or her friends and colleagues, perhaps by simply forwarding the original message to everyone in their address book. The result is a rapidly growing proliferation of pointless emails that can increase to such an extent that they overload systems.",
+		"name_tc":"惡作劇電子郵件",
+		"content_tc":"惡作劇電子郵件通常包含一個電子郵件信息，警告收件者提防一種新型、破壞力驚人的電腦病毒。郵件末段會建議讀者應警告他／她的朋友及同事，例如簡單地把原來信息轉寄給通訊錄中的所有人等。結果，該等無意義的電子郵件迅速擴散，其增長程度足以令系統負荷過重。",
+		"name_sc":"恶作剧电子邮件",
+		"content_sc":"恶作剧电子邮件通常包含一个电子邮件信息，警告收件者提防一种新型、破坏力惊人的电脑病毒。邮件末段会建议读者应警告他／她的朋友及同事，例如简单地把原来信息转寄给通讯录中的所有人等。结果，该等无意义的电子邮件迅速扩散，其增长程度足以令系统负荷过重。"
+	},
+
+	{
+		"id":"61",
+		"letter":"h",
+		"slug":"honeypot",
+		"name_en":"Honeypot",
+		"content_en":"A honeypot is a decoy system put on a network as bait for attackers. The attackers believe the honeypot is a legitimate system and attack on it, without being known that their activities are being monitored.",
+		"name_tc":"誘捕系統",
+		"content_tc":"誘捕系統是佈置在網絡上引誘攻擊者的誘餌，令攻擊者誤以為它是真實的系統，他們攻擊系統時並不知道正被秘密監察。",
+		"name_sc":"诱捕系统",
+		"content_sc":"诱捕系统是布置在网络上引诱攻击者的诱饵，令攻击者误以为它是真实的系统，他们攻击系统时并不知道正被秘密监察。"
+	},
+
+	{
+		"id":"62",
+		"letter":"h",
+		"slug":"honeynet",
+		"name_en":"Honeynet",
+		"content_en":"In a honeynet, a network of honeypots is connected to imitate an actual or fictitious network. It appears to attackers that many different types of applications are available on several different platforms.",
+		"name_tc":"誘捕網絡",
+		"content_tc":"誘捕網絡是誘捕系統組成的網絡，模擬及複製真實或虛構的網絡。誘捕網絡在攻擊者看來，就像在幾個不同的平台運行各種應用程式。",
+		"name_sc":"诱捕网络",
+		"content_sc":"诱捕网络是诱捕系统组成的网络，模拟及复制真实或虚构的网络。诱捕网络在攻击者看来，就像在几个不同的平台运行各种应用程式。"
+	},
+
+	{
+		"id":"63",
+		"letter":"i",
+		"slug":"identity-provider",
+		"name_en":"Identity Provider",
+		"content_en":"An organisation that issues identity credentials to individuals, and validates those credentials when presented by a user attempting to access a protected resource. An identity Provider may be a government agency, an academic institution, or a commercial business, such as a bank.",
+		"name_tc":"身分辨識提供方",
+		"content_tc":"向個別人士發出身分憑證的組織,當使用者嘗試接達受保護資源而出示憑證時,該組織可作出核實。身分辨識提供方可能是政府機構、學術機構,或是商務機構,例如銀行。",
+		"name_sc":"身分辨识提供方",
+		"content_sc":"向个别人士发出身分凭证的组织,当使用者尝试接达受保护资源而出示凭证时,该组织可作出核实。身分辨识提供方可能是政府机构、学术机构,或是商务机构,例如银行。"
+	},
+
+	{
+		"id":"64",
+		"letter":"i",
+		"slug":"incident-response-plan",
+		"name_en":"Incident Response Plan",
+		"content_en":"The documentation of a predetermined set of instructions or procedures to detect, respond to, and limit consequences of an incident, such as a malicious cyber attacks, against an organisation’s information system(s).",
+		"name_tc":"事故應變計劃",
+		"content_tc":"預定指令或程序以檢測及回應事件，如針對機構資訊系統的惡意網絡攻擊，並限制其負面影響。",
+		"name_sc":"事故应变计划",
+		"content_sc":"预定指令或程序以检测及回应事件，如针对机构资讯系统的恶意网络攻击，并限制其负面影响。"
+	},
+
+	{
+		"id":"65",
+		"letter":"i",
+		"slug":"information-owner",
+		"name_en":"Information Owner",
+		"content_en":"Official with statutory or operational authority for specified information and responsibility for establishing the controls for its generation, collection, processing, dissemination, and disposal.",
+		"name_tc":"資訊擁有人",
+		"content_tc":"指定資訊在法規上或操作上擁有職權的人員。他有建立控制指定資訊的產生、收集、處理、傳播和處置的責任。",
+		"name_sc":"资讯拥有人",
+		"content_sc":"指定资讯在法规上或操作上拥有职权的人员。他有建立控制指定资讯的产生、收集、处理、传播和处置的责任。"
+	},
+
+	{
+		"id":"66",
+		"letter":"i",
+		"slug":"information-security-management-systems",
+		"name_en":"Information Security Management Systems (ISMS)",
+		"content_en":"ISMS is a set of policies concerned with information security management or IT related risks. The governing principle behind an ISMS is that an organisation should design, implement and maintain a coherent set of policies, processes and systems to manage risks to its information assets, thus ensuring acceptable levels of information security risk.",
+		"name_tc":"資訊保安管理系統",
+		"content_tc":"資訊保安管理系統是一組關注資訊保安管理或資訊科技相關風險的政策。其背後的治理原則是機構應設計、實施和維護一套連貫的政策、流程和系統來管理其訊息資產的風險，從而保證了資訊保安風險的可接受的水平。",
+		"name_sc":"资讯保安管理系统",
+		"content_sc":"资讯保安管理系统是一组关注资讯保安管理或资讯科技相关风险的政策。其背后的治理原则是机构应设计、实施和维护一套连贯的政策、流程和系统来管理其讯息资产的风险，从而保证了资讯保安风险的可接受的水平。"
+	},
+
+	{
+		"id":"67",
+		"letter":"i",
+		"slug":"inoculate",
+		"name_en":"Inoculate",
+		"content_en":"To generate information or data about a file that can be used to verify the integrity of the file at a later time.",
+		"name_tc":"抗毒辨識",
+		"content_tc":"指就透過檔案內容所產生的數據，以便在日後可核實檔案內容的完整性。",
+		"name_sc":"抗毒辨识",
+		"content_sc":"指就透过档案内容所产生的数据，以便在日后可核实档案内容的完整性。"
+	},
+
+	{
+		"id":"68",
+		"letter":"i",
+		"slug":"injection-flaws",
+		"name_en":"Injection Flaws",
+		"content_en":"Injection flaw is a flaw in web application that allows an attacker to trick the web application into executing unintended commands or into changing system data.",
+		"name_tc":"插入弱點",
+		"content_tc":"插入弱點是網上應用系統的潛在威脅，讓攻擊者可執行非預期的指令或改變系統數據，以欺騙應用系統。",
+		"name_sc":"插入弱点",
+		"content_sc":"插入弱点是网上应用系统的潜在威胁，让攻击者可执行非预期的指令或改变系统数据，以欺骗应用系统。"
+	},
+
+	{
+		"id":"69",
+		"letter":"i",
+		"slug":"integrity",
+		"name_en":"Integrity",
+		"content_en":"Integrity is the need to ensure that information has not been changed accidentally or deliberately, and that it is accurate and complete.",
+		"name_tc":"完整性",
+		"content_tc":"是指數據沒有意外地或故意地遭到更改，以及完整正確。",
+		"name_sc":"完整性",
+		"content_sc":"是指数据没有意外地或故意地遭到更改，以及完整正确。"
+	},
+
+	{
+		"id":"70",
+		"letter":"i",
+		"slug":"intrusion-detection-system",
+		"name_en":"Intrusion Detection System (IDS)",
+		"content_en":"IDS detects the break-ins or attempts to attack via the use of software systems which operate on the network. It often combines the network monitoring with real-time capture and analysis in order to identify for attacks.",
+		"name_tc":"網絡入侵偵測系統",
+		"content_tc":"對透過使用在網絡上運作的軟件系統進行的入侵或攻擊嘗試作出的偵測的方法或程序。入侵偵測系統通常與網絡一起進行監察，並且具有即時收集及分析的功能，以找出網絡遭受攻擊的情況。",
+		"name_sc":"网络入侵侦测系统",
+		"content_sc":"对透过使用在网络上运作的软件系统进行的入侵或攻击尝试作出的侦测的方法或程序。入侵侦测系统通常与网络一起进行监察，并且具有即时收集及分析的功能，以找出网络遭受攻击的情况。"
+	},
+
+	{
+		"id":"71",
+		"letter":"i",
+		"slug":"intrusion-prevention-system",
+		"name_en":"Intrusion Prevention System (IPS)",
+		"content_en":"IPS helps to detect if there is an attack happening on the network. IPS also provides active response to stop the source of attacks or to minimise the impact of the attacks.",
+		"name_tc":"網絡入侵防禦系統",
+		"content_tc":"網絡入侵防禦系統（IPS）幫助偵測網絡上的攻擊情況，並主動回應阻止攻擊的源頭並減低攻擊所帶來的影響。",
+		"name_sc":"网络入侵防御系统",
+		"content_sc":"网络入侵防御系统（IPS）帮助侦测网络上的攻击情况，并主动回应阻止攻击的源头并减低攻击所带来的影响。"
+	},
+
+	{
+		"id":"72",
+		"letter":"i",
+		"slug":"ip-security",
+		"name_en":"IP Security (IPsec)",
+		"content_en":"IPsec provides interoperable, high quality and cryptographically based security services for traffic at the IP layer, such as authenticity, integrity, confidentiality and access control to each IP packet.",
+		"name_tc":"互聯網規約保安",
+		"content_tc":"互聯網規約保安為互聯網規約層的網絡通訊流量，提供了可互相操作，高品質和以加密為基礎的保安服務，例如保障每個互聯網規約數據包的真實性、完整性、保密性和接達控制。",
+		"name_sc":"互联网规约保安",
+		"content_sc":"互联网规约保安为互联网规约层的网络通讯流量，提供了可互相操作，高品质和以加密为基础的保安服务，例如保障每个互联网规约数据包的真实性、完整性、保密性和接达控制。"
+	},
+
+	{
+		"id":"73",
+		"letter":"k",
+		"slug":"key-management",
+		"name_en":"Key Management",
+		"content_en":"The process of storing, managing or distributing keys to authorised parties.",
+		"name_tc":"密碼匙的管理",
+		"content_tc":"貯存、管理或分發密碼匙給獲授權各方的程序。",
+		"name_sc":"密码匙的管理",
+		"content_sc":"贮存、管理或分发密码匙给获授权各方的程序。"
+	},
+
+	{
+		"id":"74",
+		"letter":"k",
+		"slug":"keylogger",
+		"name_en":"Keylogger",
+		"content_en":"Keylogger is a device or program that captures activities from an input device. Malicious people can make use of keyloggers to capture personal information being input into a computer system.",
+		"name_tc":"鍵盤側錄程式",
+		"content_tc":"鍵盤側錄程式是一個裝置或程式，用作擷取輸入裝置的活動。懷有惡意的人會利用鍵盤側錄程式去擷取輸入到電腦系統的個人資料。",
+		"name_sc":"键盘侧录程式",
+		"content_sc":"键盘侧录程式是一个装置或程式，用作撷取输入装置的活动。怀有恶意的人会利用键盘侧录程式去撷取输入到电脑系统的个人资料。"
+	},
+
+	{
+		"id":"75",
+		"letter":"l",
+		"slug":"least-privilege-principle",
+		"name_en":"Least Privilege Principle",
+		"content_en":"Least privilege principle is a concept in internal control that includes restricting a user's access (e.g. to data files, to processing capability, or to peripherals) or type of access (e.g. read, write, execute, delete) to the minimum necessary to perform his or her duties.",
+		"name_tc":"最小權限原則",
+		"content_tc":"最小權限原則是一種內部控制概念，將用戶可接達的資訊系統資源（例如數據檔案、資料處理能力或外圍設備）或接達的種類（例如讀、寫、執行、刪除），限制在履行其職責所需的最低限度。",
+		"name_sc":"最小权限原则",
+		"content_sc":"最小权限原则是一种内部控制概念，将用户可接达的资讯系统资源（例如数据档案、资料处理能力或外围设备）或接达的种类（例如读、写、执行、删除），限制在履行其职责所需的最低限度。"
+	},
+
+	{
+		"id":"76",
+		"letter":"l",
+		"slug":"logic-bomb",
+		"name_en":"Logic Bomb",
+		"content_en":"A piece of code left within a computing system with the intent of it executing when some condition occurs. The logic bomb could be triggered by a change in a file, by a particular input sequence to the program, or at a particular time or date. Logic bombs get their name from malicious actions that they can take when triggered.",
+		"name_tc":"邏輯炸彈",
+		"content_tc":"邏輯炸彈是一些駐留在電腦系中並在特定情況下執行的編碼。這些特定情況它可以是更改檔案、特別的程式輸入序列、或在特定的時間或日期。邏輯炸彈這個名稱正是因其發作時的惡意行為而來。",
+		"name_sc":"逻辑炸弹",
+		"content_sc":"逻辑炸弹是一些驻留在电脑系中并在特定情况下执行的编码。这些特定情况它可以是更改档案、特别的程式输入序列、或在特定的时间或日期。逻辑炸弹这个名称正是因其发作时的恶意行为而来。"
+	},
+
+	{
+		"id":"77",
+		"letter":"m",
+		"slug":"mail-bombs",
+		"name_en":"Mail Bombs",
+		"content_en":"A mail bomb is the sending of a massive amount of email to a specific person or system. A huge amount of mail may simply fill up the recipient's disk space on the server or, in some cases, may be too much for a server to handle and may cause the server to stop functioning.",
+		"name_tc":"電郵炸彈",
+		"content_tc":"電郵炸彈是指向某一特定人士或系統發出大量電子郵件。數量龐大的電子郵件或會輕易地耗盡收件人伺服器上的磁碟空間，或在某些情況下，會使伺服器負荷過重而可能引致伺服器停止運作。",
+		"name_sc":"电邮炸弹",
+		"content_sc":"电邮炸弹是指向某一特定人士或系统发出大量电子邮件。数量庞大的电子邮件或会轻易地耗尽收件人伺服器上的磁碟空间，或在某些情况下，会使伺服器负荷过重而可能引致伺服器停止运作。"
+	},
+
+	{
+		"id":"78",
+		"letter":"m",
+		"slug":"malicious-code",
+		"name_en":"Malicious Code",
+		"content_en":"Malicious code refers to computer viruses, worms, spyware, Trojan Horses and other undesirable software. Attack made by using such software is to cause disruption either by deleting files, sending emails, or rendering the host system inoperable.",
+		"name_tc":"惡意程式碼",
+		"content_tc":"惡意程式碼指電腦病毒、蠕蟲、間碟軟件、特洛依木馬及其它不良軟件。此等軟件會透過刪除檔案、發送電子郵件或使主機系統無法運作來攻擊及造成破壞。",
+		"name_sc":"恶意程式码",
+		"content_sc":"恶意程式码指电脑病毒、蠕虫、间碟软件、特洛依木马及其它不良软件。此等软件会透过删除档案、发送电子邮件或使主机系统无法运作来攻击及造成破坏。"
+	},
+
+	{
+		"id":"79",
+		"letter":"m",
+		"slug":"malware",
+		"name_en":"Malware",
+		"content_en":"Malware (malicious software) is a generic term for a number of different types of malicious code.  Malware can be used to compromise normal computer functions, steal data, obtain unauthorised access, and form a botnet to launch organised attack.",
+		"name_tc":"惡意軟件",
+		"content_tc":"惡意軟件是不同類型的惡意程式碼的一個統稱。惡意軟件可用於破壞正常的電腦功能，竊取數據，獲得未經授權的訪問，或形成殭屍網絡以發起有組織的攻擊。",
+		"name_sc":"恶意软件",
+		"content_sc":"恶意软件是不同类型的恶意程式码的一个统称。恶意软件可用于破坏正常的计算机功能，窃取数据，获得未经授权的访问，或形成殭尸网络以发起有组织的攻击。"
+	},
+
+	{
+		"id":"80",
+		"letter":"m",
+		"slug":"man-in-the-middle-attack",
+		"name_en":"Man in the Middle (MITM) Attack",
+		"content_en":"A man-in-the-middle attack (MITM) is an attack in which an attacker sits between two parties (the sender and receiver), captures and modify the communication messages of the two parties, and then sends the modified messages to the two parties.",
+		"name_tc":"中間人攻擊",
+		"content_tc":"攻擊者在雙方（發送者和接收者）之間，截取並修改雙方的通訊信息，然後發送修改過的信息到雙方，稱之為中間人攻擊。",
+		"name_sc":"中间人攻击",
+		"content_sc":"攻击者在双方（发送者和接收者）之间，截取并修改双方的通讯信息，然后发送修改过的信息到双方，称之为中间人攻击。"
+	},
+
+	{
+		"id":"81",
+		"letter":"m",
+		"slug":"masquerading",
+		"name_en":"Masquerading",
+		"content_en":"A system entity illegitimately poses as (assumes the identity of) another entity.",
+		"name_tc":"冒充",
+		"content_tc":"系統不正當地以假的身分裝作另一系統。",
+		"name_sc":"冒充",
+		"content_sc":"系统不正当地以假的身分装作另一系统。"
+	},
+
+	{
+		"id":"82",
+		"letter":"m",
+		"slug":"media-sanitisation",
+		"name_en":"Media Sanitisation",
+		"content_en":"It is a process by which data is irreversibly removed from media or the media is permanently destroyed.",
+		"name_tc":"媒體資料消除",
+		"content_tc":"這是一個令數據被刪除後不能回復，或將媒體永久性地破壞的過程。",
+		"name_sc":"媒体资料消除",
+		"content_sc":"这是一个令数据被删除后不能回复，或将媒体永久性地破坏的过程。"
+	},
+
+	{
+		"id":"83",
+		"letter":"m",
+		"slug":"message-digest",
+		"name_en":"Message Digest",
+		"content_en":"A compact representative of a message that is created by a cryptographic algorithm. It changes with the original message.",
+		"name_tc":"信息摘要",
+		"content_tc":"根據原本信息經加密運算後得出的摘要。它會隨著原本信息的變更而作相應改變。",
+		"name_sc":"信息摘要",
+		"content_sc":"根据原本信息经加密运算后得出的摘要。它会随着原本信息的变更而作相应改变。"
+	},
+
+	{
+		"id":"84",
+		"letter":"m",
+		"slug":"multifactor-authentication",
+		"name_en":"Multi-factor Authentication",
+		"content_en":"Authentication using two or more factors. Factors include: (i) something you know (e.g. password/PIN); (ii) something you have (e.g., cryptographic identification device, token); or (iii) something you are (e.g., biometric).",
+		"name_tc":"多重認證",
+		"content_tc":"多重認證是指使用兩個或多個因素來實現認證。這些因素包括：（一）你所知道的資料（例如密碼／個人識別號碼），（二）你所擁有的憑證（例如加密識別裝置，權標），或（三）你本身的特徵或行爲（例如生物特徵識別）。",
+		"name_sc":"多重认证",
+		"content_sc":"多重认证是指使用两个或多个因素来实现认证。这些因素包括：（一）你所知道的资料（例如密码／个人识别号码），（二）你所拥有的凭证（例如加密识别装置，权标），或（三）你本身的特征或行为（例如生物特征识别）。"
+	},
+
+	{
+		"id":"85",
+		"letter":"n",
+		"slug":"need-to-know-principle",
+		"name_en":"Need-To-Know Principle",
+		"content_en":"The necessity for access to, knowledge of, or possession of specific information required to carry out official duties. The need-to-know criterion is used in security procedures that require a custodian of sensitive information, prior to disclosing the information to someone else, to establish that the intended recipient has proper authorisation to access the information.",
+		"name_tc":"需要知道原則",
+		"content_tc":"需要知道原則是接達、知識或擁有執行公務所需的特定信息的需要性。保安程序的需要知道原則，在於要求敏感訊息託管人將透露訊息給別人之前，確保有適當的授權才能讓訊息接收者接達訊息。",
+		"name_sc":"需要知道原则",
+		"content_sc":"需要知道原则是接达、知识或拥有执行公务所需的特定信息的需要性。保安程序的需要知道原则，在于要求敏感讯息托管人将透露讯息给别人之前，确保有适当的授权才能让讯息接收者接达讯息。"
+	},
+
+	{
+		"id":"86",
+		"letter":"n",
+		"slug":"network-based-scanner",
+		"name_en":"Network-based Scanner",
+		"content_en":"Network-based scanner is installed on a single machine that scans a number of other hosts on the network. It helps detect critical vulnerabilities such as mis-configured firewalls, vulnerable web servers, risks associated with vendor-supplied software, and risks associated with network and systems administration.",
+		"name_tc":"網絡掃描軟件",
+		"content_tc":"網絡掃描軟件通常安裝在一部電腦上，掃描網絡上其它主機。它可以偵測重大的保安漏洞，例如配置不當的防火牆、有保安漏洞的互聯網伺服器、供應商提供的軟件所附帶的風險，以及網絡及系統管理附帶的風險等。",
+		"name_sc":"网络扫描软件",
+		"content_sc":"网络扫描软件通常安装在一部电脑上，扫描网络上其它主机。它可以侦测重大的保安漏洞，例如配置不当的防火墙、有保安漏洞的互联网伺服器、供应商提供的软件所附带的风险，以及网络及系统管理附带的风险等。"
+	},
+
+	{
+		"id":"87",
+		"letter":"n",
+		"slug":"network-sniffing",
+		"name_en":"Network Sniffing",
+		"content_en":"Capturing and examining data packets carried on a network.",
+		"name_tc":"網絡嗅探",
+		"content_tc":"在網絡上進行數據包的捕獲和檢查。",
+		"name_sc":"网络嗅探",
+		"content_sc":"在网络上进行数据包的捕获和检查。"
+	},
+
+	{
+		"id":"88",
+		"letter":"n",
+		"slug":"non-repudiation",
+		"name_en":"Non-repudiation",
+		"content_en":"The ability to provide proof of the origin such that the sender cannot deny sending the message, and the recipient cannot deny the receipt of the message.",
+		"name_tc":"不可否認性",
+		"content_tc":"提供原本的證據，使發件人不能否認曾發出信息，而收件人也不能否認曾收取信息。",
+		"name_sc":"不可否认性",
+		"content_sc":"提供原本的证据，使发件人不能否认曾发出信息，而收件人也不能否认曾收取信息。"
+	},
+
+	{
+		"id":"89",
+		"letter":"o",
+		"slug":"one-time-password",
+		"name_en":"One-time Password",
+		"content_en":"A password which is generated and used only once for authentication, and will not be reused in next authentication.",
+		"name_tc":"一次性密碼",
+		"content_tc":"為認證而產生並只使用一次的密碼，在下一次認證時，不會再使用同一個密碼。",
+		"name_sc":"一次性密码",
+		"content_sc":"为认证而产生并只使用一次的密码，在下一次认证时，不会再使用同一个密码。"
+	},
+
+	{
+		"id":"90",
+		"letter":"p",
+		"slug":"packet-filtering",
+		"name_en":"Packet Filtering",
+		"content_en":"A type of filtering to permit or deny network traffic based on the data source, destination, service or protocol of the data packets.",
+		"name_tc":"小包過濾法",
+		"content_tc":"一種根據數據小包的數據來源、目的地、服務或規約的過濾方法，從而准許或拒絕網絡數據的交換。",
+		"name_sc":"小包过滤法",
+		"content_sc":"一种根据数据小包的数据来源、目的地、服务或规约的过滤方法，从而准许或拒绝网络数据的交换。"
+	},
+
+	{
+		"id":"91",
+		"letter":"p",
+		"slug":"password",
+		"name_en":"Password",
+		"content_en":"A private and unique series of numbers or letters which enable a user to gain access to a system or service. A passphrase is a longer password.",
+		"name_tc":"密碼",
+		"content_tc":"一組私人及獨有的數字或字母，用以協助用戶接達系統或服務。密碼組指較長的密碼。",
+		"name_sc":"密码",
+		"content_sc":"一组私人及独有的数字或字母，用以协助用户接达系统或服务。密码组指较长的密码。"
+	},
+
+	{
+		"id":"92",
+		"letter":"p",
+		"slug":"patch",
+		"name_en":"Patch",
+		"content_en":"A patch is a program that upgrades software to a different version, or repairs bug/vulnerability of software.",
+		"name_tc":"修補程式",
+		"content_tc":"修補程式是用於軟件升級，或修補現存軟件的程式錯誤或保安漏洞。",
+		"name_sc":"修补程式",
+		"content_sc":"修补程式是用于软件升级，或修补现存软件的程式错误或保安漏洞。"
+	},
+
+	{
+		"id":"134",
+		"letter":"p",
+		"slug":"payment-card-industry-data-security-standard",
+		"name_en":"Payment Card Industry (PCI) Data Security Standard (DSS)",
+		"content_en":"Payment Card Industry (PCI) Data Security Standard (DSS) is a standard developed by PCI Standards Council to enhance payment account data security. The standard consists of 12 core requirements, which include security management, policies, procedures, network architecture, software design and other critical measures.",
+		"name_tc":"支付卡行業數據安全標準",
+		"content_tc":"支付卡行業數據安全標準，是由支付卡行業標準會議所發展出來以加強付款帳戶資料的保安標準。該標準含12項核心要求，包括保安管理、政策、程序、網絡設計、軟件設計和其它重要措施。",
+		"name_sc":"支付卡行业数据安全标准",
+		"content_sc":"支付卡行业数据安全标准，是由支付卡行业标准会议所发展出来以加强付款帐户资料的保安标准。该标准含12项核心要求，包括保安管理、政策、程序、网络设计、软件设计和其它重要措施。"
+	},
+
+	{
+		"id":"93",
+		"letter":"p",
+		"slug":"penetration-testing",
+		"name_en":"Penetration Testing",
+		"content_en":"Penetration testing is used to test the external perimeter security of a network or facility.",
+		"name_tc":"滲透測試",
+		"content_tc":"從外圍開始測試外部周邊網絡或設備的安全。",
+		"name_sc":"渗透测试",
+		"content_sc":"从外围开始测试外部周边网络或设备的安全。"
+	},
+
+	{
+		"id":"94",
+		"letter":"p",
+		"slug":"personal-identification-number",
+		"name_en":"Personal Identification Number (PIN)",
+		"content_en":"An alphanumeric code or password used to authenticate an identity or to gain access to a system resource.",
+		"name_tc":"個人識別號碼",
+		"content_tc":"字母數字代碼或密碼，用以驗證身分並藉此獲得接達系統資源。",
+		"name_sc":"个人识别号码",
+		"content_sc":"字母数字代码或密码，用以验证身分并藉此获得接达系统资源。"
+	},
+
+	{
+		"id":"95",
+		"letter":"p",
+		"slug":"pharming",
+		"name_en":"Pharming",
+		"content_en":"An attack redirects users to a bogus website such as fraudulent websites or proxy servers, typically through DNS server hijacking or poisoning.",
+		"name_tc":"域欺騙",
+		"content_tc":"這攻擊通過騎劫或破壞域名系統伺服器，把用戶引領到仿冒網站，例如欺詐網站或代理伺服器。",
+		"name_sc":"域欺骗",
+		"content_sc":"这攻击通过骑劫或破坏域名系统伺服器，把用户引领到仿冒网站，例如欺诈网站或代理伺服器。"
+	},
+
+	{
+		"id":"96",
+		"letter":"p",
+		"slug":"phishing",
+		"name_en":"Phishing",
+		"content_en":"Phishing is a kind of social engineering attack that tricks legitimate users into revealing private details, such as e-banking login names and passwords by using e-mails or fraudulent websites.",
+		"name_tc":"仿冒詐騙",
+		"content_tc":"仿冒詐騙是一種社交工程的攻擊，犯罪者利用電子郵件或欺詐網站，引誘毫無戒心的網絡用戶透露私人資料，例如網上銀行之登入名稱和密碼。",
+		"name_sc":"仿冒诈骗",
+		"content_sc":"仿冒诈骗是一种社交工程的攻击，犯罪者利用电子邮件或欺诈网站，引诱毫无戒心的网络用户透露私人资料，例如网上银行之登入名称和密码。"
+	},
+
+	{
+		"id":"97",
+		"letter":"p",
+		"slug":"plaintext",
+		"name_en":"Plaintext",
+		"content_en":"A message text or data that is freely readable and understandable by anyone.",
+		"name_tc":"原文",
+		"content_tc":"可供任何人讀取或了解的信息文本或數據。",
+		"name_sc":"原文",
+		"content_sc":"可供任何人读取或了解的信息文本或数据。"
+	},
+
+	{
+		"id":"98",
+		"letter":"p",
+		"slug":"polymorphic-virus",
+		"name_en":"Polymorphic Virus",
+		"content_en":"A type of virus that changes its telltale code segments so that it \"looks\" different from one infected file to another, thus making detection more difficult.",
+		"name_tc":"多構式病毒",
+		"content_tc":"多構式病毒指一種可改變本身指示代碼段的病毒，使它的「外表」在每一個受感染的檔案都有所不同，增加了偵測的困難程度。",
+		"name_sc":"多构式病毒",
+		"content_sc":"多构式病毒指一种可改变本身指示代码段的病毒，使它的「外表」在每一个受感染的档案都有所不同，增加了侦测的困难程度。"
+	},
+
+	{
+		"id":"99",
+		"letter":"p",
+		"slug":"port-scanning",
+		"name_en":"Port Scanning",
+		"content_en":"A port scanning activity is a series of messages sent by someone attempting to break into a computer to learn which computer network services, each associated with a \"well-known\" port number, the computer provides. Port scanning, a favourite approach of computer cracker, gives the assailant an idea where to probe for weaknesses. Essentially, a port scan consists of sending a message to each port, one at a time. The kind of response received indicates whether the port is used and can therefore be probed for weakness.",
+		"name_tc":"連接埠掃描",
+		"content_tc":"試圖入侵電腦的人發出一連串的信息，通過每個相對應的知名連接埠號碼，以獲取相關電腦網絡服務的資訊。連接埠掃描是電腦入侵者喜歡用的方法，來發現系統的弱點以便作出攻擊。從本質上講，一個連接埠掃描，包括了每次發送一個信息到各個連接埠。從收到的回應中得知該連接埠是否正被使用，從而進一步可以探測系統的弱點。",
+		"name_sc":"连接埠扫描",
+		"content_sc":"试图入侵电脑的人发出一连串的信息，通过每个相对应的知名连接埠号码，以获取相关电脑网络服务的资讯。连接埠扫描是电脑入侵者喜欢用的方法，来发现系统的弱点以便作出攻击。从本质上讲，一个连接埠扫描，包括了每次发送一个信息到各个连接埠。从收到的回应中得知该连接埠是否正被使用，从而进一步可以探测系统的弱点。"
+	},
+
+	{
+		"id":"100",
+		"letter":"p",
+		"slug":"private-key",
+		"name_en":"Private Key",
+		"content_en":"A data file storing a mathematical key which is assigned and known only to a single individual, used for creating digital signature and decrypting messages previously encrypted by the sender, using the recipient’s own public key.",
+		"name_tc":"私人密碼匙",
+		"content_tc":"用以貯存數學密碼匙的數據檔案，該數學密碼匙是支配及告知予某個別人士的，用以產生數碼簽署及在收取電子郵件時，把由發件人以該收件人本身的公開密碼匙加密的信息解密。",
+		"name_sc":"私人密码匙",
+		"content_sc":"用以贮存数学密码匙的数据档案，该数学密码匙是支配及告知予某个别人士的，用以产生数码签署及在收取电子邮件时，把由发件人以该收件人本身的公开密码匙加密的信息解密。"
+	},
+
+	{
+		"id":"101",
+		"letter":"p",
+		"slug":"privileged-account",
+		"name_en":"Privileged Account",
+		"content_en":"The account for a user having access to system control, monitoring, or administration functions.",
+		"name_tc":"特權帳戶",
+		"content_tc":"該帳戶的用戶擁有接達系統的控制、監視或管理等功能。",
+		"name_sc":"特权帐户",
+		"content_sc":"该帐户的用户拥有接达系统的控制、监视或管理等功能。"
+	},
+
+	{
+		"id":"102",
+		"letter":"p",
+		"slug":"proxy-server",
+		"name_en":"Proxy Server",
+		"content_en":"A server that acts as an intermediary between a workstation user and the Internet so that the enterprise can ensure security, administrative control, and caching service.",
+		"name_tc":"代理伺服器",
+		"content_tc":"工作站用戶和互聯網之間，作為中介作用的伺服器，並提供了安全保障，管理控制和緩存等服務。",
+		"name_sc":"代理伺服器",
+		"content_sc":"工作站用户和互联网之间，作为中介作用的伺服器，并提供了安全保障，管理控制和缓存等服务。"
+	},
+
+	{
+		"id":"103",
+		"letter":"p",
+		"slug":"public-key",
+		"name_en":"Public Key",
+		"content_en":"Asymmetric cryptography involves a pair of cryptographic keys for each user. The component that can be made publicly known is the public key.",
+		"name_tc":"公開密碼匙",
+		"content_tc":"每個用戶使用一對密碼匙以進行不對稱加密法，可公開的部份稱為公開密碼匙。",
+		"name_sc":"公开密码匙",
+		"content_sc":"每个用户使用一对密码匙以进行不对称加密法，可公开的部份称为公开密码匙。"
+	},
+
+	{
+		"id":"104",
+		"letter":"p",
+		"slug":"public-key-infrastructure",
+		"name_en":"Public Key Infrastructure (PKI)",
+		"content_en":"A PKI (public key infrastructure) enables users of a basically unsecured public network such as the Internet to securely and privately exchange data and money through the use of a public and a private cryptographic key pair that is obtained and shared through a trusted authority. The public key infrastructure provides for a digital certificate that can identify an individual or an organisation and directory services that can store and, when necessary, revoke the certificates. It often includes services and protocols for managing the public keys through the use of Certification Authority.",
+		"name_tc":"公開密碼匙基礎建設",
+		"content_tc":"公開密碼匙基礎建設讓用戶可在基本上不安全的公共網絡（如互聯網）上，使用透過受信任機關獲得和共享的公共和私人密鑰對，來安全地交易數據和金錢。公開密碼匙基礎建設提供的數碼證書，可以識別一個人或一個組織，以及提供存儲證書，並在有需要時撤銷證書的目錄服務。它通常包括透過使用核證機關，以管理公共密碼匙的服務和協議。",
+		"name_sc":"公开密码匙基础建设",
+		"content_sc":"公开密码匙基础建设让用户可在基本上不安全的公共网络（如互联网）上，使用透过受信任机关获得和共享的公共和私人密钥对，来安全地交易数据和金钱。公开密码匙基础建设提供的数码证书，可以识别一个人或一个组织，以及提供存储证书，并在有需要时撤销证书的目录服务。它通常包括透过使用核证机关，以管理公共密码匙的服务和协议。"
+	},
+
+	{
+		"id":"105",
+		"letter":"r",
+		"slug":"relying-party",
+		"name_en":"Relying Party",
+		"content_en":"Anyone (or any application) that relies on someone's identity as represented by their credential.",
+		"name_tc":"信賴方",
+		"content_tc":"任何人士(或應用程式)信賴他人的憑證所代表的身分。",
+		"name_sc":"信赖方",
+		"content_sc":"任何人士(或应用程序)信赖他人的凭证所代表的身分。"
+	},
+
+	{
+		"id":"106",
+		"letter":"r",
+		"slug":"repudiation",
+		"name_en":"Repudiation",
+		"content_en":"Denial by an entity involved in a communication / transaction that s/he has participated in the activity.",
+		"name_tc":"否認性",
+		"content_tc":"即曾經參與通訊或交易活動的一方作出否認。",
+		"name_sc":"否认性",
+		"content_sc":"即曾经参与通讯或交易活动的一方作出否认。"
+	},
+
+	{
+		"id":"107",
+		"letter":"r",
+		"slug":"rogue-device",
+		"name_en":"Rogue Device",
+		"content_en":"It refers to devices introduced into the network that are not authorised.",
+		"name_tc":"虛假設備",
+		"content_tc":"指網絡上未經授權的設備。",
+		"name_sc":"虚假设备",
+		"content_sc":"指网络上未经授权的设备。"
+	},
+
+	{
+		"id":"108",
+		"letter":"r",
+		"slug":"role-based-access-control",
+		"name_en":"Role-based Access Control (RBAC)",
+		"content_en":"Role-based access control (RBAC) is an authorisation mechanism in which access decisions are based on the roles that individual users have as part of an organisation.",
+		"name_tc":"基於角色接達控制",
+		"content_tc":"基於角色接達控制是一種授權機制，接達決定權建立於個別用戶在組織中的角色。",
+		"name_sc":"基于角色接达控制",
+		"content_sc":"基于角色接达控制是一种授权机制，接达决定权建立于个别用户在组织中的角色。"
+	},
+
+	{
+		"id":"109",
+		"letter":"r",
+		"slug":"rootkit",
+		"name_en":"Rootkit",
+		"content_en":"A collection of tools or programs that a hacker uses to mask intrusion and obtain administrator-level access to a computer or computer network. It often refers to that of malicious intent without going through proper authorisation and/or authentication processes.",
+		"name_tc":"Rootkit",
+		"content_tc":"Rootkit是一種程式／工具，用作奪取系統的根目錄／管理員身份接達權。Rootkit亦指沒有通過正常授權及／或認證過程的惡意入侵。",
+		"name_sc":"Rootkit",
+		"content_sc":"Rootkit是一种程式／工具，用作夺取系统的根目录／管理员身份接达权。Rootkit亦指没有通过正常授权及／或认证过程的恶意入侵。"
+	},
+
+	{
+		"id":"110",
+		"letter":"s",
+		"slug":"scam-email",
+		"name_en":"Scam Email",
+		"content_en":"Unsolicited email which is deceptive and deliberately fraudulent in nature, leading to infection by viruses, identity theft, or even financial loss if instructions described in the messages are followed.",
+		"name_tc":"詐騙電郵",
+		"content_tc":"未經收件人同意的電子郵件，除了對收件人造成滋擾外，也可能含有行騙及欺詐的成份。如果跟從郵件裡的指令，可能會使電腦感染病毒，身份被盜，甚至是損失金錢。",
+		"name_sc":"诈骗电邮",
+		"content_sc":"未经收件人同意的电子邮件，除了对收件人造成滋扰外，也可能含有行骗及欺诈的成份。如果跟从邮件里的指令，可能会使电脑感染病毒，身份被盗，甚至是损失金钱。"
+	},
+
+	{
+		"id":"111",
+		"letter":"s",
+		"slug":"secure-sockets-layer",
+		"name_en":"Secure Sockets Layer (SSL)",
+		"content_en":"Secure Sockets Layer (SSL) is a protocol designed to enable encrypted, authenticated communications across the Internet. It is a security layer between the application and transport layers, which protects the application-layer protocols such as HTTP and is transparent to application developers or users. It provides privacy, authentication and message integrity.",
+		"name_tc":"保密插口層",
+		"content_tc":"保密插口層是設計用以協助把透過互聯網通訊的信息加密和認證的規約。保密插口層位於應用層和傳輸層之間，以保護應用層的規約，例如：超文本傳輸規約，而發展應用系統的人及用戶則不受其限制。保密插口層提供保護私隱，作出認證和保持信息完整性等功能。",
+		"name_sc":"保密插口层",
+		"content_sc":"保密插口层是设计用以协助把透过互联网通讯的信息加密和认证的规约。保密插口层位于应用层和传输层之间，以保护应用层的规约，例如：超文本传输规约，而发展应用系统的人及用户则不受其限制。保密插口层提供保护私隐，作出认证和保持信息完整性等功能。"
+	},
+
+	{
+		"id":"112",
+		"letter":"s",
+		"slug":"security-assertion",
+		"name_en":"Security Assertion",
+		"content_en":"A security assertion is a statement about the identity of a user that is supported by the trust established at the receiving site on the issuer of the assertion.",
+		"name_tc":"安全斷言",
+		"content_tc":"「安全斷言」指有關使用者身分的宣稱,該宣稱建基於接收的一方與發行者已建立的信任。",
+		"name_sc":"安全断言",
+		"content_sc":"「安全断言」指有关使用者身分的宣称,该宣称建基于接收的一方与发行者已建立的信任。"
+	},
+
+	{
+		"id":"113",
+		"letter":"s",
+		"slug":"security-incident",
+		"name_en":"Security Incident",
+		"content_en":"It is any event that could pose a threat to the availability, integrity and confidentiality of an information system.",
+		"name_tc":"保安事故",
+		"content_tc":"指可能對資訊系統或資訊資源的可用性完整性及機密性構成威脅的任何事件。",
+		"name_sc":"保安事故",
+		"content_sc":"指可能对资讯系统或资讯资源的可用性完整性及机密性构成威胁的任何事件。"
+	},
+
+	{
+		"id":"114",
+		"letter":"s",
+		"slug":"security-policy",
+		"name_en":"Security Policy",
+		"content_en":"A top-level directive statement that guide and determine decisions concerning security in a system.",
+		"name_tc":"保安政策",
+		"content_tc":"用作引導及決定系統保安方面最高層次的指令文件。",
+		"name_sc":"保安政策",
+		"content_sc":"用作引导及决定系统保安方面最高层次的指令文件。"
+	},
+
+	{
+		"id":"115",
+		"letter":"s",
+		"slug":"security-risk-assessment",
+		"name_en":"Security Risk Assessment",
+		"content_en":"Security Risk Assessment can be defined as a process of evaluating security risks, which are related to the use of information technology. It can be used as a baseline for showing the amount of change since the last assessment, and how much more changes are required in order to meet the security requirements.",
+		"name_tc":"保安風險評估",
+		"content_tc":"保安風險評估定義為用於資訊科技的保安風險測試程序，是上一次評估後作出轉變的基準，釐定還需要多少轉變才能夠達到保安要求。",
+		"name_sc":"保安风险评估",
+		"content_sc":"保安风险评估定义为用于资讯科技的保安风险测试程序，是上一次评估后作出转变的基准，厘定还需要多少转变才能够达到保安要求。"
+	},
+
+	{
+		"id":"116",
+		"letter":"s",
+		"slug":"segregation-of-duties",
+		"name_en":"Segregation of Duties",
+		"content_en":"Segregation of duties is a concept in internal control that requires critical functions to be divided into steps among different individuals so as to prevent a single individual from subverting a critical process.",
+		"name_tc":"職務分工",
+		"content_tc":"職務分工是一種內部控制的概念，指將一項重要工作的各個步驟分別交由不同人員處理，以杜絕重要程序被一人破壞的可能性。",
+		"name_sc":"职务分工",
+		"content_sc":"职务分工是一种内部控制的概念，指将一项重要工作的各个步骤分别交由不同人员处理，以杜绝重要程序被一人破坏的可能性。"
+	},
+
+	{
+		"id":"117",
+		"letter":"s",
+		"slug":"server-authentication",
+		"name_en":"Server Authentication",
+		"content_en":"It allows a client to identify that it is communicating with the target party, not a malicious third party.",
+		"name_tc":"伺服器認證",
+		"content_tc":"協助客戶辨識與其通訊的一方並非懷著惡意的第三方。",
+		"name_sc":"伺服器认证",
+		"content_sc":"协助客户辨识与其通讯的一方并非怀着恶意的第三方。"
+	},
+
+	{
+		"id":"118",
+		"letter":"s",
+		"slug":"service-set-identifier",
+		"name_en":"Service Set Identifier (SSID)",
+		"content_en":"Service Set Identifier (SSID) is a configurable identification that allows wireless clients to communicate with an appropriate access point. With proper configuration, only clients with the correct SSID can communicate with access points.",
+		"name_tc":"服務設定識別碼",
+		"content_tc":"服務設定識別碼（SSID）是可設定的識別碼，無線客戶端可憑識別碼跟適當的無線接駁點通訊。只要配置正確，客戶端擁有正確的服務設定識別碼便可與無線接駁點通訊。",
+		"name_sc":"服务设定识别码",
+		"content_sc":"服务设定识别码（SSID）是可设定的识别码，无线客户端可凭识别码跟适当的无线接驳点通讯。只要配置正确，客户端拥有正确的服务设定识别码便可与无线接驳点通讯。"
+	},
+
+	{
+		"id":"119",
+		"letter":"s",
+		"slug":"session-hijack",
+		"name_en":"Session Hijack",
+		"content_en":"Take over a session that someone else has established.",
+		"name_tc":"對話劫持",
+		"content_tc":"入侵者搶奪並接管合法使用者之間的現有對話通訊階段。",
+		"name_sc":"对话劫持",
+		"content_sc":"入侵者抢夺并接管合法使用者之间的现有对话通讯阶段。"
+	},
+
+	{
+		"id":"120",
+		"letter":"s",
+		"slug":"session-key",
+		"name_en":"Session Key",
+		"content_en":"A session key is a symmetric key which encrypts a message or session, in order to protect data during transmission. It is created at the beginning of a communications session.",
+		"name_tc":"對話密碼匙",
+		"content_tc":"對話密碼匙是對稱密碼匙，用以把信息加密，使數據在傳輸時受到保護。對話密碼匙是在開始進行通訊加密時產生的。",
+		"name_sc":"对话密码匙",
+		"content_sc":"对话密码匙是对称密码匙，用以把信息加密，使数据在传输时受到保护。对话密码匙是在开始进行通讯加密时产生的。"
+	},
+
+	{
+		"id":"121",
+		"letter":"s",
+		"slug":"shoulder-attack",
+		"name_en":"Shoulder Attack",
+		"content_en":"Shoulder attack is an attack in which attacker might be able to observe what one types and hence steal the password by direct observation by looking over one’s shoulder, or indirect monitoring by using a camera when one types in his password.",
+		"name_tc":"肩窺",
+		"content_tc":"攻擊者在用戶輸入密碼時，在其肩膊後方直接觀看所鍵入字符，或非直接地從閉路電視監察，繼而竊取密碼。這種攻擊方法稱為肩窺。",
+		"name_sc":"肩窥",
+		"content_sc":"攻击者在用户输入密码时，在其肩膊后方直接观看所键入字符，或非直接地从闭路电视监察，继而窃取密码。这种攻击方法称为肩窥。"
+	},
+
+	{
+		"id":"122",
+		"letter":"s",
+		"slug":"single-sign-on",
+		"name_en":"Single Sign-On (SSO)",
+		"content_en":"Single sign-on is an access control mechanism that requires a user to login only once and be authenticated automatically by all other service providers.",
+		"name_tc":"單一登入",
+		"content_tc":"單一登入是接達控制的一種，它要求用戶登入一次，然後其它服務提供者會自動認證該用戶身分。",
+		"name_sc":"单一登入",
+		"content_sc":"单一登入是接达控制的一种，它要求用户登入一次，然后其它服务提供者会自动认证该用户身分。"
+	},
+
+	{
+		"id":"123",
+		"letter":"s",
+		"slug":"smart-card",
+		"name_en":"Smart Card",
+		"content_en":"A tamper-resistant card with a chip storing an encrypted password or the private key which makes it difficult to be sniffed or stolen by the intruder.",
+		"name_tc":"智能卡",
+		"content_tc":"貯存了經加密的密碼或私人密碼匙的唯讀晶片，入侵者難以探取或竊取卡上的資料。",
+		"name_sc":"智能卡",
+		"content_sc":"贮存了经加密的密码或私人密码匙的唯读晶片，入侵者难以探取或窃取卡上的资料。"
+	},
+
+	{
+		"id":"124",
+		"letter":"s",
+		"slug":"social-engineering",
+		"name_en":"Social Engineering",
+		"content_en":"An act using social interactions such as lie, play acting or verbal wordings to trick legitimate users for secrets of the systems such as the user lists, user passwords and network architecture.",
+		"name_tc":"社交工程/社會工程",
+		"content_tc":"以社交手法例如說謊、假扮或言語用字等方式欺騙用戶，藉此套取系統秘密，譬如用戶名單、用戶密碼和網絡結構。",
+		"name_sc":"社交工程/社会工程",
+		"content_sc":"以社交手法例如说谎、假扮或言语用字等方式欺骗用户，藉此套取系统秘密，譬如用户名单、用户密码和网络结构。"
+	},
+
+	{
+		"id":"125",
+		"letter":"s",
+		"slug":"soft-token",
+		"name_en":"Soft Token",
+		"content_en":"This is a copy of software with a cryptographic key installed in the user's computer, PDA or smartphone. The cryptographic key is normally encrypted and stored on some storage media, and authentication requires entry of password or biometrics to activate the token.",
+		"name_tc":"軟體權標",
+		"content_tc":"安裝於使用者的電腦、個人數碼助理或智能手機內配備密碼匙的軟件。密碼匙通常經過加密,並儲存於資料儲存媒體,認證時使用者須要輸入密碼或進行生物測定以激活權標。",
+		"name_sc":"软件权标",
+		"content_sc":"安装于使用者的电脑、个人数码助理或智能手机内配备密码匙的软件。密码匙通常经过加密,并储存于资料储存媒体,认证时使用者须要输入密码或进行生物测定以激活权标。"
+	},
+
+	{
+		"id":"126",
+		"letter":"s",
+		"slug":"spam",
+		"name_en":"Spam",
+		"content_en":"Spam refers to bulk unsolicited electronic messages sent in the form of e-mail, fax or short messages, etc. regardless of whether the recipients have given any consent to receive such or even after the recipients have requested not to receive such any more.",
+		"name_tc":"濫發訊息",
+		"content_tc":"濫發電子訊息是指在不管收件人同意與否或在收件人已要求發件者停止送訊息的情況下，通過電子郵件、傳真或電話短訊等形式而發出的大量訊息。",
+		"name_sc":"滥发讯息",
+		"content_sc":"滥发电子讯息是指在不管收件人同意与否或在收件人已要求发件者停止送讯息的情况下，通过电子邮件、传真或电话短讯等形式而发出的大量讯息。"
+	},
+
+	{
+		"id":"127",
+		"letter":"s",
+		"slug":"spammer",
+		"name_en":"Spammer",
+		"content_en":"Spammer is a person who sends spam messages.",
+		"name_tc":"濫發電郵者",
+		"content_tc":"濫發電郵者是發出濫發訊息的人。",
+		"name_sc":"滥发电邮者",
+		"content_sc":"滥发电邮者是发出滥发讯息的人。"
+	},
+
+	{
+		"id":"128",
+		"letter":"s",
+		"slug":"spyware",
+		"name_en":"Spyware",
+		"content_en":"Spyware is software that secretly forwards information about a user's online activities to third parties without the user's permission.",
+		"name_tc":"間諜軟件",
+		"content_tc":"間諜軟件在未經用戶允許的情況下，便把用戶網上活動的資料秘密地轉送至別人的軟件。",
+		"name_sc":"间谍软件",
+		"content_sc":"间谍软件在未经用户允许的情况下，便把用户网上活动的资料秘密地转送至别人的软件。"
+	},
+
+	{
+		"id":"129",
+		"letter":"s",
+		"slug":"ssl-vpn",
+		"name_en":"SSL VPN",
+		"content_en":"An SSL VPN allows users to connect to the VPN devices using their Web browsers. The SSL (Secure Sockets Layer) protocol or TLS (Transport Layer Security) protocol is used to encrypt the traffic between the Web browser and the SSL VPN device.",
+		"name_tc":"保密插口層虛擬私有網絡",
+		"content_tc":"保密插口層虛擬私有網絡讓用戶使用互聯網瀏覽器，便可以連接虛擬私有網絡裝置，互聯網瀏覽器與保密插口層虛擬私有網絡裝置之間會使用保密插口層規約或傳輸層保安(TLS)規約來加密通訊。",
+		"name_sc":"保密插口层虚拟私有网络",
+		"content_sc":"保密插口层虚拟私有网络让用户使用互联网浏览器，便可以连接虚拟私有网络装置，互联网浏览器与保密插口层虚拟私有网络装置之间会使用保密插口层规约或传输层保安(TLS)规约来加密通讯。"
+	},
+
+	{
+		"id":"130",
+		"letter":"s",
+		"slug":"symmetric-cryptography",
+		"name_en":"Symmetric Cryptography",
+		"content_en":"A branch of cryptography involving algorithms that use the same key for encryption and decryption.",
+		"name_tc":"對稱加密法",
+		"content_tc":"使用相同的密碼匙以加密和解密的加密法。",
+		"name_sc":"对称加密法",
+		"content_sc":"使用相同的密码匙以加密和解密的加密法。"
+	},
+
+	{
+		"id":"131",
+		"letter":"t",
+		"slug":"third-party-mail-relay",
+		"name_en":"Third-party Mail Relay",
+		"content_en":"A mail relay that configured in a manner that people from third-party, who are not local users, can send email through this email server.",
+		"name_tc":"第三者郵件驛遞",
+		"content_tc":"一個電郵伺服器允許不屬於該電郵系統用戶的第三方通過此伺服器發送電子郵件。",
+		"name_sc":"第三者邮件驿递",
+		"content_sc":"一个电邮伺服器允许不属于该电邮系统用户的第三方通过此伺服器发送电子邮件。"
+	},
+
+	{
+		"id":"132",
+		"letter":"t",
+		"slug":"threat",
+		"name_en":"Threat",
+		"content_en":"A potential violation of security that may cause harm to an organisation and its assets.",
+		"name_tc":"威脅",
+		"content_tc":"可能對機構及其資產有害的潛在保安因素。",
+		"name_sc":"威胁",
+		"content_sc":"可能对机构及其资产有害的潜在保安因素。"
+	},
+
+	{
+		"id":"133",
+		"letter":"t",
+		"slug":"timestamp",
+		"name_en":"Timestamp",
+		"content_en":"A time mark or notation that indicates the date and the time of an action / event.",
+		"name_tc":"時間標示",
+		"content_tc":"顯示行動的日期和時間，及發出或收取該時間標籤的人的身分或裝置的時間標記或標示。",
+		"name_sc":"时间标示",
+		"content_sc":"显示行动的日期和时间，及发出或收取该时间标签的人的身分或装置的时间标记或标示。"
+	},
+
+	{
+		"id":"135",
+		"letter":"t",
+		"slug":"token",
+		"name_en":"Token",
+		"content_en":"There are two types of token, hard token and soft token. Hard token is a hardware device that contains a protected cryptographic key that cannot be exported. Soft token is a copy of software with a cryptographic key installed in the user's computer, PDA or smartphone. The cryptographic key is normally encrypted and stored on some storage media, and authentication requires entry of password or biometrics to activate the token.",
+		"name_tc":"權標",
+		"content_tc":"權標分為兩種,硬體權標及軟體權標。硬體權標是指載有受保護密碼匙的硬件設備,該設備不能匯出密碼匙。軟體權標是安裝於使用者的電腦、個人數碼助理或智能手機內配備密碼匙的軟件。密碼匙通常經過加密,並儲存於資料儲存媒體,認證時使用者須要輸入密碼或進行生物測定以激活權標。",
+		"name_sc":"权标",
+		"content_sc":"权标分为两种,硬件权标及软件权标。硬件权标是指载有受保护密码匙的硬件设备,该设备不能汇出密码匙。软件权标是安装于使用者的电脑、个人数码助理或智能手机内配备密码匙的软件。密码匙通常经过加密,并储存于资料储存媒体,认证时使用者须要输入密码或进行生物测定以激活权标。"
+	},
+
+	{
+		"id":"136",
+		"letter":"t",
+		"slug":"trojan-horse",
+		"name_en":"Trojan Horse",
+		"content_en":"A software which pretends to provide legitimate function, but actually carries malicious function exploiting legitimate authorisations of a person who invokes the program.",
+		"name_tc":"特洛依木馬",
+		"content_tc":"假裝提供正常功能，實際上帶有惡意破壞功能的軟件。",
+		"name_sc":"特洛依木马",
+		"content_sc":"假装提供正常功能，实际上带有恶意破坏功能的软件。"
+	},
+
+	{
+		"id":"137",
+		"letter":"v",
+		"slug":"virus",
+		"name_en":"Virus",
+		"content_en":"A computer virus is a block of executable code that would replicate itself by attaching to other files or replacing another program.",
+		"name_tc":"電腦病毒",
+		"content_tc":"電腦病毒指一組執行代碼，可透過附於其它檔案或取代其它程式而自行複製。",
+		"name_sc":"电脑病毒",
+		"content_sc":"电脑病毒指一组执行代码，可透过附于其它档案或取代其它程式而自行复制。"
+	},
+
+	{
+		"id":"138",
+		"letter":"v",
+		"slug":"virus-signature",
+		"name_en":"Virus Signature",
+		"content_en":"Specific strings of binary code in most viruses (except polymorphic ones) that allow antivirus software to identify the virus. New viruses contain new signatures, which is why it is essential to keep signature files up to date.",
+		"name_tc":"病毒識別碼",
+		"content_tc":"大部分病毒（除多構式病毒外）中的特定二進制碼字串，防毒軟件可藉此偵測出病毒。新的病毒有新的病毒碼，因此必須定期更新防毒軟件的病毒碼。",
+		"name_sc":"病毒识别码",
+		"content_sc":"大部分病毒（除多构式病毒外）中的特定二进制码字串，防毒软件可藉此侦测出病毒。新的病毒有新的病毒码，因此必须定期更新防毒软件的病毒码。"
+	},
+
+	{
+		"id":"139",
+		"letter":"v",
+		"slug":"vishing",
+		"name_en":"Vishing",
+		"content_en":"Vishing is a type of phishing attack that targeted VoIP. It can be used by the attacker to steal the identities or money of the victim.",
+		"name_tc":"語音網絡仿冒詐騙",
+		"content_tc":"語音網絡仿冒詐騙是利用VoIP技述的仿冒詐騙攻擊。攻擊者可藉此竊取受害人的身份或金錢。",
+		"name_sc":"语音网络仿冒诈骗",
+		"content_sc":"语音网络仿冒诈骗是利用VoIP技述的仿冒诈骗攻击。攻击者可藉此窃取受害人的身份或金钱。"
+	},
+
+	{
+		"id":"140",
+		"letter":"v",
+		"slug":"vulnerability",
+		"name_en":"Vulnerability",
+		"content_en":"A flaw or weakness in a system that could be exploited by intruders to violate the security policy.",
+		"name_tc":"保安漏洞",
+		"content_tc":"系統的缺點或弱點，讓入侵者有機可乘加以破壞，違反保安政策。",
+		"name_sc":"保安漏洞",
+		"content_sc":"系统的缺点或弱点，让入侵者有机可乘加以破坏，违反保安政策。"
+	},
+
+	{
+		"id":"141",
+		"letter":"v",
+		"slug":"vulnerability-scanner",
+		"name_en":"Vulnerability Scanner",
+		"content_en":"Vulnerability scanner is software that assesses security vulnerabilities in networks or host systems and produces scan results.",
+		"name_tc":"保安漏洞掃描軟件",
+		"content_tc":"保安漏洞掃描軟件是用於評估網絡或主機系統的保安漏洞，並得出一套掃描結果。",
+		"name_sc":"保安漏洞扫描软件",
+		"content_sc":"保安漏洞扫描软件是用于评估网络或主机系统的保安漏洞，并得出一套扫描结果。"
+	},
+
+	{
+		"id":"142",
+		"letter":"w",
+		"slug":"war-driving",
+		"name_en":"War Driving",
+		"content_en":"Wardriving is the act of searching for Wi-Fi wireless networks by a person in a moving vehicle using a portable device.",
+		"name_tc":"駕駛攻擊/沿街掃描",
+		"content_tc":"駕駛攻擊/沿街掃描是指在行駛的車輛中使用便攜式設備尋找Wi-Fi無線網絡。",
+		"name_sc":"驾驶攻击/沿街扫描",
+		"content_sc":"驾驶攻击/沿街扫描是指在行驶的车辆中使用便携式设备寻找Wi-Fi无线网络。"
+	},
+
+	{
+		"id":"143",
+		"letter":"w",
+		"slug":"web-application-firewall",
+		"name_en":"Web Application Firewall",
+		"content_en":"According to the Web Application Security Consortium, a web application firewall (WAF) is an intermediary device, sitting between a web client and a web server, analysing messages at application layer for violations in the programmed security policy.",
+		"name_tc":"網上應用系統防火牆",
+		"content_tc":"根據網絡應用安全聯盟（Web Application Security Consortium,WASC），網上應用系統防火牆是一種介於網絡客戶端和網絡伺服器之間的裝置，作為分析在應用系統層違反保安政策之訊息。",
+		"name_sc":"网上应用系统防火墙",
+		"content_sc":"根据网络应用安全联盟（Web Application Security Consortium,WASC），网上应用系统防火墙是一种介于网络客户端和网络伺服器之间的装置，作为分析在应用系统层违反保安政策之讯息。"
+	},
+
+	{
+		"id":"144",
+		"letter":"w",
+		"slug":"web-defacement",
+		"name_en":"Web Defacement",
+		"content_en":"Change of the content (usually the main page) of a website with some messages by intruder or by virus.",
+		"name_tc":"網頁竄改",
+		"content_tc":"指網站內容（通常是主頁）變成了由入侵者或電腦病毒發放的一些信息。",
+		"name_sc":"网页窜改",
+		"content_sc":"指网站内容（通常是主页）变成了由入侵者或电脑病毒发放的一些信息。"
+	},
+
+	{
+		"id":"145",
+		"letter":"w",
+		"slug":"wi-fi-protected-access",
+		"name_en":"Wi-Fi Protected Access (WPA)",
+		"content_en":"Wi-Fi Protected Access (WPA) is a wireless security protocol designed to address and fix the known security issues in WEP. WPA provides users with a higher level of assurance that their data will remain protected by using Temporal Key Integrity Protocol (TKIP) for data encryption. 802.1x authentication has been introduced in this protocol to improve user authentication. WPA has been superseded by WPA2.",
+		"name_tc":"無線保護接達",
+		"content_tc":"無線保護接達（WPA）是針對WEP的缺陷而設計的無線保安規約。WPA能為用戶提供較高的保證，例如用戶的數據可透過暫時密碼匙完整性規約（TKIP）進行數據加密後得到保護，並且引進了802.1x認證技術為用戶提供更佳的認證過程。WPA已被WPA2取代。",
+		"name_sc":"无线保护接达",
+		"content_sc":"无线保护接达（WPA）是针对WEP的缺陷而设计的无线保安规约。WPA能为用户提供较高的保证，例如用户的数据可透过暂时密码匙完整性规约（TKIP）进行数据加密后得到保护，并且引进了802.1x认证技术为用户提供更佳的认证过程。WPA已被WPA2取代。"
+	},
+
+	{
+		"id":"146",
+		"letter":"w",
+		"slug":"wi-fi-protected-access-2",
+		"name_en":"Wi-Fi Protected Access 2 (WPA2)",
+		"content_en":"Wi-Fi Protected Access 2 (WPA2) is a wireless security protocol, based on IEEE 802.11i, in which only authorised users can access their wireless with the features of supporting stronger cryptography (Advanced Encryption Standard, AES), stronger authentication control (Extensible Authentication Protocol, EAP), key management, replay attack protection and data integrity.",
+		"name_tc":"無線保護接達2",
+		"content_tc":"無線保護接達2（WPA2）是依據IEEE802.11i標準的無線保安規約，只有獲授權的用戶才可接達無線裝置，並支援更強的加密法（高級加密標準AES）、更強的認證控制（可擴展認證規約EAP）、密碼匙管理、中繼攻擊保護和數據完整性的功能。",
+		"name_sc":"无线保护接达2",
+		"content_sc":"无线保护接达2（WPA2）是依据IEEE802.11i标准的无线保安规约，只有获授权的用户才可接达无线装置，并支援更强的加密法（高级加密标准AES）、更强的认证控制（可扩展认证规约EAP）、密码匙管理、中继攻击保护和数据完整性的功能。"
+	},
+
+	{
+		"id":"147",
+		"letter":"w",
+		"slug":"wi-fi-protected-access-3",
+		"name_en":"Wi-Fi Protected Access 3 (WPA3)",
+		"content_en":"Wi-Fi Protected Access 3 (WPA3) is a new wireless security standard built on WPA2 but brings new features to enhance Wi-Fi security for more robust authentication, enhanced cryptographic strength, while maintaining resiliency of mission critical networks.",
+		"name_tc":"無線保護接達3",
+		"content_tc":"無線保護接達3（WPA3）（WPA3）是最新的無線保安標準，在WPA2的基礎上加入新功能，增強無線網絡的安全性，提高認證的可靠程度和加密的強度，以及保持關鍵網絡的復原能力。",
+		"name_sc":"无线保护接达3",
+		"content_sc":"无线保护接达3（WPA3）（WPA3）是最新的无线保安标准，在WPA2的基础上加入新功能，增强无线网络的安全性，提高认证的可靠程度和加密的强度，以及保持关键网络的复原能力。"
+	},
+
+	{
+		"id":"148",
+		"letter":"w",
+		"slug":"wired-equivalent-privacy",
+		"name_en":"Wired Equivalent Privacy (WEP)",
+		"content_en":"Wired Equivalent Privacy Protocol (WEP) is a basic security feature of IEEE 802.11 standard that was intended to provide confidentiality over a wireless network by encrypting information sent over the network. After the key-scheduling flaw was found in the WEP, it is now considered to be fully broken because the WEP key can be cracked in minutes with the aid of automated tools.",
+		"name_tc":"有線等效保密規約",
+		"content_tc":"有線等效保密規約是IEEE802.11標准的基本保安功能，可在無線網絡中替傳輸資料進行加密，提供保密性。由於有線等效保密規約密碼匙的排程弱點已被發現，有線等效保密規約的密碼匙已可被自動破解工具於數分鍾內破解。",
+		"name_sc":"有线等效保密规约",
+		"content_sc":"有线等效保密规约是IEEE802.11标准的基本保安功能，可在无线网络中替传输资料进行加密，提供保密性。由于有线等效保密规约密码匙的排程弱点已被发现，有线等效保密规约的密码匙已可被自动破解工具于数分钟内破解。"
+	},
+
+	{
+		"id":"149",
+		"letter":"w",
+		"slug":"worm",
+		"name_en":"Worm",
+		"content_en":"A worm is a program that spreads over network. Unlike a virus, worm does not attach itself to a host program.",
+		"name_tc":"蠕蟲",
+		"content_tc":"蠕蟲是一種經由網絡擴散的程式。它跟病毒有所不同，因為它不會附在一個主程式內。",
+		"name_sc":"蠕虫",
+		"content_sc":"蠕虫是一种经由网络扩散的程式。它跟病毒有所不同，因为它不会附在一个主程式内。"
+	},
+
+	{
+		"id":"150",
+		"letter":"z",
+		"slug":"zero-day-attack",
+		"name_en":"Zero-day Attack",
+		"content_en":"An attack exploiting a newly discovered vulnerability appears before the release of the corresponding patch by the software vendor.",
+		"name_tc":"零日攻擊",
+		"content_tc":"在軟件供應商發放相對應的修補程式前，可利用這些新發現的保安漏洞而進行的攻擊。",
+		"name_sc":"零日攻击",
+		"content_sc":"在软件供应商发放相对应的修补程式前，可利用这些新发现的保安漏洞而进行的攻击。"
+	},
+
+	{
+		"id":"151",
+		"letter":"z",
+		"slug":"zombie-computer",
+		"name_en":"Zombie Computer",
+		"content_en":"A computer attached to the Internet that has been compromised by intruder with computer viruses or Trojan Horses and manipulated without the knowledge of the computer owner. The computer is usually used to perform malicious attacks such as denial of service attack under remote control.",
+		"name_tc":"殭屍電腦",
+		"content_tc":"指連接互聯網而已經受入侵者、電腦病毒或木馬程式影響的電腦。該等電腦通常被用作惡意用途，例如在接收遠程指令後作出拒絕服務攻擊。一般而言，擁有者並不知道該等用途。",
+		"name_sc":"殭尸电脑",
+		"content_sc":"指连接互联网而已经受入侵者、电脑病毒或木马程式影响的电脑。该等电脑通常被用作恶意用途，例如在接收远程指令后作出拒绝服务攻击。一般而言，拥有者并不知道该等用途。"
+	}
+]
