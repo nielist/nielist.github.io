@@ -20,15 +20,22 @@ function getGlossary() {
 function onChangeSourceText() {
   let source_text = $("#source-text").val();
   let target_text = source_text;
+  glossary_list.sort((a, b) => (a.name_en.length < b.name_en.length) ? 1 : -1);
   for (let i = 0; i < glossary_list.length; i++) {
     let name_en = glossary_list[i].name_en;
-    let name_tc = glossary_list[i].name_tc;
-    let name_sc = glossary_list[i].name_sc;
-    let re = new RegExp(name_en, "gim");
+    let re = new RegExp(`\\b${name_en}\\b`, "gi");
     target_text = target_text.replace(re, "<mark>"+name_en+"</mark>");
-    re = new RegExp(name_tc, "gim");
+  }
+  glossary_list.sort((a, b) => (a.name_tc.length < b.name_tc.length) ? 1 : -1);
+  for (let i = 0; i < glossary_list.length; i++) {
+    let name_tc = glossary_list[i].name_tc;
+    let re = new RegExp(`\\b${name_tc}\\b`, "gi");
     target_text = target_text.replace(re, "<mark>"+name_tc+"</mark>");
-    re = new RegExp(name_sc, "gim");
+  }
+  glossary_list.sort((a, b) => (a.name_sc.length < b.name_sc.length) ? 1 : -1);
+  for (let i = 0; i < glossary_list.length; i++) {
+    let name_sc = glossary_list[i].name_sc;
+    let re = new RegExp(`\\b${name_sc}\\b`, "gi");
     target_text = target_text.replace(re, "<mark>"+name_sc+"</mark>");
   }
   $("#target-text").html(target_text);

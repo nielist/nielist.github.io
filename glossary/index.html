@@ -47,27 +47,31 @@
 </head>
 <body>
 
-<div class="container">
-  <div class="row mt-5 align-items-center">
+<div class="container align-items-center m-5">
+  <div class="row">
     <div class="col">
       <div class="card bg-light">
         <div class="card-body">
           <div class="form-group">
             <label for="source-text">Article</label>
-            <textarea class="form-control" rows="16" id="source-text" placeholder="Place source text here..."></textarea>
+            <textarea class="form-control" rows="8" id="source-text" placeholder="Place article here..."></textarea>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-1 text-center">
-      <i class="far fa-arrow-alt-right fa-2x"></i>
+  </div>
+  <div class="row m-3">
+    <div class="col text-center">
+      <i class="far fa-arrow-alt-down fa-2x"></i>
     </div>
+  </div>
+  <div class="row">
     <div class="col">
       <div class="card bg-light">
         <div class="card-body">
           <div class="form-group">
-            <label for="target-text">Article (Highlighted)</label>
-            <div style="border-width:1px;border-radius:0.25rem;height:380px;">
+            <label for="target-text">Article (with highlights)</label>
+            <div>
               <p id="target-text">
               </p>
             </div>
