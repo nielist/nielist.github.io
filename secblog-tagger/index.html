@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Textbox Demo</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container mt-4">
+    <div class="form-group">
+      <label for="inputText">請輸入文字：</label>
+      <input type="text" class="form-control" id="inputText" placeholder="在這裡輸入文字">
+    </div>
+    <div id="result"></div>
+  </div>
+  <script>
+    $(document).ready(function() {
+      $('#inputText').on('input', function() {
+        var inputText = $(this).val();
+        var keywords = ['Edge', 'Chrome', 'ChatGPT']; // 要匹配的特定字眼
+        var result = '';
+        for (var i = 0; i < keywords.length; i++) {
+          if (inputText.includes(keywords[i])) {
+            result += '<p>' + keywords[i] + '</p>';
+          }
+        }
+        $('#result').html(result);
+      });
+    });
+  </script>
+</body>
+</html>
