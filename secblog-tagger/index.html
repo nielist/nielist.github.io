@@ -25,6 +25,41 @@
       }
       window.history.replaceState({}, '', `${window.location.pathname}${queryString}`);
     }
+
+    function onLoadUrl() {
+      let params = getUrlQuery();
+      for (const key of params.keys()) {
+        if ($('#'+key).length <= 0) {
+          $('input[type=text]#Code').val(key);
+          onClickAddNewStock();
+        }
+      }
+      for (const key of params.keys()) {
+        if (params.has(key)) {
+          let values = params.getAll(key);
+          for (const value of values) {
+            if (value != '') {
+              $('#'+key).val(value);
+            }
+          }
+        }
+      }
+    }
+
+    function onClickTag() {
+      let params = {};
+      $('input[type=number].stock-shares').each(function(){
+        let id = $(this).attr('id');
+        let tag = $('#'+id).val();
+        if (tag != '') {
+          if (typeof params[id] === 'undefined') {
+            params[id] = [];
+          }
+          params[id].push(''+tag);
+        }
+      });
+      setUrlQuery(params);
+    }
   </script>
 </head>
 <body>
