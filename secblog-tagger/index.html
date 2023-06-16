@@ -5,6 +5,27 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script>
+    function getUrlQuery(url) {
+      if (typeof url === 'undefined' || url === '') {
+        url = window.location;
+      }
+      return new URLSearchParams(url.search);
+    }
+    function setUrlQuery(params) {
+      let urlParams = new URLSearchParams();
+      for (const key of Object.keys(params)) {
+        for (const value of Object.values(params[key])) {
+          urlParams.append(key, value);
+        }
+      }
+      let queryString = urlParams.toString();
+      if (queryString.length > 0) {
+        queryString = '?' + queryString;
+      }
+      window.history.replaceState({}, '', `${window.location.pathname}${queryString}`);
+    }
+  </script>
 </head>
 <body>
   <div class="container mt-4">
