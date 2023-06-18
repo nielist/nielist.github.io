@@ -60,9 +60,60 @@
       });
       setUrlQuery(params);
     }
+    $.ajax({
+      url: 'article.json',
+      dataType: 'json',
+      success: function(data) {
+        // 將 JSON 轉換為 JavaScript 對象
+        var articles = data.articles;
+        var tags = data.tags;
+        
+        // TODO: 在左邊顯示文章列表，在右邊顯示 tags 列表
+      }
+    });
+
+    // 將 tags 列表顯示在右邊
+    var tagList = $('#tag-list');
+    $.each(tags, function(index, tag) {
+      tagList.append('<a href="#" class="tag" data-tag="' + tag + '">' + tag + '</a>');
+    });
+    
+    // 當 tag 被點擊時
+    $('.tag').click(function() {
+      // 更新當前 URL query
+      var tag = $(this).data('tag');
+      var url = window.location.href.split('?')[0] + '?tag=' + tag;
+      window.history.pushState({tag: tag}, '', url);
+      
+      // TODO: 根據 tag 顯示符合的文章列表
+    });
+
+    // 從 URL query 中獲取 tag 參數
+    var urlParams = new URLSearchParams(window.location.search);
+    var selectedTag = urlParams.get('tag');
+    
+    // 顯示符合 selectedTag 的文章列表
+    var articleList = $('#article-list');
+    $.each(articles, function(index, article) {
+      if (selectedTag && article.tags.indexOf(selectedTag) === -1) {
+        // 如果有 selectedTag，但文章沒有這個 tag，則跳過
+        return;
+      }
+      
+      articleList.append('<div class="article">' + article.title + '</div>');
+    });
   </script>
 </head>
 <body>
+  <div class="row">
+    <div class="col-md-8" id="article-list">
+      <!-- 文章列表 -->
+    </div>
+    <div class="col-md-4" id="tag-list">
+      <!-- Tag 列表 -->
+    </div>
+  </div>
+  <!--
   <div class="container mt-4">
     <div class="form-group">
       <label for="inputText">請輸入文字：</label>
@@ -85,5 +136,6 @@
       });
     });
   </script>
+  -->
 </body>
 </html>
