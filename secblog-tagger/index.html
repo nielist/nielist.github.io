@@ -6,62 +6,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script>
-    function getUrlQuery(url) {
-      if (typeof url === 'undefined' || url === '') {
-        url = window.location;
-      }
-      return new URLSearchParams(url.search);
-    }
-    function setUrlQuery(params) {
-      let urlParams = new URLSearchParams();
-      for (const key of Object.keys(params)) {
-        for (const value of Object.values(params[key])) {
-          urlParams.append(key, value);
-        }
-      }
-      let queryString = urlParams.toString();
-      if (queryString.length > 0) {
-        queryString = '?' + queryString;
-      }
-      window.history.replaceState({}, '', `${window.location.pathname}${queryString}`);
-    }
-
-    function onLoadUrl() {
-      let params = getUrlQuery();
-      for (const key of params.keys()) {
-        if ($('#'+key).length <= 0) {
-          $('input[type=text]#Code').val(key);
-          onClickAddNewStock();
-        }
-      }
-      for (const key of params.keys()) {
-        if (params.has(key)) {
-          let values = params.getAll(key);
-          for (const value of values) {
-            if (value != '') {
-              $('#'+key).val(value);
-            }
-          }
-        }
-      }
-    }
-
-    function onClickTag() {
-      let params = {};
-      $('input[type=number].stock-shares').each(function(){
-        let id = $(this).attr('id');
-        let tag = $('#'+id).val();
-        if (tag != '') {
-          if (typeof params[id] === 'undefined') {
-            params[id] = [];
-          }
-          params[id].push(''+tag);
-        }
-      });
-      setUrlQuery(params);
-    }
-    var tagList = new Array();
     var articles = new Array();
+    var tagList = new Array();
     $.ajax({
       url: 'spotify.json',
       dataType: 'json',
@@ -76,19 +22,16 @@
             }
           });
         });
-        console.log(articles);
-        console.log(tagList);
         // TODO: 在左邊顯示文章列表，在右邊顯示 tags 列表
         // 將 tags 列表顯示在右邊
         $.each(tagList, function(index, tag) {
           $('#tag-list').append('<a href="?tag=' + tag + '" class="tag" data-tag="' + tag + '"><span class="badge badge-primary">' + tag + '<span></a>');
         });
-        
         // 當 tag 被點擊時
         $('.tag').click(function(e) {
           // 更新當前 URL query
           var tag = $(this).data('tag');
-          var url = window.location.href.split('?')[0] + '?tag=' + tag;
+          var url = window.location.pathname + '?tag=' + tag;
           window.history.pushState({tag: tag}, '', url);
           
           // TODO: 根據 tag 顯示符合的文章列表
@@ -96,6 +39,8 @@
           e.preventDefault();
           return false;
         });
+    		// 在左邊顯示文章列表
+    		displayArticleList();
       }
     });
 
@@ -127,29 +72,5 @@
       <!-- Tag 列表 -->
     </div>
   </div>
-  <!--
-  <div class="container mt-4">
-    <div class="form-group">
-      <label for="inputText">請輸入文字：</label>
-      <input type="text" class="form-control" id="inputText" placeholder="在這裡輸入文字">
-    </div>
-    <div id="result"></div>
-  </div>
-  <script>
-    $(document).ready(function() {
-      $('#inputText').on('input', function() {
-        var inputText = $(this).val();
-        var keywords = ['Edge', 'Chrome', 'ChatGPT']; // 要匹配的特定字眼
-        var result = '';
-        for (var i = 0; i < keywords.length; i++) {
-          if (inputText.includes(keywords[i])) {
-            result += '<p>' + keywords[i] + '</p>';
-          }
-        }
-        $('#result').html(result);
-      });
-    });
-  </script>
-  -->
 </body>
 </html>
