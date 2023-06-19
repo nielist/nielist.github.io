@@ -70,7 +70,7 @@
         articles = data.playlist;
         $.each(articles, function(index, article) {
           $.each(article.tags, function(index, selectedTag) {
-            if (selectedTag && tagList.indexOf(selectedTag) === -1) {
+            if (tagList && tagList.indexOf(selectedTag) === -1) {
               // 如果tagList沒有這個tag
               tagList.push(selectedTag);
             }
