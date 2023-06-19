@@ -81,34 +81,39 @@
         // TODO: 在左邊顯示文章列表，在右邊顯示 tags 列表
         // 將 tags 列表顯示在右邊
         $.each(tagList, function(index, tag) {
-          $('#tag-list').append('<a href="#" class="tag" data-tag="' + tag + '">' + tag + '</a>');
+          $('#tag-list').append('<a href="?tag=' + tag + '" class="tag" data-tag="' + tag + '">' + tag + '</a>');
         });
         
         // 當 tag 被點擊時
         $('.tag').click(function() {
           // 更新當前 URL query
           var tag = $(this).data('tag');
-          setUrlQuery({'tag': tag});
+          var url = window.location.href.split('?')[0] + '?tag=' + tag;
+          window.history.pushState({tag: tag}, '', url);
           
           // TODO: 根據 tag 顯示符合的文章列表
+          displayArticleList();
         });
       }
     });
 
-    // 從 URL query 中獲取 tag 參數
-    var urlParams = new URLSearchParams(window.location.search);
-    var selectedTag = urlParams.get('tag');
-    
-    // 顯示符合 selectedTag 的文章列表
-    var articleList = $('#article-list');
-    $.each(articles, function(index, article) {
-      if (selectedTag && article.tags.indexOf(selectedTag) === -1) {
-        // 如果有 selectedTag，但文章沒有這個 tag，則跳過
-        return;
-      }
+    function displayArticleList() {
+      // 從 URL query 中獲取 tag 參數
+      var urlParams = new URLSearchParams(window.location.search);
+      var selectedTag = urlParams.get('tag');
       
-      articleList.append('<div class="article">' + article.title + '</div>');
-    });
+      // 顯示符合 selectedTag 的文章列表
+      var articleList = $('#article-list');
+      articleList.html();
+      $.each(articles, function(index, article) {
+        if (selectedTag && article.tags.indexOf(selectedTag) === -1) {
+          // 如果有 selectedTag，但文章沒有這個 tag，則跳過
+          return;
+        }
+        
+        articleList.append('<div class="article">' + article.title + '</div>');
+      });
+    }
   </script>
 </head>
 <body>
