@@ -39,8 +39,8 @@
           e.preventDefault();
           return false;
         });
-    		// 在左邊顯示文章列表
-    		displayArticleList();
+        // 在左邊顯示文章列表
+        displayArticleList();
       }
     });
 
@@ -51,7 +51,7 @@
       
       // 顯示符合 selectedTag 的文章列表
       var articleList = $('#article-list');
-      articleList.html();
+      articleList.html('');
       $.each(articles, function(index, article) {
         if (selectedTag && article.tags.indexOf(selectedTag) === -1) {
           // 如果有 selectedTag，但文章沒有這個 tag，則跳過
