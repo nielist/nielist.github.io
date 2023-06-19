@@ -61,8 +61,9 @@
       setUrlQuery(params);
     }
     $.ajax({
-      url: 'article.json',
+      url: 'spotify.json',
       dataType: 'json',
+      cache: false,
       success: function(data) {
         // 將 JSON 轉換為 JavaScript 對象
         var articles = data.articles;
