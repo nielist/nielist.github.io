@@ -85,7 +85,7 @@
         });
         
         // 當 tag 被點擊時
-        $('.tag').click(function() {
+        $('.tag').click(function(e) {
           // 更新當前 URL query
           var tag = $(this).data('tag');
           var url = window.location.href.split('?')[0] + '?tag=' + tag;
@@ -93,6 +93,8 @@
           
           // TODO: 根據 tag 顯示符合的文章列表
           displayArticleList();
+          e.preventDefault();
+          return false;
         });
       }
     });
