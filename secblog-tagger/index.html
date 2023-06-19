@@ -25,7 +25,7 @@
         // TODO: 在左邊顯示文章列表，在右邊顯示 tags 列表
         // 將 tags 列表顯示在右邊
         $.each(tagList, function(index, tag) {
-          $('#tag-list').append('<a href="?tag=' + tag + '" class="tag" data-tag="' + tag + '"><span class="badge badge-primary">' + tag + '<span></a>');
+          $('#tag-list').append('<a href="?tag=' + tag + '" class="tag" data-tag="' + tag + '" style="margin:2px"><span class="badge badge-primary">' + tag + '<span></a>');
         });
         // 當 tag 被點擊時
         $('.tag').click(function(e) {
