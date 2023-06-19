@@ -79,23 +79,20 @@
         console.log(articles);
         console.log(tagList);
         // TODO: 在左邊顯示文章列表，在右邊顯示 tags 列表
+        // 將 tags 列表顯示在右邊
+        $.each(tagList, function(index, tag) {
+          $('#tag-list').append('<a href="#" class="tag" data-tag="' + tag + '">' + tag + '</a>');
+        });
+        
+        // 當 tag 被點擊時
+        $('.tag').click(function() {
+          // 更新當前 URL query
+          var tag = $(this).data('tag');
+          setUrlQuery({'tag': tag});
+          
+          // TODO: 根據 tag 顯示符合的文章列表
+        });
       }
-    });
-
-    // 將 tags 列表顯示在右邊
-    var tagList = $('#tag-list');
-    $.each(tags, function(index, tag) {
-      tagList.append('<a href="#" class="tag" data-tag="' + tag + '">' + tag + '</a>');
-    });
-    
-    // 當 tag 被點擊時
-    $('.tag').click(function() {
-      // 更新當前 URL query
-      var tag = $(this).data('tag');
-      var url = window.location.href.split('?')[0] + '?tag=' + tag;
-      window.history.pushState({tag: tag}, '', url);
-      
-      // TODO: 根據 tag 顯示符合的文章列表
     });
 
     // 從 URL query 中獲取 tag 參數
