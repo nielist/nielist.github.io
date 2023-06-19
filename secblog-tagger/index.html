@@ -60,8 +60,8 @@
       });
       setUrlQuery(params);
     }
-    var tagList = [];
-    var articles = [];
+    var tagList = new Array();
+    var articles = new Array();
     $.ajax({
       url: 'spotify.json',
       dataType: 'json',
