@@ -60,15 +60,24 @@
       });
       setUrlQuery(params);
     }
+    var tagList = [];
+    var articles = [];
     $.ajax({
       url: 'spotify.json',
       dataType: 'json',
       cache: false,
       success: function(data) {
-        // 將 JSON 轉換為 JavaScript 對象
-        var articles = data.articles;
-        var tags = data.tags;
-        
+        articles = data.playlist;
+        $.each(articles, function(index, article) {
+          $.each(article.tags, function(index, selectedTag) {
+            if (selectedTag && tagList.indexOf(selectedTag) === -1) {
+              // 如果tagList沒有這個tag
+              tagList.push(selectedTag);
+            }
+          });
+        });
+        console.log(articles);
+        console.log(tagList);
         // TODO: 在左邊顯示文章列表，在右邊顯示 tags 列表
       }
     });
